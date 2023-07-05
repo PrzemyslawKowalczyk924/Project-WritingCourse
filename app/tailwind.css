@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Borna';
+        src: url(../Borna_Medium/borna-medium-webfont.woff) format('woff'),
+        url(../Borna_Medium/borna-medium-webfont.woff2) format('woff2');
+    }
+}
