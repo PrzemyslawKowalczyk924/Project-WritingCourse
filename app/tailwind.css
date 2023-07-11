@@ -4,8 +4,22 @@
 
 @layer base {
     @font-face {
-        font-family: 'Borna';
-        src: url(../Borna_Medium/borna-medium-webfont.woff) format('woff'),
-        url(../Borna_Medium/borna-medium-webfont.woff2) format('woff2');
+        font-family: 'Novela';
+        src: url(../public/fonts/novela-regular-webfont.woff) format('woff'),
+        url(../public/fonts/novela-regular-webfont.woff2) format('woff2');
     }
+}
+
+.hideComponent {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.showHiddenComponent {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    /* transition-delay: 300ms; */
 }
