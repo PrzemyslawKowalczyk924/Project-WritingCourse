@@ -3,23 +3,116 @@
 @tailwind utilities;
 
 @layer base {
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
     @font-face {
         font-family: 'Novela';
-        src: url(../public/fonts/novela-regular-webfont.woff) format('woff'),
-        url(../public/fonts/novela-regular-webfont.woff2) format('woff2');
+        font-weight: 400;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-regular-webfont.eot);
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-regular-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-regular-webfont.woff2) format('woff2');
     }
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 300;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-regularitalic-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-regularitalic-webfont.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 900;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-black-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-black-webfont.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 800;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-blackitalic-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-blackitalic-webfont.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 700;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-bold-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-bold-webfont.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 700;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-bolditalic-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-bolditalic-webfont.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 100;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-displayitalic-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-displayitalic-webfont.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 200;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-displayregular-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-displayregular-webfont.woff2) format('woff2');
+    }
+
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 600;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-semibold-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-semibold-webfont.woff2) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Novela';
+        font-weight: 500;
+        src: url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-semibolditalic-webfont.woff) format('woff'),
+        url(../public/fonts/Novela-Complete-Webfont/Novela-webfontkit/novela-semibolditalic-webfont.woff2) format('woff2');
+    }
+    
 }
 
-.hideComponent {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
+@layer components {
+
+    .customContainer {
+        @apply max-w-commonLayout text-center mt-0 mb-0 mr-auto ml-auto pt-0 pb-0 pr-5 pl-5
+    }
+
+    .inlineContainer {
+        position: absolute;
+        /* margin-left: 45px; */
+        top: 90px;
+        left: 145px;
+        /* width: 100%;
+        height: 100%; */
+        text-align: center;
+        overflow: hidden;
+        z-index: 0;
+    }
+
 }
 
-.showHiddenComponent {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-    /* transition-delay: 300ms; */
+@layer utilities {
+
+    .hideComponent {
+        @apply opacity-0 blur-sm -translate-x-full transition-all
+    }
+    
+    .showHiddenComponent {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        transition-delay: 300ms;
+    }
+    
 }

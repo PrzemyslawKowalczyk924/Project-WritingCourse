@@ -7,21 +7,28 @@ export default {
       'novela': 'Novela, serif'
     },
     extend: {
-      container: {
-        center: true,
-        padding: '2rem',
-      },
-      section: {
-        padding: '108px 0px',
+      fontSize: {
+        '10xl': '10rem', 
+        '11xl': '12rem',
+        '12xl': '14rem'
       },
       colors: {
+        'lavenda-pink': '#FFEBEC',
         'mimi-pink': '#FFD6D9',
-        'magenta': '#a0025c'
+        'light-pink': '#FFC2C6',
+        'cherry-pink': '#FFADB3',
+        'magenta': '#a0025c',
+        'teal': '#008080'
       },
       minHeight: {
-        '1/2': '50vh',
         '1/4': '25vh',
+        '1/2': '50vh',
+        '3/4': '75vh',
+        '7/8': '85vh',
       },
+      maxWidth: {
+        'commonLayout': '1140px'
+      }
     },
   },
   plugins: [],

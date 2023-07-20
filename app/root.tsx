@@ -22,7 +22,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-novela bg-mimi-pink text-magenta leading-7 text-center">
+      <body className="font-novela bg-mimi-pink text-magenta leading-7 text-center m-0">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
