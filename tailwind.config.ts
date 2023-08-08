@@ -1,8 +1,30 @@
 import type { Config } from 'tailwindcss'
 
 export default {
-  content: ['./app/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './app/**/*.{js,jsx,ts,tsx}',
+    './node_modules/flowbite-react/**/*.js'
+  ],
   theme: {
+    screens: {
+      'xs': {'max': '639px'},
+      // => @media (max-width: 639px) { ... }
+
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
     fontFamily: {
       'novela': 'Novela, serif'
     },
@@ -18,7 +40,10 @@ export default {
         'light-pink': '#FFC2C6',
         'cherry-pink': '#FFADB3',
         'magenta': '#a0025c',
-        'teal': '#008080'
+        'teal': '#008080',
+        'beige': '#D9BA8C',
+        'morelowy': '#E9967B',
+        'hexowy': '#fe947a'
       },
       minHeight: {
         '1/4': '25vh',
@@ -38,6 +63,9 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('flowbite/plugin')
+  ],
 } satisfies Config
 

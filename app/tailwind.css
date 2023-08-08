@@ -100,6 +100,32 @@
         z-index: 0;
     }
 
+    .butterFlySizer {
+        /* background-image: url('../public/icons/butterflySVG.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; */
+
+        width: 1000px;
+        height: 1000px;
+        transform: rotate(30deg) translateX(-176px) translateY(-237px) scale(2.5);
+        z-index: 0;
+        opacity: 60%;
+    }
+
+    @keyframes ticker-kf {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(-108rem, 0 , 0);
+        }
+    }
+    .img-ticker {
+        animation: ticker-kf 18s linear infinite;
+    }
+
 }
 
 @layer utilities {
