@@ -1,8 +1,9 @@
+import FlyOut from "../features/flyOutMenu"
+
 const navigation = [
-  { name: 'kurs', href: '#', current: true },
-  { name: 'o mnie', href: '#', current: false },
-  { name: 'blog', href: '#', current: false },
-  { name: 'kontakt', href: '#', current: false },
+  { name: 'o mnie', href: 'about', current: false },
+  { name: 'blog', href: 'blog', current: true },
+  { name: 'kontakt', href: 'contact', current: false },
 ]
 
 function classNames(...classes) {
@@ -12,6 +13,7 @@ function classNames(...classes) {
 export default function Navigation() {
   return (
     <div className="flex space-x-4">
+    <FlyOut />
     {navigation.map((item) => (
       <a
         key={item.name}
