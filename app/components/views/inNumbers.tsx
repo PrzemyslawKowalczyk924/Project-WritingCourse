@@ -1,3 +1,5 @@
+import CountUp from "../features/numberCounter"
+
 const links = [
     { name: 'Nauka z mentorem', href: '#' },
     { name: 'Nauka w grupie', href: '#' },
@@ -13,6 +15,7 @@ const links = [
   ]
   
   export default function InNumbers() {
+
     return (
       <div className="relative isolate overflow-hidden bg-mimi-pink py-24 sm:py-32">
        {/*  <img
