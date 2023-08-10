@@ -57,6 +57,7 @@ export default {
       backgroundImage: {
         'hero-pattern': 'url("public/images/hero_pinkBackground.png")',    
         'old-paper': 'url("https://images.pexels.com/photos/14129745/pexels-photo-14129745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',    
+        'contact-pattern': 'url("public/images/grafika2.png")',   
       },
       boxShadow: {
         'costum-1': '1px 1px 1px black',

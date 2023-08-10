@@ -145,5 +145,15 @@
         transition-delay: 300ms;
     }
 
+    /* Dodaje ' min' dla drugiego elementu */
+    .second-child-ofValue::after {
+        content: ' min';
+        font-size: 30px;
+    }
+  
+    /* Dodaje '%' dla ostatniego elementu */
+    .last-child-ofValue::after {
+        content: '%';
+    }
     
 }
