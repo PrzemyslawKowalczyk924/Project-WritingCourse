@@ -1,19 +1,18 @@
-import { useEffect, useRef, useState } from 'react';
-import arrow_down from "../../public/icons/arrow_down.svg";
-import dreamComeTrue from "../../public/images/DreamComeTrue.jpg";
-import typeWriter2 from "../../public/movies/typewriter2.mp4";
-import { motion, useTransform, useScroll, spring } from "framer-motion";
+import { useEffect, useRef } from 'react';
+import { motion, useTransform, useScroll, spring, useInView } from "framer-motion";
 import { useFollowPointer } from "../features/use-follow-pointer";
 import TypewriterEffect from '../features/typeWriter';
-import { text } from 'express';
 
 
 export default function Intro() {
 
-    const ref = useRef(null);
+    const ref = useRef(null)
+    const isInView = useInView(ref);
+
+   /*  const ref = useRef(null);
     const { x, y } = useFollowPointer(ref);
 
-    const introRef = useRef(null);
+    const introRef = useRef(null); */
 
 /*     const [isExpanded, setIsExpanded] = useState({
         one: false,
@@ -30,8 +29,14 @@ export default function Intro() {
 
     useEffect(() => {
 
+        if (isInView) {
+            const hiddenElements = document.querySelectorAll('.hideComponentBottom');
+            hiddenElements.forEach((element) => element.classList.add('showHiddenComponent'));
+            console.log('hidden', isInView);
+        }
+
         // tutaj mamy szanowną funkcjonalność odpowiedzialną za pokazywanie i znikanie napisów w Intro
-        const observer = new IntersectionObserver((entries) => {
+       /*  const observer = new IntersectionObserver((entries) => {
             //console.log(entries)
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -40,17 +45,17 @@ export default function Intro() {
                     entry.target.classList.remove('showHiddenComponent');
                 }
             });
-        });
+        }); */
 
-        if (typeof IntersectionObserver !== 'undefined') {
+       /*  if (typeof IntersectionObserver !== 'undefined') {
             const hiddenElements = document.querySelectorAll('.hideComponentBottom');
             hiddenElements.forEach((element) => observer.observe(element));
             //return observer.disconnect();
-        }
-    }, []);
+        } */
+    }, [isInView]);
 
 
-    useEffect(() => {
+    /* useEffect(() => {
         let path = document.querySelector('path');
         let svgElem = document.querySelector('svg');
         let pathLength = path.getTotalLength();
@@ -88,7 +93,7 @@ export default function Intro() {
         }
 
         window.addEventListener('scroll', handleScroll);
-    })
+    }) */
 
    /*  useEffect(() => {
 
@@ -123,7 +128,7 @@ export default function Intro() {
 
     return (
       <section className="w-full bg-lavenda-pink relative scroll-smooth h-screen">
-        <div className='max-w-screen-xl text-center mt-0 mb-0 mr-auto ml-auto pt-0 pb-0 pr-5 pl-5 flex xs:flex-col-reverse sm:flex-col-reverse md:flex-col justify-center h-full items-end'>
+        <div className='max-w-screen-xl text-center mt-0 mb-0 mr-auto ml-auto pt-0 pb-0 pr-5 pl-5 flex xs:flex-col-reverse sm:flex-col-reverse md:flex-col justify-center h-full items-end xs:mt-52'>
         {/* <motion.div initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 0.8, scale: 1 }}
         transition={{
@@ -138,18 +143,18 @@ export default function Intro() {
       }} className="bg-lavenda-pink overflow-hidden rounded-full shadow-xl top-1/4 absolute">
             <video src={typeWriter2} autoPlay loop muted className="w-72 h-72 object-cover"></video>
         </motion.div> */}
-            <div className='flex flex-col justify-end items-end w-6/12 text-left h-1/2'>
-                <div className='w-full text-lg xs:text-base pl-24 hideComponentBottom'>
+            <div className='flex flex-col justify-end items-end w-6/12 text-left h-1/2 xs:w-full xs:justify-start xs:h-full'>
+                <div className='w-full text-lg xs:text-base pl-24 hideComponentBottom h-44 xs:pl-5'>
                     <span>Wyrusz w twórczą przygodę! Chcesz napisać książkę, ale masz mnóstwo wątpliwości? Dokucza Ci blokada? A może nie wiesz od czego zacząć?</span>
                     <TypewriterEffect text='  Kurs „Napisz historię marzeń!” pomoże Ci w kwestiach technicznych, przyniesie mnóstwo inspiracji i motywacji. Pora odkryć w sobie talent i wykorzystać maksimum możliwości.'/>
                 </div>
             </div>
             <div className="text-black h-1/2 flex flex-row justify-center items-end w-full">
-                <div className="text-black flex flex-col justify-center items-start mr-56">
-                    <h2 className="hideComponentBottom text-11xl font-light mb-14">Napisz</h2>
-                    <div className="hideComponentBottom text-black tracking-tighter font-black text-9xl flex flex-row justify-end items-center mt-6 mb-28">
-                        <p className="hideComponentBottom mt-3 mr-10">historię</p>
-                        <p className="hideComponentBottom">marzeń!</p>
+                <div ref={ref} className="text-black flex flex-col justify-center items-start mr-56 xs:mr-0 xs:items-center">
+                    <h2 className="hideComponentBottom text-11xl font-light mb-14 xs:mb-0 xs:text-7xl xs:mr-48">Napisz</h2>
+                    <div className="hideComponentBottom text-black tracking-tighter font-black text-9xl flex flex-row justify-end items-center mt-6 mb-28 xs:mt-2 xs:text-5xl">
+                        <p className="hideComponentBottom mt-3 mr-10 xs:mr-4 xs:mt-0">historię</p>
+                        <p className="hideComponentBottom xs:mr-7">marzeń!</p>
                     </div>   
                 </div>
             </div>

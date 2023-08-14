@@ -40,12 +40,12 @@ export default function Index() {
   const skewYTownAndBlog = useTransform(scrollYProgress, [0, 1], [0, -0.5]);
 
   return (
-    <div className="grid grid-flow-row grid-cols-1 overflow-hidden ">
-      <motion.div className="bg-cover bg-hero-pattern" style={{ perspective: perspectiveVal, rotate: '0deg', skewY: skewY, rotateY: '0deg', scaleX: scalEX, translateZ: '0px', translateX: '0px', translateY: transY,  rotateX: tiltY, transformOrigin: "bottom"}}>
-        <motion.header className="flex flex-col  justify-center items-center h-screen" style={{ }}>
-            <motion.h1 className="text-8xl mb-2 mt-auto text-magenta tracking-tighter drop-shadow-2xl" style={{ perspective: perspectiveVal, rotateY: '0deg', scaleX: scaleEXName, scaleY: scaleNameY, translateZ: '0px', translateX: '0px', translateY: transYName,  rotateX: rotateNameX, transformOrigin: "bottom"}}>Amelia Pudzianowska&#8482;</motion.h1>
-            <h1 className="text-4xl mt-2 font-thin text-magenta">Przedstawia:</h1>
-            <motion.h2 className="text-1 mt-auto font-extralight text-magenta mb-7 drop-shadow" style={{ perspective: perspectiveVal, rotateY: '0deg', scaleX: scaleEXTownAndBlogName, skewY: skewYTownAndBlog, scaleY: scaleTowAndBlogY, translateZ: '0px', translateX: '0px', translateY: transYTownAndBlog,  rotateX: rotateNameX, transformOrigin: "bottom"}}>2023 Radom | blog & kurs</motion.h2>
+    <div className="grid grid-flow-row grid-cols-1 overflow-hidden">
+      <motion.div className="bg-cover bg-hero-pattern sm:bg-contain sm:bg-no-repeat xs:bg-right-bottom" style={{ perspective: perspectiveVal, rotate: '0deg', skewY: skewY, rotateY: '0deg', scaleX: scalEX, translateZ: '0px', translateX: '0px', translateY: transY,  rotateX: tiltY, transformOrigin: "bottom"}}>
+        <motion.header className="flex flex-col  justify-center items-center h-screen">
+            <motion.h1 className="text-8xl mb-2 mt-auto text-magenta tracking-tighter drop-shadow-2xl xs:text-3xl" style={{ perspective: perspectiveVal, rotateY: '0deg', scaleX: scaleEXName, scaleY: scaleNameY, translateZ: '0px', translateX: '0px', translateY: transYName,  rotateX: rotateNameX, transformOrigin: "bottom"}}>Amelia Pudzianowska&#8482;</motion.h1>
+            <h1 className="text-4xl mt-2 font-thin text-magenta xs:text-xl">Przedstawia:</h1>
+            <motion.h2 className="text-1 mt-auto font-extralight text-magenta mb-7 drop-shadow xs:text-base" style={{ perspective: perspectiveVal, rotateY: '0deg', scaleX: scaleEXTownAndBlogName, skewY: skewYTownAndBlog, scaleY: scaleTowAndBlogY, translateZ: '0px', translateX: '0px', translateY: transYTownAndBlog,  rotateX: rotateNameX, transformOrigin: "bottom"}}>2023 Radom | blog & kurs</motion.h2>
         </motion.header>
       </motion.div>
       <Intro />
@@ -60,3 +60,5 @@ export default function Index() {
     </div>
   );
 }
+
+//bg-position: 90% center, bacground-size: 298%, bacground-repeat: no-repeat

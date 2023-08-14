@@ -6,8 +6,8 @@ import fota3 from '../../../public/images/blackTulip3.jpg';
 export default function Publication() {
 
     return (
-        <section className="bg-mimi-pink dark:bg-gray-900">
-            <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 min-h-1/2">
+        <section className="bg-mimi-pink dark:bg-gray-900 xs:min-h-screen">
+            <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 min-h-1/2 xs:flex xs:h-full xs:flex-col-reverse">
                 <Carousel>
                     <img
                         alt="..."
@@ -31,7 +31,7 @@ export default function Publication() {
                     />
                 </Carousel>
                 <div className="mt-4 md:mt-0">
-                    <h2 className="mb-6 text-4xl tracking-tighter font-extrabold text-gray-900 dark:text-white">Z nami natychmiast opublikujesz swoją pierwszą opowieść!</h2>
+                    <h2 className="mb-6 text-4xl tracking-tighter font-extrabold text-gray-900 dark:text-white">Z nami opublikujesz opowiadanie w eBooku!</h2>
                     <p className="mb-6 text-gray-500 md:text-lg tracking-tight dark:text-gray-400 text-justify">Cieszę się ogromnie, że mogę zaprezentować wam naszą pierwszą antologię z opowiadaniami! Udostępniam ją całkowicie za darmo, aby zachęcić Was do odkrywania mojego kursu i dołączenia do naszej kreatywnej społeczności pisarskiej. Pobierzcie antologię i doświadczcie niesamowitych możliwości, jakie daje nasz kurs! Razem możemy stworzyć coś wyjątkowego!</p>
                     <a href="images/LoremIpsum.pdf" target="_blank" className="bg-cherry-pink m-5 inline-flex shadow items-center text-gray-800 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
                         Czytaj online
