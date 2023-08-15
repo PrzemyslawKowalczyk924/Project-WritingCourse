@@ -3,7 +3,8 @@ import arrow_down from "../../../public/icons/arrow_down.svg";
 import { motion, Variants } from "framer-motion";
 import TypewriterEffect from '../features/typeWriter';
 import stamp from '../../../public/images/png stamp for insta.png';
-import diamond from '../../../public/icons/boxDiamond.svg'
+import diamond from '../../../public/icons/boxDiamond.svg';
+import autorPhoto from '../../../public/images/author_AvatarTwo.png'
 
 const itemVariants: Variants = {
     open: {
@@ -61,8 +62,8 @@ export default function Intro_PartTwo() {
                 <div className='flex flex-col items-center m-auto h-96'>
                     <p className='whitespace-nowrap font-bold'>AUTOR</p>
                     <p className='font-thin text-3xl mb-6'>Amelia Pudzianowska</p>
-                    <div className='w-24 h-24 bg-light-pink border rounded-full flex justify-center items-center mb-3 shadow border-transparent'>
-                        <img className='w-16 h-16 mb-5 mt-5 ml-1 opacity-80' src={diamond} />
+                    <div className='w-32 h-32 bg-light-pink border rounded-full flex justify-center items-center mb-5 shadow border-transparent'>
+                        <img className='w-28 h-28 rounded-full my-5' src={autorPhoto} />
                     </div>
                     
                     <span className='w-72 text-left whitespace-break-spaces tracking-tight'>Szlifowanie diamentów pod okiem doświadczonego Mentora jest rozwiązaniem, które może otworzyć drzwi do sukcesu. <TypewriterEffect text='  Autorski kurs Amelii Pudzianowskiej, doświadczonej twórczyni, pisarki i poetki to nowatorski pomysł na kreatywne pisanie.'></TypewriterEffect> </span>

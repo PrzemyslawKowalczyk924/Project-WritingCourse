@@ -150,9 +150,9 @@ export default function Intro() {
                 </div>
             </div>
             <div className="text-black h-1/2 flex flex-row justify-center items-end w-full">
-                <div ref={ref} className="text-black flex flex-col justify-center items-start mr-56 xs:mr-0 xs:items-center">
-                    <h2 className="hideComponentBottom text-11xl font-light mb-14 xs:mb-0 xs:text-6xl xs:mr-auto">Napisz</h2>
-                    <div className="hideComponentBottom text-black tracking-tighter font-black text-9xl flex flex-row justify-end items-center mt-6 mb-28 xs:mt-2 xs:text-4xl">
+                <div ref={ref} className="text-black flex flex-col justify-center items-start mr-56 xs:mr-0 xs:items-center 2xs:ml-4">
+                    <h2 className="hideComponentBottom text-11xl font-light mb-14 xs:mb-0 2xs:text-3xl xs:text-6xl xs:mr-auto sm:text-8xl md:text-10xl lg:text-11xl">Napisz</h2>
+                    <div className="hideComponentBottom text-black tracking-tighter font-black text-9xl flex flex-row justify-end items-center mt-6 mb-28 2xs:text-xl xs:mt-2 xs:text-4xl sm:text-6xl md:text-8xl lg:text-9xl">
                         <p className="hideComponentBottom mt-3 mr-10 xs:mr-4 xs:mt-0">historię</p>
                         <p className="hideComponentBottom xs:mr-7">marzeń!</p>
                     </div>   
