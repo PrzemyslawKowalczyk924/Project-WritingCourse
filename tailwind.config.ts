@@ -50,6 +50,8 @@ export default {
         '1/2': '50vh',
         '3/4': '75vh',
         '7/8': '85vh',
+        '5/4': '125vh',
+        '6/4': '150vh',
       },
       maxWidth: {
         'commonLayout': '1140px'
