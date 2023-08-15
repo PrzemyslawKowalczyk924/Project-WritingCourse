@@ -9,6 +9,7 @@ import Ticker from "~/components/views/ticker";
 import CallToAction from "~/components/views/cta";
 import NewsLetter from "~/components/views/newsLetter";
 import Publication from "~/components/views/publication";
+import { useEffect, useState } from "react";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -17,13 +18,49 @@ export const meta: V2_MetaFunction = () => {
   ];
 };
 
+/* const useMobileViewport = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Dostosuj wartość do swoich potrzeb
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
+  return isMobile;
+};
+
+
+const isMobile = useMobileViewport(); */
+
 export default function Index() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Dostosuj wartość do swoich potrzeb
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
   const { scrollYProgress } = useScroll();
   //                                           0, 0.2, 1    0   -60 -660
   //                                           0, 60, 60    0, 120, 120 + 0. -660. -660    0, -660, -660
 
   const tiltX = useTransform(scrollYProgress, [0, 20], [0, 170]); // Przechylanie w lewo i w prawo
-  const tiltY = useTransform(scrollYProgress, [0, 1], [0, 380]); // Dostosuj wartość, jeśli potrzebujesz inny stopień odchylania na osi Y
+  const tiltY = useTransform(scrollYProgress, [0, 1], 
+   isMobile ? [0, 850] : [0, 380]
+    ); // Dostosuj wartość, jeśli potrzebujesz inny stopień odchylania na osi Y
   const scalEX = useTransform(scrollYProgress, [0, 1], [1, 2]); // Dostosuj wartość, aby zwężać obraz wzdłuż osi X
   const transY = useTransform(scrollYProgress, [0, 1], [0, -0.5]);
   const skewY = useTransform(scrollYProgress, [0, 1], [0, -15]);
@@ -38,6 +75,7 @@ export default function Index() {
   const scaleEXTownAndBlogName = useTransform(scrollYProgress, [0, 1], [1, 1.16]);
   const transYTownAndBlog = useTransform(scrollYProgress, [0, 1], [0, -430]);
   const skewYTownAndBlog = useTransform(scrollYProgress, [0, 1], [0, -0.5]);
+  
 
   return (
     <div className="grid grid-flow-row grid-cols-1 overflow-hidden">
