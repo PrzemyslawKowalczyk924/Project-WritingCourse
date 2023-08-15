@@ -149,10 +149,10 @@ export default function Intro() {
                     <TypewriterEffect text='  Kurs „Napisz historię marzeń!” pomoże Ci w kwestiach technicznych, przyniesie mnóstwo inspiracji i motywacji. Pora odkryć w sobie talent i wykorzystać maksimum możliwości.'/>
                 </div>
             </div>
-            <div className="text-black h-1/2 flex flex-row justify-center items-end w-full xs:mx-auto">
-                <div ref={ref} className="text-black flex flex-col justify-center items-start mr-56 xs:mx-0 xs:items-center">
-                    <h2 className="hideComponentBottom text-11xl font-light mb-14 xs:mb-0 xs:text-5xl xs:mr-auto">Napisz</h2>
-                    <div className="hideComponentBottom text-black tracking-tighter font-black text-7xl flex flex-row justify-end items-center mt-6 mb-28 xs:mt-2 xs:text-5xl">
+            <div className="text-black h-1/2 flex flex-row justify-center items-end w-full">
+                <div ref={ref} className="text-black flex flex-col justify-center items-start mr-56 xs:mr-0 xs:items-center">
+                    <h2 className="hideComponentBottom text-11xl font-light mb-14 xs:mb-0 xs:text-6xl xs:mr-auto">Napisz</h2>
+                    <div className="hideComponentBottom text-black tracking-tighter font-black text-9xl flex flex-row justify-end items-center mt-6 mb-28 xs:mt-2 xs:text-4xl">
                         <p className="hideComponentBottom mt-3 mr-10 xs:mr-4 xs:mt-0">historię</p>
                         <p className="hideComponentBottom xs:mr-7">marzeń!</p>
                     </div>   
