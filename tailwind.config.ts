@@ -7,11 +7,11 @@ export default {
   ],
   theme: {
     screens: {
-      '2xs': {'max': '425px'},
-      // => @media (max-width: 425px) { ... }
-
       'xs': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
+      
+      '2xs': {'max': '425px'},
+      // => @media (max-width: 425px) { ... }
 
       'sm': {'min': '640px'},
       // => @media (min-width: 640px) { ... }

@@ -143,17 +143,17 @@ export default function Intro() {
       }} className="bg-lavenda-pink overflow-hidden rounded-full shadow-xl top-1/4 absolute">
             <video src={typeWriter2} autoPlay loop muted className="w-72 h-72 object-cover"></video>
         </motion.div> */}
-            <div className='flex flex-col justify-end items-end w-6/12 text-left h-1/2 xs:w-full xs:justify-start xs:h-full'>
-                <div className='w-full text-lg xs:text-base pl-24 hideComponentBottom h-44 xs:pl-5'>
+            <div className='flex flex-col justify-end items-end w-6/12 text-left h-1/2 xs:w-full xs:justify-start xs:h-full sm:w-full sm:justify-center md:justify-end sm:h-1/2 md:w-1/2'>
+                <div className='w-full text-lg xs:text-base pl-24 hideComponentBottom h-44 xs:pl-5 md:pl-2'>
                     <span>Wyrusz w twórczą przygodę! Chcesz napisać książkę, ale masz mnóstwo wątpliwości? Dokucza Ci blokada? A może nie wiesz od czego zacząć?</span>
                     <TypewriterEffect text='  Kurs „Napisz historię marzeń!” pomoże Ci w kwestiach technicznych, przyniesie mnóstwo inspiracji i motywacji. Pora odkryć w sobie talent i wykorzystać maksimum możliwości.'/>
                 </div>
             </div>
-            <div className="text-black h-1/2 flex flex-row justify-center items-end w-full">
-                <div ref={ref} className="text-black flex flex-col justify-center items-start mr-56 xs:mr-0 xs:items-center 2xs:ml-4">
-                    <h2 className="hideComponentBottom text-11xl font-light mb-14 xs:mb-0 2xs:text-3xl xs:text-6xl xs:mr-auto sm:text-8xl md:text-10xl lg:text-11xl">Napisz</h2>
-                    <div className="hideComponentBottom text-black tracking-tighter font-black text-9xl flex flex-row justify-end items-center mt-6 mb-28 2xs:text-xl xs:mt-2 xs:text-4xl sm:text-6xl md:text-8xl lg:text-9xl">
-                        <p className="hideComponentBottom mt-3 mr-10 xs:mr-4 xs:mt-0">historię</p>
+            <div className="text-black h-1/2 flex flex-row justify-center items-end w-full sm:h-full md:h-1/2">
+                <div ref={ref} className="text-black flex flex-col justify-center items-start lg:mr-56 lg:ml-0 xs:mr-0 xs:items-center 2xs:ml-4 sm:mr-auto sm:ml-auto md:mr-auto md:ml-5">
+                    <h2 className="hideComponentBottom text-11xl font-light mb-14 2xs:text-6xl xs:text-7xl xs:mb-0 sm:mb-0 xs:mr-auto sm:text-8xl md:text-9xl lg:text-11xl">Napisz</h2>
+                    <div className="hideComponentBottom text-black tracking-tighter font-black text-9xl flex flex-row justify-end items-center mt-6 mb-28 2xs:text-4xl xs:mt-2 sm:mt-0 xs:text-5xl sm:text-6xl md:text-7xl lg:text-9xl">
+                        <p className="hideComponentBottom mt-3 mr-10 xs:mr-4 sm:mr-4 xs:mt-0 sm:mt-0">historię</p>
                         <p className="hideComponentBottom xs:mr-7">marzeń!</p>
                     </div>   
                 </div>

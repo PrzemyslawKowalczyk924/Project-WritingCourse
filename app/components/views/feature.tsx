@@ -39,7 +39,7 @@ export default function Feature() {
           „Wszystko czego potrzebujesz aby stać się świadomym twórcą”
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-900 text-justify">
-          W przeciwieństwie do całej gamy lekcji, które opierają się na nagranych lekcjach, kurs „Napisz historię marzeń!” jest prowadzony na żywo. Daje to możliwość komunikacji, ćwiczeń i zabawy podczas trwania zajęć. 
+          W przeciwieństwie do całej gamy zajęć, które opierają się na nagranych lekcjach, kurs „Napisz historię marzeń!” jest prowadzony na żywo. Daje to możliwość komunikacji, ćwiczeń i zabawy podczas trwania zajęć. 
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-900 text-justify">
           Warsztaty prowadzone w małych grupkach pozwalają na integrację, nawiązywanie internetowych przyjaźni i wzajemnego wspierania się w twórczej drodze. Kurs prowadzony jest przez platformę Google Meets, składa się z pięciu spotkań, a jego celem jest umożliwienie uczestnikowi publikacji swojego pierwszego opowiadania we wspólnej antologii.
