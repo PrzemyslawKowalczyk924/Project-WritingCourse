@@ -56,8 +56,8 @@ export default function Intro_PartTwo() {
     }, []);
 
     return (
-      <section className="w-full bg-lavenda-pink relative xs:mb-32 scroll-smooth z-10">
-        <div className="bg-mimi-pink min-h-screen flex flex-col justify-center items-center">
+      <section className="w-full bg-mimi-pink relative xs:mb-32 scroll-smooth z-10">
+        <div className="max-w-commonLayout min-h-screen flex flex-col justify-center items-center">
             <div className='flex flex-row justify-between items-center w-full xs:flex-col-reverse'>
                 <div className='flex flex-col items-center m-auto h-96'>
                     <p className='whitespace-nowrap font-bold'>AUTOR</p>

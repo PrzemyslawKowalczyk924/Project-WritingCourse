@@ -7,7 +7,7 @@ export default function Publication() {
 
     return (
         <section className="bg-mimi-pink dark:bg-gray-900 xs:min-h-5/4 sm:min-h-5/4 md:min-h-5/4">
-            <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 h-full xs:flex xs:h-full xs:flex-col-reverse">
+            <div className="gap-8 items-center py-8 px-4 mx-auto max-w-commonLayout xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 h-full xs:flex xs:h-full xs:flex-col-reverse">
                 <Carousel>
                     <img
                         alt="..."

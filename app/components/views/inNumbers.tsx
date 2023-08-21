@@ -37,7 +37,7 @@ const links = [
           createAnimation(countH2, 60, 3),
           createAnimation(countH3, 3, 3),
           createAnimation(countH4, 8, 5),
-          createAnimation(countH5, 100, 10),
+          createAnimation(countH5, 100, 7),
         ];
       
         return () => {
@@ -61,8 +61,8 @@ const links = [
 
 
     return (
-      <div  className="relative isolate overflow-hidden bg-mimi-pink py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section  className="relative isolate overflow-hidden bg-mimi-pink py-24 sm:py-32 z-30">
+        <div className="mx-auto max-w-commonLayout px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tighter text-black sm:text-6xl">„Napisz historię marzeń!” w liczbach:</h2>
             <p className="mt-6 text-lg leading-8 text-gray-700">
@@ -95,7 +95,7 @@ const links = [
             </dl>
           </div>
         </div>
-      </div>
+      </section>
     )
   }
   

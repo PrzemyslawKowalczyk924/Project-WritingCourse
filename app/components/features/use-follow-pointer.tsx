@@ -14,6 +14,8 @@ export function useFollowPointer(ref: RefObject<HTMLElement>) {
       setPoint({ x, y });
     };
 
+    const askMoreComponent = document.getElementById('ctaId');
+    console.log('askMore', askMoreComponent)
     window.addEventListener("pointermove", handlePointerMove);
 
     return () => window.removeEventListener("pointermove", handlePointerMove);

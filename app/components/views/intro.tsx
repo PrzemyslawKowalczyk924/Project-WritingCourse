@@ -128,7 +128,7 @@ export default function Intro() {
 
     return (
       <section className="w-full bg-lavenda-pink relative scroll-smooth h-screen">
-        <div className='max-w-screen-xl text-center mt-0 mb-0 mr-auto ml-auto pt-0 pb-0 pr-5 pl-5 flex xs:flex-col-reverse sm:flex-col-reverse md:flex-col justify-center h-full items-end xs:mt-52'>
+        <div className='max-w-commonLayout text-center mt-0 mb-0 mr-auto ml-auto pt-0 pb-0 pr-5 pl-5 flex xs:flex-col-reverse sm:flex-col-reverse md:flex-col justify-center h-full items-end xs:mt-52'>
         {/* <motion.div initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 0.8, scale: 1 }}
         transition={{
