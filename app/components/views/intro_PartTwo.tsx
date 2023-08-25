@@ -68,7 +68,7 @@ export default function Intro_PartTwo() {
                     
                     <span className='w-72 text-left whitespace-break-spaces tracking-tight'>Szlifowanie diamentów pod okiem doświadczonego Mentora jest rozwiązaniem, które może otworzyć drzwi do sukcesu. <TypewriterEffect text='  Autorski kurs Amelii Pudzianowskiej, doświadczonej twórczyni, pisarki i poetki to nowatorski pomysł na kreatywne pisanie.'></TypewriterEffect></span>
                     
-                    <motion.nav
+                    {/* <motion.nav
                         initial={false}
                         animate={isOpen ? "open" : "closed"}
                         className="menu w-72 drop-shadow"
@@ -121,7 +121,7 @@ export default function Intro_PartTwo() {
                                 <li>o kursie</li>
                             </motion.ul>
                         </motion.div>
-                    </motion.nav>
+                    </motion.nav> */}
 
                        {/*  <div className='hideComponent flex flex-col justify-end items-center'>
                             <button onClick={() => toggleHiddenComponentsText('two')}>{isExpanded.two ? 'Ukryj tekst' : 'dowiedz się więcej'}<img className="w-5 h-5 ml-2 p-0 inline" src={arrow_down}/></button>
