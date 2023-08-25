@@ -3,7 +3,7 @@ export default function AskMore() {
 
     return (
 
-        <section className="text-gray-600 body-font bg-mimi-pink z-30">
+        <section className="text-gray-600 body-font bg-mimi-pink z-30 relative">
             <div className="max-w-commonLayout px-5 py-24 mx-auto z-30">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">Masz więcej pytań?</h1>
                 <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">

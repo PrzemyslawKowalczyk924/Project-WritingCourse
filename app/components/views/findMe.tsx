@@ -1,7 +1,9 @@
+import slonecznik12 from '../../../public/images/grafika12.svg'
 
 export default function FindMe() {
     return (
-      <div className="bg-slonecznik-pattern bg-right-bottom py-24 sm:py-32">
+      <section className="bg-lavenda-pink py-24 sm:py-32 relative">
+        <img className='absolute w-96 h-80 left-2/3 top-0 opacity-95' src={slonecznik12} />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-start ml-28 text-lg font-semibold leading-8 text-gray-900">
             Znajdziesz mnie również na:
@@ -33,6 +35,6 @@ export default function FindMe() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     )
   }

@@ -11,6 +11,7 @@ import Publication from "~/components/views/publication";
 import AskMore from "~/components/views/askMore";
 import Hero from "~/components/views/hero";
 import FindMe from "~/components/views/findMe";
+import Cta2 from "~/components/views/cta2";
 
 export const meta: V2_MetaFunction = () => {
   return [

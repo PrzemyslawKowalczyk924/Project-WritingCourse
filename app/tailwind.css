@@ -177,5 +177,25 @@
         margin-left: 7%;
         margin-right: auto;
     }
+
+    .sunflower {
+        transform: scaleX(-1);
+        top: 34.333333%;
+        right: 69.666667%;
+    }
+
+    .sunFlowerMobile {
+        transform: scaleX(-1);
+        top: 2.333333%;
+        right: 5.666667%;
+        width: 136px;
+    }
+
+    .sunFlowerTablet {
+        transform: scaleX(-1);
+        top: -0.666667%;
+        right: 9.666667%;
+        width: 200px;
+    }
     
 }

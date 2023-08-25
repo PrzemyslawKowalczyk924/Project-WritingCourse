@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     screens: {
+
+      'md-max': {'max': '767px'},
+      // => @media (max-width: 767px) { ... }
+
       'xs': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
       
@@ -64,6 +68,13 @@ export default {
         'old-paper': 'url("https://images.pexels.com/photos/14129745/pexels-photo-14129745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',    
         'contact-pattern': 'url("public/images/grafika2.png")',   
         'slonecznik-pattern': 'url("public/images/grafika3.png")',   
+        'slonecznik2-pattern': 'url("public/images/grafika6.png")',   
+        'slonecznik3-pattern': 'url("public/images/grafika7.png")',   
+        'slonecznik4-pattern': 'url("public/images/grafika8.png")',   
+        'slonecznikAI-pattern': 'url("public/images/grafika9.svg")',   
+        'slonecznik10-pattern': 'url("public/images/grafika10.svg")',   
+        'slonecznik11-pattern': 'url("public/images/grafika11.svg")',   
+        'slonecznik12-pattern': 'url("public/images/grafika12.svg")',   
       },
       boxShadow: {
         'costum-1': '1px 1px 1px black',
