@@ -14,8 +14,11 @@ export default {
       'xs': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
       
-      '2xs': {'max': '425px'},
+      '2xs': {'max': '424px'},
       // => @media (max-width: 425px) { ... }
+
+      '2sm': {'min' : '425px'},
+      // => @media (min-width: 425px) { ... }
 
       'sm': {'min': '640px'},
       // => @media (min-width: 640px) { ... }

@@ -65,9 +65,8 @@ export default function Intro_PartTwo() {
                     <div className='w-32 h-32 bg-light-pink border rounded-full flex justify-center items-center mb-5 shadow border-transparent'>
                         <img className='w-28 h-28 rounded-full my-5' src={autorPhoto} />
                     </div>
-                    
                     <span className='w-72 text-left whitespace-break-spaces tracking-tight'>Szlifowanie diamentów pod okiem doświadczonego Mentora jest rozwiązaniem, które może otworzyć drzwi do sukcesu. <TypewriterEffect text='  Autorski kurs Amelii Pudzianowskiej, doświadczonej twórczyni, pisarki i poetki to nowatorski pomysł na kreatywne pisanie.'></TypewriterEffect></span>
-                    
+                    <a href="contact" className="text-gray-700 bg-cherry-pink hover:bg-primary-800 shadow focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Więcej</a>
                     {/* <motion.nav
                         initial={false}
                         animate={isOpen ? "open" : "closed"}
