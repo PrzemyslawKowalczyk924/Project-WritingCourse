@@ -39,6 +39,10 @@ export default {
       'novela': 'Novela, serif'
     },
     extend: {
+      height: {
+        '128': '32rem',
+        '140': '50rem',
+      },
       fontSize: {
         '10xl': '10rem', 
         '11xl': '12rem',
@@ -62,6 +66,7 @@ export default {
         '7/8': '85vh',
         '5/4': '125vh',
         '6/4': '150vh',
+        '140': '50rem',
       },
       maxWidth: {
         'commonLayout': '1140px'
