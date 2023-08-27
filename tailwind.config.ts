@@ -75,6 +75,18 @@ export default {
         'slonecznik10-pattern': 'url("public/images/grafika10.svg")',   
         'slonecznik11-pattern': 'url("public/images/grafika11.svg")',   
         'slonecznik12-pattern': 'url("public/images/grafika12.svg")',   
+        'zaslona-pattern': 'url("public/images/zaslona.jpg")',   
+        'vanGogh-pattern': 'url("public/images/viewVanGoh.jpg"), url("public/images/vanGogh2.jpg")',   
+        'ctaBackground-pattern': 'url("public/images/ctaBackGround.png")',   
+        'ctaCourtain1-pattern': 'url("public/images/kurtyna1.jpg")',   
+        'ctaCourtain2-pattern': 'url("public/images/kurtyna2.jpg")',   
+        'ctaCourtain3-pattern': 'url("public/images/kurtyna3.jpg")',   
+        'zaslona2-pattern': 'url("public/images/zaslona2.jpg")',   
+        'zaslona3-pattern': 'url("public/images/zaslona3.jpg")',   
+        'zaslona4-pattern': 'url("public/images/zaslona4.jpg")',   
+      },
+      backgroundSize: {
+        'contain-50': '50% 50%',
       },
       boxShadow: {
         'costum-1': '1px 1px 1px black',

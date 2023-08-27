@@ -87,7 +87,8 @@ const links = [
                       index === 1 ? 'second-child-ofValue' : ''
                     } ${index === stats.length - 1 ? 'last-child-ofValue' : ''} `}>{stat.value}
                     </motion.dd> 
-                    : ''
+                    : <motion.dd className={`text-5xl mb-3 font-bold leading-10 tracking-tight text-black`}>{stat.value}
+                    </motion.dd> 
                   }
 
                 </div>
