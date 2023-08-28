@@ -198,4 +198,23 @@
         width: 200px;
     }
 
+    .backgroundOfCTA {
+        position: relative;
+    }
+
+    .backgroundOfCTA::before {
+        content: '';
+        position: fixed;
+        z-index: -999;
+        display: block;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        background-image: url(../public/images/ctaBackGround.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
 }
