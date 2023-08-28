@@ -19,8 +19,7 @@ export default function CallToAction() {
     };
 
     return (
-        <section id='ctaId' className="bg-ctaBackground-pattern bg-cover bg-fixed bg-no-repeat md-max:h-140 my-20 h-screen dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
-            {/* <img className='absolute w-96 h-96 top-auto left-0 opacity-50 -z-50' src={slonecznik13} /> */}
+        <section id='ctaId' className="bg-ctaBackground-pattern bg-cover bg-fixed bg-no-repeat md-max:h-140 md-max:bg-auto md-max:bg-repeat h-screen dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
             <div className='absolute  w-full h-full top-0'>
                 <div className='absolute bg-zaslona-pattern w-96 h-96 top-0 left-0 -z-40 rounded-bl-full shadow-2xl transform -scale-x-100 2xs:w-1/2 md-max:w-5/12 md-max:h-1/4'></div>
                 <div className='absolute bg-zaslona-pattern w-96 h-96 top-0 right-0 -z-40 rounded-bl-full shadow-2xl 2xs:w-1/2 md-max:w-5/12 md-max:h-1/4'></div>
@@ -28,15 +27,11 @@ export default function CallToAction() {
                 <div className='absolute bg-zaslona-pattern w-80 h-96 top-48 left-0 -z-50 rounded-bl-full shadow-2xl transform -scale-x-100 md-max:h-1/2 md-max:w-1/4 md-max:top-0'></div>
                 <div className='absolute bg-zaslona-pattern w-80 h-96 top-48 right-0 -z-50 rounded-bl-full shadow-2xl md-max:h-1/2 md-max:w-1/4 md-max:top-0'></div>
 
-                {/* <div className='absolute bg-zaslona-pattern w-60 h-72 top-1/4 left-0 rounded-bl-full -z-50 shadow-2xl transform -scale-x-100'></div> */}
-                {/* <div className='absolute bg-zaslona-pattern w-40 h-72 bottom-0 top-3/4 left-0 -z-50 rounded-tr-full shadow-2xl'></div> */}
-                
                 <div className='absolute bg-zaslona-pattern w-60 h-72 top-80 left-0 rounded-bl-full -z-50 shadow-2xl transform -scale-x-100 -skew-x-12 -skew-y-12 scale-y-150 -translate-x-14 md-max:w-1/4 md-max:h-1/2 md-max:top-0'></div>
                 <div className='absolute bg-zaslona-pattern w-40 h-72 bottom-0 top-80 right-0 -z-50 rounded-bl-full shadow-2xl transform skew-x-12 skew-y-12 scale-y-150 translate-x-5 md-max:w-1/4 md-max:h-1/2 md-max:top-0'></div>
 
                 <div className='absolute bg-zaslona-pattern bg-right-top w-72 h-72 bottom-0 left-0 -z-50 rounded-tl-full shadow-2xl transform -scale-x-100 scale-y-150 -rotate-12 -translate-x-32 md-max:w-1/3 md-max:1/2'></div>
                 <div className='absolute bg-zaslona-pattern bg-right-top w-72 h-72 bottom-0 right-0 -z-50 rounded-bl-full shadow-2xl transform scale-x-100 -scale-y-150 rotate-12 translate-x-32 md-max:w-1/3 md-max:1/2'></div>
-                {/* <img className='absolute w-h-60 h-60 py-40 bottom-0 right-0 opacity-75 -z-50 rounded-tl-full shadow-2xl' src={widokVahGogh}/> */}
             </div>
             <motion.div
                 onMouseMove={handleMouseMove}
