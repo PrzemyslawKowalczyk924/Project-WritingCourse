@@ -61,7 +61,7 @@ const links = [
 
 
     return (
-      <section  className="relative isolate overflow-hidden bg-mimi-pink py-24 sm:py-32 z-30">
+      <section  className="relative isolate overflow-hidden bg-mimi-pink sm:py-32 z-30">
         <div className="mx-auto max-w-commonLayout px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tighter text-black sm:text-6xl">„Napisz historię marzeń!” w liczbach:</h2>
