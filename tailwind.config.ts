@@ -41,7 +41,8 @@ export default {
     extend: {
       height: {
         '128': '32rem',
-        '140': '50rem',
+        '140': '49rem',
+        '170': '70rem',
       },
       fontSize: {
         '10xl': '10rem', 
