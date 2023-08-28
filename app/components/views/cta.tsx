@@ -19,7 +19,7 @@ export default function CallToAction() {
     };
 
     return (
-        <section id='ctaId' className="bg-ctaBackground-pattern bg-cover bg-fixed bg-no-repeat md-max:h-140 md-max:bg-auto md-max:bg-repeat h-screen dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
+        <section id='ctaId' className="bg-ctaBackground-pattern bg-cover bg-fixed md-max:h-140 md-max:bg-auto md-max:bg-repeat h-screen w-full dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
             <div className='absolute  w-full h-full top-0'>
                 <div className='absolute bg-zaslona-pattern w-96 h-96 top-0 left-0 -z-40 rounded-bl-full shadow-2xl transform -scale-x-100 2xs:w-1/2 md-max:w-5/12 md-max:h-1/4'></div>
                 <div className='absolute bg-zaslona-pattern w-96 h-96 top-0 right-0 -z-40 rounded-bl-full shadow-2xl 2xs:w-1/2 md-max:w-5/12 md-max:h-1/4'></div>
