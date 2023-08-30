@@ -2,15 +2,16 @@ import motyl from '../../../public/icons/butterflySVG.svg';
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useFollowPointer } from "../../components/features/use-follow-pointer";
-import ctaBackgroundImg from "../../../public/images/ctaBackGround.png"
+import ctaBackgroundImg from "../../../public/images/ctaBackGround.png";
+import ctaBgMobile from "../../../public/images/ctaBgMobile.png";
 
 export default function CallToAction() {
-    const ref = useRef(null);
+    const ref = useRef <HTMLElement | null> (null);
     const { x, y } = useFollowPointer(ref);
 
     const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
-    const handleMouseMove = (e: { currentTarget: { getBoundingClientRect: () => any; }; clientX: number; clientY: number; }) => {
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const componentRect = e.currentTarget.getBoundingClientRect();
         setCursor({
             x: e.clientX - componentRect.left,
@@ -21,7 +22,7 @@ export default function CallToAction() {
     return (
         <section id='ctaId' className="bg-ctaBackground-pattern md-max:bg-none bg-cover md:bg-fixed md-max:h-140 h-screen w-full dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
             <div className='absolute w-full h-full'>
-                <img src={ctaBackgroundImg} className='hidden md-max:block md-max:fixed top-0 left-0 h-full -z-50 max-w-none' />
+                <img src={ctaBgMobile} className='hidden md-max:block md-max:fixed bg-center left-0 -z-50 h-140 max-w-3xl top-16' />
             </div>
             <div className='absolute  w-full h-full top-0'>
                 <div className='absolute bg-zaslona-pattern w-96 h-96 top-0 left-0 -z-40 rounded-bl-full shadow-2xl transform -scale-x-100 2xs:w-1/2 md-max:w-5/12 md-max:h-1/4'></div>
