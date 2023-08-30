@@ -2,7 +2,7 @@ import motyl from '../../../public/icons/butterflySVG.svg';
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useFollowPointer } from "../../components/features/use-follow-pointer";
-
+import ctaBackgroundImg from "../../../public/images/ctaBackGround.png"
 
 export default function CallToAction() {
     const ref = useRef(null);
@@ -19,7 +19,10 @@ export default function CallToAction() {
     };
 
     return (
-        <section id='ctaId' className=" bg-cover bg-fixed md-max:h-140 h-screen w-full dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
+        <section id='ctaId' className="bg-ctaBackground-pattern md-max:bg-none bg-cover bg-fixed md-max:h-140 h-screen w-full dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
+            <div className='absolute w-full h-full'>
+                <img src={ctaBackgroundImg} className='hidden md-max:block md-max:fixed top-0 left-0 h-full -z-50 max-w-none' />
+            </div>
             <div className='absolute  w-full h-full top-0'>
                 <div className='absolute bg-zaslona-pattern w-96 h-96 top-0 left-0 -z-40 rounded-bl-full shadow-2xl transform -scale-x-100 2xs:w-1/2 md-max:w-5/12 md-max:h-1/4'></div>
                 <div className='absolute bg-zaslona-pattern w-96 h-96 top-0 right-0 -z-40 rounded-bl-full shadow-2xl 2xs:w-1/2 md-max:w-5/12 md-max:h-1/4'></div>
@@ -58,9 +61,7 @@ export default function CallToAction() {
                     <p className="my-6 z-10 px-32 font-light text-gray-800 dark:text-gray-800 md:text-lg md-max:p-0 2xs:mt-2 2xs:mb-0 md-max:m-3">Zapisz się na kurs i "Napisz historię marzeń". <span className='xs:hidden'>Już dziś dołącz do szerokiego grona ludzi, którzy z pisania uczynili swoje życiowe rzemiosło i pasję.</span></p>
                 </div>
             </div>
-            <div className='h-1/2 w-full flex items-center justify-center relative z-10'>
-                <a href="pricing" className="absolute top-0 leading-9 text-gray-900 z-10 bg-lavenda-pink hover:bg-primary-800 shadow-2xl focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-8 py-5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 mx-auto md-max:top-1/2 ">Cennik</a>
-            </div>
+            <a href="pricing" className="absolute top-3/4 leading-9 text-gray-900 z-10 bg-lavenda-pink hover:bg-primary-800 shadow-2xl focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-8 py-5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 mx-auto xs:top-full xs:bottom-3/4 md-max:top-1/2 ">Cennik</a>
 
         </section>
     );

@@ -26,7 +26,7 @@ export default function Feature() {
 
 
   return (
-    <section className="bg-lavenda-pink py-24 sm:py-32 relative">
+    <section className="bg-lavenda-pink py-24 sm:py-32 relative z-20">
       <div className="mx-auto max-w-commonLayout px-6 lg:px-8 flex flex-row">
         <div className='w-96 h-96 mr-auto xs:mr-0 xs:absolute'>
           <motion.img className='butterFlySizer xs:opacity-30' src={motyl} style={ {rotate: '30deg', translateX: '-176px', translateY: "-237px", scale: "2.5", rotateZ: skewY} } />
