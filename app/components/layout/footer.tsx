@@ -2,7 +2,7 @@ import butterfly from "../../../public/icons/butterfly_24.png"
 
 export default function Footer() {
     return (
-        <footer className="bg-white bg-gradient-to-tr from-[#ffffff] to-[#FFEBEC] dark:bg-gray-900">
+        <footer className="bg-white bg-gradient-to-tr from-[#ffffff] to-[#FFEBEC] dark:bg-gray-900 z-20">
             <div className="mx-auto w-full max-w-commonLayout p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">

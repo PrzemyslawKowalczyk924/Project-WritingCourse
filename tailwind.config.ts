@@ -39,6 +39,9 @@ export default {
       'novela': 'Novela, serif'
     },
     extend: {
+      inset: {
+        '650px': '650px',
+      },
       height: {
         '128': '32rem',
         '140': '48rem',

@@ -77,7 +77,7 @@ const links = [
                 </a>
               ))}
             </div>
-            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 xs:grid-cols-4 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat, index) => (
                 <div key={stat.name} className={`flex flex-col-reverse items-center justify-center xs:col-span-2 last:col-span-4 last:mt-4`}>
                   <dt className="text-xl leading-7 text-gray-700">{stat.name}</dt>
