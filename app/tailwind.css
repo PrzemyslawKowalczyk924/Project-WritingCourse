@@ -101,13 +101,8 @@
     }
 
     .butterFlySizer {
-        /* background-image: url('../public/icons/butterflySVG.svg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat; */
-
         width: 1000px;
-        height: 1000px;
+        height: 400px;
         transform: rotate(30deg) translateX(-176px) translateY(-237px) scale(2.5);
         z-index: 0;
         opacity: 60%;
