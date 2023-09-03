@@ -29,19 +29,18 @@ export default function Feature() {
     <section className="bg-lavenda-pink py-24 sm:py-32 relative z-20">
       <div className="mx-auto max-w-commonLayout px-6 lg:px-8 flex flex-row">
         <div className='w-96 h-96 mr-auto xs:mr-0 xs:absolute'>
-          <motion.img className='butterFlySizer xs:opacity-30' src={motyl} style={ {rotate: '35deg', translateX: '-176px', translateY: "37px", scale: "2.5", rotateZ: skewY} } />
+          <motion.img className='butterFlySizer md-max:opacity-20 md-max:pt-20 xs:mt-28  sm:mb-12' src={motyl} style={ {rotate: '35deg', translateX: '-176px', translateY: "37px", scale: "2.5", rotateZ: skewY} } />
         </div>
         <div className="mx-auto max-w-2xl lg:text-center z-10 relative px-24 mr-0 xs:px-5">
-          {/* <h2 className="text-base font-semibold leading-7 from-neutral-500">Publikuj szybciej & skuteczniej</h2> */}
-          <h2 className="text-base font-semibold leading-7 from-neutral-500">Czytaj & Pisz</h2>
-          <h2 className="text-base font-semibold leading-7 from-neutral-500">czyli:</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-base font-semibold leading-7 from-neutral-500 tracking-tight">Czytaj & Pisz</h2>
+          <h2 className="text-base font-semibold leading-7 from-neutral-500 tracking-tight">czyli:</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl">
           „Wszystko czego potrzebujesz aby stać się świadomym twórcą”
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-900 text-justify">
+          <p className="mt-6 text-lg leading-8 text-gray-900 text-justify tracking-tighter">
           W przeciwieństwie do całej gamy zajęć, które opierają się na nagranych lekcjach, kurs „Napisz historię marzeń!” jest prowadzony na żywo. Daje to możliwość komunikacji, ćwiczeń i zabawy podczas trwania zajęć. 
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-900 text-justify">
+          <p className="mt-6 text-lg leading-8 text-gray-900 text-justify tracking-tighter">
           Warsztaty prowadzone w małych grupkach pozwalają na integrację, nawiązywanie internetowych przyjaźni i wzajemnego wspierania się w twórczej drodze. Kurs prowadzony jest przez platformę Google Meets, składa się z pięciu spotkań, a jego celem jest umożliwienie uczestnikowi publikacji swojego pierwszego opowiadania we wspólnej antologii.
           </p>
         </div>
