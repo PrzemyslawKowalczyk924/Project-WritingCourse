@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { motion, useTransform, useScroll, spring, useInView } from "framer-motion";
+import { clsx } from 'clsx';
 import { useFollowPointer } from "../features/use-follow-pointer";
 import TypewriterEffect from '../features/typeWriter';
 import slonecznik10 from '../../../public/images/grafika10.svg';
@@ -10,7 +11,7 @@ import introNapiszHistorie3 from '../../../public/images/introNapiszHistorie3.we
 
 export default function Intro() {
 
-    const ref = useRef(null)
+    const ref = useRef <HTMLDivElement>(null);
     const isInView = useInView(ref);
 
    /*  const ref = useRef(null);
@@ -30,33 +31,6 @@ export default function Intro() {
             [key]: !prevState[key as keyof typeof prevState]
         }));
     } */
-
-    useEffect(() => {
-
-        if (isInView) {
-            const hiddenElements = document.querySelectorAll('.hideComponentBottom');
-            hiddenElements.forEach((element) => element.classList.add('showHiddenComponent'));
-            console.log('hidden', isInView);
-        }
-
-        // tutaj mamy szanowną funkcjonalność odpowiedzialną za pokazywanie i znikanie napisów w Intro
-       /*  const observer = new IntersectionObserver((entries) => {
-            //console.log(entries)
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('showHiddenComponent');
-                } else {
-                    entry.target.classList.remove('showHiddenComponent');
-                }
-            });
-        }); */
-
-       /*  if (typeof IntersectionObserver !== 'undefined') {
-            const hiddenElements = document.querySelectorAll('.hideComponentBottom');
-            hiddenElements.forEach((element) => observer.observe(element));
-            //return observer.disconnect();
-        } */
-    }, [isInView]);
 
 
     /* useEffect(() => {
@@ -136,7 +110,7 @@ export default function Intro() {
         <div className='max-w-commonLayout text-center mt-0 mb-0 mr-auto ml-auto pt-0 pb-0 pr-5 pl-5 flex md:flex-col justify-center h-full items-end md-max:static md-max:flex-col md-max:m-0'>
         {/* <img className='absolute w-screen left-0' src={introNapiszHistorie} /> */}
         {/* <img className='absolute left-0' src={introNapiszHistorie2} /> */}
-        <img className='hideComponentBottom absolute xl:p-52 left-0 md:mt-40 md-max:static md-max:mb-12' src={introNapiszHistorie3} />
+        <img className={clsx('absolute xl:p-52 left-0 md:mt-40 md-max:static md-max:mb-12', isInView ? 'showHiddenComponent' : 'hideComponentBottom')} src={introNapiszHistorie3} />
         {/* <motion.div initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 0.8, scale: 1 }}
         transition={{
@@ -152,7 +126,7 @@ export default function Intro() {
             <video src={typeWriter2} autoPlay loop muted className="w-72 h-72 object-cover"></video>
         </motion.div> */}
             <div ref={ref} className='flex flex-col justify-end items-end w-6/12 text-left h-1/2 sm:justify-center md:justify-start md:w-1/2 mb-10 md-max:w-full md-max:justify-center md-max:m-0 md-max:h-auto'>
-                <div className='w-full text-justify text-lg xs:text-base pl-24 hideComponentBottom h-44 xs:pl-5 md:pl-2 md-max:px-6'>
+                <div className={clsx('w-full text-justify text-lg xs:text-base pl-24 h-44 xs:pl-5 md:pl-2 md-max:px-6', isInView ? 'showHiddenComponent' : 'hideComponentBottom')}>
                     <span>Wyrusz w twórczą przygodę! Chcesz napisać książkę, ale masz mnóstwo wątpliwości? Dokucza Ci blokada? A może nie wiesz od czego zacząć?</span>
                     <TypewriterEffect text='  Kurs „Napisz historię marzeń!” pomoże Ci w kwestiach technicznych, przyniesie mnóstwo inspiracji i motywacji. Pora odkryć w sobie talent i wykorzystać maksimum możliwości.'/>
                 </div>
