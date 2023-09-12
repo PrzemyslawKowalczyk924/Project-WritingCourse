@@ -1,6 +1,6 @@
 export default function Ticker() {
     return (
-      <section className="bg-light-pink py-24 sm:py-32 z-20 overflow-hidden">
+      <section className="bg-light-pink py-24 sm:py-32 z-30 overflow-hidden">
         <div className="flex -mx-4 img-ticker">
             <img className="w-64 mx-4 self-start flex-none" src="https://via.placeholder.com/256x341/f4ccccff/434343?text=1" />
             <img className="w-64 mx-4 self-start flex-none" src="https://via.placeholder.com/256x192/f4ccccff/434343?text=2" />

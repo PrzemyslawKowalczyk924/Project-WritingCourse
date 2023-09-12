@@ -8,6 +8,9 @@ export default {
   theme: {
     screens: {
 
+      'lg-max': {'max': '1023px'},
+      // => @media (max-width: 1023px) { ... }
+
       'md-max': {'max': '767px'},
       // => @media (max-width: 767px) { ... }
 
