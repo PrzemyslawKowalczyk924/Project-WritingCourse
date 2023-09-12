@@ -12,7 +12,7 @@ import introNapiszHistorie3 from '../../../public/images/introNapiszHistorie3.we
 export default function Intro() {
 
     const ref = useRef <HTMLDivElement>(null);
-    const isInView = useInView(ref);
+    const isInView = useInView(ref, { once: true });
 
    /*  const ref = useRef(null);
     const { x, y } = useFollowPointer(ref);
