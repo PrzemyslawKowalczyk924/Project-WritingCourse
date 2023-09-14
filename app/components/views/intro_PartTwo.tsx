@@ -59,14 +59,17 @@ export default function Intro_PartTwo() {
       <section className="w-full bg-mimi-pink relative xs:pb-32 scroll-smooth z-20">
         <div className="max-w-commonLayout min-h-screen flex flex-col justify-center items-center mx-auto">
             <div className='flex flex-row justify-between items-center w-full xs:flex-col-reverse'>
-                <div className='flex flex-col items-center m-auto h-96'>
+                <div className='flex flex-col items-center m-auto h-128'>
                     <p className='whitespace-nowrap font-bold'>AUTOR</p>
                     <p className='font-thin text-3xl mb-6'>Amelia Pudzianowska</p>
                     <div className='w-32 h-32 bg-light-pink border rounded-full flex justify-center items-center mb-5 shadow border-transparent'>
                         <img className='w-28 h-28 rounded-full my-5' src={autorPhoto} />
                     </div>
-                    <span className='w-72 h-64 mb-6 text-left whitespace-break-spaces tracking-tight'>Szlifowanie diamentów pod okiem doświadczonego Mentora jest rozwiązaniem, które może otworzyć drzwi do sukcesu. <TypewriterEffect text='  Autorski kurs Amelii Pudzianowskiej, doświadczonej twórczyni, pisarki i poetki to nowatorski pomysł na kreatywne pisanie.'></TypewriterEffect></span>
-                    <a href="/about" className="text-gray-700 bg-cherry-pink hover:bg-primary-800 shadow focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Więcej</a>
+                    <span className='w-72 h-72 text-left whitespace-break-spaces tracking-tight'>
+                        Szlifowanie diamentów pod okiem doświadczonego Mentora jest rozwiązaniem, które może otworzyć drzwi do sukcesu. 
+                        <TypewriterEffect styles={{  }} text='  Autorski kurs Amelii Pudzianowskiej, doświadczonej twórczyni, pisarki i poetki to nowatorski pomysł na kreatywne pisanie.'/>
+                    </span>
+                        <a href="/about" className="text-gray-700 bg-cherry-pink hover:bg-primary-800 shadow focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Więcej</a>
                     {/* <motion.nav
                         initial={false}
                         animate={isOpen ? "open" : "closed"}

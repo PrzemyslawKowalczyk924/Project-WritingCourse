@@ -35,7 +35,7 @@ const features = [
 export default function Enhance() {
   return (
     <section className="bg-lavenda-pink py-24 sm:py-32 z-20 relative">
-      <img className='absolute w-96 h-80 top-1/3 right-auto  z-0' src={slonecznik11} />
+      <img className='absolute w-96 h-80 top-1/3 right-auto  z-0 opacity-10 xl:opacity-100' src={slonecznik11} />
       <div className="mx-auto max-w-commonLayout px-6 lg:px-8">
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">

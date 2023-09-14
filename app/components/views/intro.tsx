@@ -128,7 +128,7 @@ export default function Intro() {
             <div ref={ref} className='flex flex-col justify-end items-end w-6/12 text-left h-1/2 sm:justify-center md:justify-start md:w-1/2 mb-10 md-max:w-full md-max:justify-center md-max:m-0 md-max:h-auto'>
                 <div className={clsx('w-full text-justify text-lg xs:text-base pl-24 h-44 xs:pl-5 md:pl-2 md-max:px-6', isInView ? 'showHiddenComponent' : 'hideComponentBottom')}>
                     <span>Wyrusz w twórczą przygodę! Chcesz napisać książkę, ale masz mnóstwo wątpliwości? Dokucza Ci blokada? A może nie wiesz od czego zacząć?</span>
-                    <TypewriterEffect text='  Kurs „Napisz historię marzeń!” pomoże Ci w kwestiach technicznych, przyniesie mnóstwo inspiracji i motywacji. Pora odkryć w sobie talent i wykorzystać maksimum możliwości.'/>
+                    <TypewriterEffect styles={{}} text=' Kurs „Napisz historię marzeń!” pomoże Ci w kwestiach technicznych, przyniesie mnóstwo inspiracji i motywacji. Pora odkryć w sobie talent i wykorzystać maksimum możliwości.'/>
                 </div>
             </div>
             {/* <div className="text-black h-1/2 flex flex-row justify-center items-end w-full sm:h-full md:h-1/2">

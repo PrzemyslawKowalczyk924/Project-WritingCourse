@@ -1,28 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, CSSProperties } from 'react';
+import { useInView } from 'framer-motion';
 
 interface TypewriterEffectProps {
   text: string;
+  styles?: CSSProperties;
 }
 
-const TypewriterEffect: React.FC<TypewriterEffectProps> = ({ text }) => {
+const TypewriterEffect: React.FC<TypewriterEffectProps> = ({ text, styles = {} }) => {
   const [typedText, setTypedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0); // Przechowuje bieżący indeks znaku
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
 
   useEffect(() => {
-    let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex < text.length - 1) {
-        setTypedText((prevText) => prevText + text[currentIndex]);
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, 70);
+    let typingInterval: ReturnType<typeof setInterval> | null = null;
+    
+    if (isInView && currentIndex < text.length) {
+      typingInterval = setInterval(() => {
+        if (currentIndex < text.length) {
+          setTypedText((prevText) => prevText + text[currentIndex]);
+          setCurrentIndex((prevIndex) => prevIndex + 1);
+        } else {
+          if (typingInterval) clearInterval(typingInterval);
+        }
+      }, 70);
+    }
 
-    return () => clearInterval(typingInterval);
-  }, [text]);
+    return () => {
+      if (typingInterval) clearInterval(typingInterval);
+    };
+  }, [text, isInView, currentIndex]);
 
   return (
-    <span>
+    <span ref={ref} style={styles}>
       {typedText}
     </span>
   );
