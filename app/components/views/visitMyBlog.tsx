@@ -3,10 +3,10 @@ import typeWriterMachine from '../../../public/movies/typewriter2.mp4';
 
 export default function VisitMyBlog() {
     return (
-        <section className="text-gray-600 body-font bg-mimi-pink">
+        <section className="text-gray-600 body-font bg-mimi-pink z-30">
             <div className="max-w-commonLayout mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                    <img className="object-cover object-center rounded-full w-96 h-96 opacity-90" alt="hero" src={doorsToBlog} />
+                    <img className="object-cover object-center shadow-2xl rounded-full w-96 h-96 opacity-80" alt="hero" src={doorsToBlog} />
                    {/*  <video className="object-cover object-center rounded-full w-96 h-96 opacity-90" src={typeWriterMachine} /> */}
                 </div>
                 <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
