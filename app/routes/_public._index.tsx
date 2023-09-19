@@ -11,7 +11,7 @@ import Publication from "~/components/views/publication";
 import AskMore from "~/components/views/askMore";
 import Hero from "~/components/views/hero";
 import FindMe from "~/components/views/findMe";
-import Cta2 from "~/components/views/cta2";
+import VisitMyBlog from "~/components/views/visitMyBlog";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -35,6 +35,7 @@ export default function Index() {
       <CallToAction />
       <AskMore />
       <FindMe />
+      <VisitMyBlog />
       <NewsLetter />
     </div>
   );
