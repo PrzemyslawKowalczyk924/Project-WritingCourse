@@ -1,4 +1,4 @@
-import doorsToBlog from '../../../public/images/doorsToBlog.png';
+import doorsToBlog from '../../../public/images/doorsToBlog.png';``
 import typeWriterMachine from '../../../public/movies/typewriter2.mp4';
 
 export default function VisitMyBlog() {

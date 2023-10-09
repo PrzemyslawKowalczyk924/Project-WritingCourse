@@ -35,14 +35,14 @@ export default function Example() {
       <motion.button
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="pl-4 inline-flex items-center gap-x-px text-sm font-semibold text-white h-full hover:text-yellow-200"
+        className="inline-flex items-center gap-x-px text-sm font-semibold text-white h-full hover:text-yellow-200"
         /* whileHover={{
           rotateY: 25,
           transition: { duration: 1 },
         }} */
         whileTap={{ scale: 0.9 }}
       >
-        <span>kurs</span>
+        <span>twórczość</span>
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
         {isHovered && (
           <motion.div
@@ -52,7 +52,7 @@ export default function Example() {
             damping: 10,
             ease: "linear",
             duration: 0.1,
-            delay: 0.2
+            delay: 0.02
           }}
             /* whileHover={{
 

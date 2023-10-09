@@ -23,7 +23,7 @@ const TypewriterEffect: React.FC<TypewriterEffectProps> = ({ text, styles = {} }
         } else {
           if (typingInterval) clearInterval(typingInterval);
         }
-      }, 70);
+      }, 30);
     }
 
     return () => {
