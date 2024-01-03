@@ -9,12 +9,8 @@ const navigation = [
 
 const oneElement = {
   name: 'o mnie',
-  href: 'toon',
+  href: '/about',
   current: true,
-}
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
 }
 
 export default function Navigation() {
@@ -25,7 +21,7 @@ export default function Navigation() {
         <a
           key={oneElement.name}
           href={oneElement.href}
-          className='text-white hover:bg-gray-700 hover:text-white hover:rounded-md px-3 py-2 text-sm font-medium'
+          className='text-white hover:bg-gray-700 hover:text-gray-300 hover:rounded-md px-3 py-2 text-sm font-medium'
           aria-current={oneElement.current ? 'page' : undefined}
         >
           {oneElement.name}
@@ -37,9 +33,9 @@ export default function Navigation() {
         <a
           key={item.name}
           href={item.href}
-          className={classNames(
+          className={
             item.current ? 'bg-gray-900 text-white' : 'text-white hover:bg-gray-700 hover:text-gray-300 rounded-md px-3 py-2 text-sm font-medium'
-          )}
+          }
           aria-current={item.current ? 'page' : undefined}
         >
           {item.name}

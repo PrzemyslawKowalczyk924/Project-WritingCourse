@@ -36,34 +36,25 @@ export default function Example() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className="pl-4 inline-flex items-center gap-x-px text-sm font-semibold text-white h-full hover:text-yellow-200"
-        /* whileHover={{
-          rotateY: 25,
-          transition: { duration: 1 },
-        }} */
         whileTap={{ scale: 0.9 }}
       >
         <span>kurs</span>
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
         {isHovered && (
           <motion.div
-          transition={{
-            type: "spring", 
-            stiffness: 190,
-            damping: 10,
-            ease: "linear",
-            duration: 0.1,
-            delay: 0.2
-          }}
-            /* whileHover={{
-
-              transition: { duration: 2, delay: 1},
-            }} */
+            transition={{
+              type: "spring",
+              stiffness: 190,
+              damping: 10,
+              ease: "linear",
+              duration: 0.1,
+              delay: 0.2
+            }}
             initial={{ x: -250, y: -100, rotate: -25, opacity: 0 }}
             animate={{ x: -250, y: 0, rotate: 0, opacity: 1 }}
-            exit={{ x: 0, y: -300, opacity: 0, }}
             whileTap={{ scale: 0.99 }}
             className="absolute left-1/2 z-10 top-16 flex w-screen max-w-max -translate-x-1/2 px-4">
-            <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+            <div className="w-screen max-w-md flex-auto overflow-hidden rounded-b-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
               <div className="p-4">
                 {solutions.map((item) => (
                   <div key={item.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">

@@ -15,11 +15,11 @@ import {
 } from '@heroicons/react/24/outline';
 
 const solutions = [
-  { name: 'Napisz historię marzeń', description: 'Czym jest kurs i do kogo jest skierowany?', href: '#', icon: PencilIcon },
-  { name: 'Wyzwania', description: 'Co będzie twoim zadaniem na kursie i co zyskasz dzięki niemu?', href: '#', icon: LanguageIcon },
-  { name: 'Ślad', description: "Czyli jak pisać, aby porywać tłumy i pozostawić po sobie niezatarty ślad", href: '#', icon: FingerPrintIcon },
-  { name: 'Integrcja', description: 'Przekonaj się, że w grupie jest nie tylko raźniej, ale owocniej', href: '#', icon: SquaresPlusIcon },
-  { name: 'Publikacja', description: 'Napisz swoją historię marzeń i pozwól, aby przeczytali ją inni!', href: '#', icon: PaperAirplaneIcon },
+  { name: 'Poezja', description: 'Czym jest kurs i do kogo jest skierowany?', href: '#', icon: PencilIcon },
+  { name: 'Opowiadanie', description: 'Co będzie twoim zadaniem na kursie i co zyskasz dzięki niemu?', href: '#', icon: LanguageIcon },
+  { name: 'Powieść', description: "Czyli jak pisać, aby porywać tłumy i pozostawić po sobie niezatarty ślad", href: '#', icon: FingerPrintIcon },
+  { name: 'Artykuły', description: 'Przekonaj się, że w grupie jest nie tylko raźniej, ale owocniej', href: '#', icon: SquaresPlusIcon },
+  { name: 'Felieton', description: 'Napisz swoją historię marzeń i pozwól, aby przeczytali ją inni!', href: '#', icon: PaperAirplaneIcon },
 ];
 
 const callsToAction = [
@@ -63,7 +63,7 @@ export default function Example() {
             exit={{ x: 0, y: -300, opacity: 0, }}
             whileTap={{ scale: 0.99 }}
             className="absolute left-1/2 z-10 top-16 flex w-screen max-w-max -translate-x-1/2 px-4">
-            <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+            <div className="w-screen max-w-md flex-auto overflow-hidden rounded-b-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
               <div className="p-4">
                 {solutions.map((item) => (
                   <div key={item.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
