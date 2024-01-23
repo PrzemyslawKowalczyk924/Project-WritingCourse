@@ -43,7 +43,7 @@ export default function Header() {
                     />
                   </a>
                 </div>
-                <div className="hidden sm:ml-6 sm:block h-full">
+                <div className="hidden sm:ml-6 sm:block h-full w-full">
                   <Navigation />
                 </div>
               </div>

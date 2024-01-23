@@ -12,8 +12,8 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="grid grid-flow-row grid-cols-1 overflow-hidden ">
-      <Header colSpan="" />
+    <div className="grid grid-flow-row grid-cols-1 overflow-clip">
+      <Header />
       <Outlet />
       <Footer />
     </div>
