@@ -7,7 +7,7 @@ interface SectionProps {
     rotate: MotionValue<string>;
 }
 
-const TrippyScrollEffect = () => {
+const TrippyScrollEffectTwo = () => {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -51,11 +51,16 @@ const TrippyScrollEffect = () => {
 
     return (
         <div ref={targetRef} className="relative z-0 h-[300vh]">
-            <div className="sticky top-16 h-screen">
-                <Trippy />
+            <div className="sticky flex top-16 h-screen">
+                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-40" alt="fotka2" />
+                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-20" alt="fotka2" />
+                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-20 w-20" alt="fotka2" />
+                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-40" alt="fotka2" />
+                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-20" alt="fotka2" />
+                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-40" alt="fotka2" />
             </div>
         </div>
     )
 }
 
-export default TrippyScrollEffect;
+export default TrippyScrollEffectTwo;
