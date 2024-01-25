@@ -57,13 +57,19 @@ const TrippyScrollEffectTwo = () => {
 
     return (
         <div ref={targetRef} className="relative z-0 h-[300vh]">
-            <div className="sticky flex top-16 h-screen">
-                <img src={image1} className="h-40 w-40" alt="fotka2" />
-                <img src={image2} className="h-40 w-40" alt="fotka2" />
-                <img src={image3} className="h-40 w-40" alt="fotka2" />
-                <img src={image4} className="h-40 w-40" alt="fotka2" />
-                <img src={image5} className="h-40 w-40" alt="fotka2" />
-                <img src={image6} className="h-40 w-40" alt="fotka2" />
+            <div className="sticky flex top-8 h-screen justify-center items-center flex-wrap flex-col">
+                <div className="flex">
+                    <img src={image1} className="h-48 w-72" alt="fotka2" />
+                    <img src={image2} className="h-48 w-72" alt="fotka2" />
+                </div>
+                <div className="flex">
+                    <img src={image3} className="h-48 w-72" alt="fotka2" />
+                    <img src={image4} className="h-48 w-72" alt="fotka2" />
+                </div>
+                <div className="flex">
+                    <img src={image5} className="h-48 w-72" alt="fotka2" />
+                    <img src={image6} className="h-48 w-72" alt="fotka2" />
+                </div>
             </div>
         </div>
     )
