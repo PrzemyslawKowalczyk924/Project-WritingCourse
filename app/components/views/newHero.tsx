@@ -15,7 +15,7 @@ const TrippyScrollEffect = () => {
 
     const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
 
-    const NUM_SECTION = 10;
+    const NUM_SECTION = 3;
     const PADDING = `${100 / NUM_SECTION / 2}vmin`;
 
     const generateSections = (count, color, rotate) => {
