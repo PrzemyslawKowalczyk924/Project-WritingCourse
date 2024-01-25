@@ -1,5 +1,11 @@
 import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
 import { useRef, ReactNode, CSSProperties } from "react";
+import image1 from "../../../public/images/image1.webp";
+import image2 from "../../../public/images/image2.webp";
+import image3 from "../../../public/images/image3.webp";
+import image4 from "../../../public/images/image4.webp";
+import image5 from "../../../public/images/image5.webp";
+import image6 from "../../../public/images/image6.webp";
 
 interface SectionProps {
     background: string;
@@ -51,13 +57,19 @@ const TrippyScrollEffectTwo = () => {
 
     return (
         <div ref={targetRef} className="relative z-0 h-[300vh]">
-            <div className="sticky flex top-16 h-screen">
-                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-40" alt="fotka2" />
-                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-40" alt="fotka2" />
-                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-20 w-40" alt="fotka2" />
-                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-40" alt="fotka2" />
-                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-40" alt="fotka2" />
-                <img src={"https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} className="h-40 w-40" alt="fotka2" />
+            <div className="sticky flex top-8 h-screen justify-center items-center flex-wrap flex-col">
+                <div className="flex">
+                    <img src={image1} className="h-48 w-72" alt="fotka2" />
+                    <img src={image2} className="h-48 w-72" alt="fotka2" />
+                </div>
+                <div className="flex">
+                    <img src={image3} className="h-48 w-72" alt="fotka2" />
+                    <img src={image4} className="h-48 w-72" alt="fotka2" />
+                </div>
+                <div className="flex">
+                    <img src={image5} className="h-48 w-72" alt="fotka2" />
+                    <img src={image6} className="h-48 w-72" alt="fotka2" />
+                </div>
             </div>
         </div>
     )
