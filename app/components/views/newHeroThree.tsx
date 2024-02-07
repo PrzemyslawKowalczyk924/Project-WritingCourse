@@ -1,4 +1,4 @@
-import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
+import { useTransform, useScroll, motion, MotionValue, useMotionValueEvent, frame } from "framer-motion";
 import { useRef, ReactNode, CSSProperties } from "react";
 import image1 from "../../../public/images/PióroAlone.png";
 import image2 from "../../../public/images/kałamaż2.png";
@@ -12,16 +12,57 @@ interface SectionProps {
 }
 
 const TrippyScrollEffectTwo = () => {
+
     const targetRef = useRef(null);
+    /* const containerRef = useRef(null); */
+
     const { scrollYProgress } = useScroll({
         target: targetRef,
     });
 
-    const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
-    const imageOpacity = useTransform(scrollYProgress, [0, 10], [0, 10]);
+    /* const { scrollY } = useScroll({
+        target: targetRef,
+    }); */
 
-    const imageOneX = useTransform(scrollYProgress, [0, 10], [-200, 1800]);
-    const imageOneY = useTransform(scrollYProgress, [0, 10], [-100, 900]);
+   /*  useMotionValueEvent(scrollY, "change", (latest) => {
+        console.log("Page scroll: ", latest)
+    }) */
+
+    
+    
+    const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
+    const imageOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0, 0, 10, 10, 10, 10, 0.9]);
+    
+    const imageOneX = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [-10, -25, 0, -15, 0, -15, 0]);
+    const imageOneY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [10, -25, 15, -15, 15, -15, -15, 15]);
+    const imageOneRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [5, -25, 0, -15, 0, -15, 0]);
+   
+    const inkImageX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.56, 0.6, 0.75, 0.76, 1], [0, 6, 4, 4, 7, 3, 7, 6]);
+    const inkImageY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, -41, -44, -82, -45, -78, -45, 370]);
+    const inkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0.5, 0.5, 0.5, 0.6, 0.75, 1, 0]);
+    const inkImageRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 0.8, 0.9, 1], [0, 0, 0, 0, 7, 7, -17, 17, -17, 17]);
+    const splashOfInkOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.99, 1], [0, 0, 0, 0, 0, 0, 0, 10]);
+
+    /* console.log(imageOneX, imageOneY); */
+    
+    useMotionValueEvent(scrollYProgress, "change", (latest) => {
+        console.log("Page scroll: ", latest);
+        if (scrollYProgress.get() == 1) {
+            console.log('true');
+            console.log(imageOneX.get());
+           /*  frame.render(() => {
+                imageOneX = useTransform(scrollYProgress, [0, 10], [25, -50])
+            }); */
+        }
+        
+    })
+
+    /* useMotionValueEvent(imageOneX, "change", (latest) => {
+        console.log("Page scroll: ", latest);
+        if(latest > -18.6) {
+            imageOneX.set(0);
+        }
+    }) */
 
     const imageTwoX = useTransform(scrollYProgress, [0, 10], [100, -900]);
     const imageTwoY = useTransform(scrollYProgress, [0, 10], [-200, 1800]);
@@ -42,6 +83,13 @@ const TrippyScrollEffectTwo = () => {
 
     const NUM_SECTION = 10;
     const PADDING = `${100 / NUM_SECTION / 2}vmin`;
+
+    /* const motionScroller = () => {
+        
+        
+    }
+
+    motionScroller(); */
 
     const generateSections = (count, color, rotate) => {
         if (count === NUM_SECTION) {
@@ -75,26 +123,26 @@ const TrippyScrollEffectTwo = () => {
     }
 
     return (
-        <section className="bg-lavenda-pink z-20">
-            <motion.div className="z-20">
+        <section ref={targetRef} className="bg-lavenda-pink relative z-0 h-[600vh]">
+            <motion.div className="sticky top-0 h-screen z-20">
                 <motion.header className="flex flex-col justify-center items-center h-screen">
                     <div className="flex flex-col justify-center items-center mt-auto">
-                        <motion.img src={image1} className="h-24 w-24 mr-20 mt-48" alt="fotka2" />
+                        <motion.img /* ref={targetReference} */ src={image1} className="h-24 w-24 mr-20 mt-48" style={{ translateX: imageOneX, translateY: imageOneY, rotate: imageOneRotate }} alt="fotka2" />
                         <motion.img src={image2} className="h-12" alt="fotka2" />
-                        <motion.img src={image3} className="w-4 h-6" alt="fotka2" />
+                        <motion.img src={image3} className="w-4 h-6 -z-10" alt="fotka2" style={{ translateX: inkImageX, translateY: inkImageY, rotate: inkImageRotate, opacity: imageOpacity, scale: inkScale }} />
                     </div>
                     <motion.h1 className="text-8xl mb-2 pt-11 mt-auto text-magenta tracking-tighter drop-shadow-2xl xs:text-3xl">Amelia Pudzianowska&#8482;</motion.h1>
                     <h1 className="text-4xl mt-2 mb-20 font-thin text-magenta xs:text-xl">Przedstawia:</h1>
                     <div className="flex flex-col justify-center items-center">
-                        <motion.img src={image4} className="w-14 h-14" alt="fotka4" />
+                        <motion.img src={image4} className="w-14 h-14" alt="fotka4" style={{opacity: splashOfInkOpacity}} />
                     </div>
                     <motion.h2 className="text-1 mt-auto font-extralight text-magenta mb-7 drop-shadow xs:text-base">2023 Radom | blog & kurs</motion.h2>
                 </motion.header>
             </motion.div>
-            <div ref={targetRef} className="relative z-0 h-[300vh] bg-lavenda-pink">
+            {/* <div  className="relative z-0 h-[300vh] bg-lavenda-pink">
                 <div className="sticky flex top-8 h-screen justify-center items-center flex-wrap flex-col">
                 </div>
-            </div>
+            </div> */}
         </section>
     )
 }
