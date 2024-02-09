@@ -26,19 +26,19 @@ const TrippyScrollEffectTwo = () => {
         target: targetRef,
     }); */
 
-   /*  useMotionValueEvent(scrollY, "change", (latest) => {
-        console.log("Page scroll: ", latest)
-    }) */
+    /*  useMotionValueEvent(scrollY, "change", (latest) => {
+         console.log("Page scroll: ", latest)
+     }) */
 
-    
-    
+
+
     const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
     const imageOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0, 0, 10, 10, 10, 10, 0.9]);
-    
+
     const imageOneX = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [-10, -25, 0, -15, 0, -15, 0]);
     const imageOneY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [10, -25, 15, -15, 15, -15, -15, 15]);
     const imageOneRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [5, -25, 0, -15, 0, -15, 0]);
-   
+
     const inkImageX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.56, 0.6, 0.75, 0.76, 1], [0, 6, 4, 4, 7, 3, 7, 6]);
     const inkImageY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, -41, -44, -82, -45, -78, -45, 370]);
     const inkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0.5, 0.5, 0.5, 0.6, 0.75, 1, 0.4]);
@@ -47,26 +47,22 @@ const TrippyScrollEffectTwo = () => {
     const splashOfInkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.4, 0.5, 0.75, 0.76, 1], [0, 0, 0, 0, 0, 0.1, 0.5, 1.2]);
 
     /* console.log(imageOneX, imageOneY); */
-    
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
+
+    /* useMotionValueEvent(scrollYProgress, "change", (latest) => {
         console.log("Page scroll: ", latest);
         if (scrollYProgress.get() == 1) {
             console.log('true');
             console.log(imageOneX.get());
-           /*  frame.render(() => {
-                imageOneX = useTransform(scrollYProgress, [0, 10], [25, -50])
-            }); */
+             frame.render(() => {
+                 imageOneX = useTransform(scrollYProgress, [0, 10], [25, -50])
+             });
         }
-        
-    })
+    }); */
 
     /* useMotionValueEvent(imageOneX, "change", (latest) => {
         console.log("Page scroll: ", latest);
-        if(latest > -18.6) {
-            imageOneX.set(0);
-        }
-    }) */
-
+    })
+ */
     const imageTwoX = useTransform(scrollYProgress, [0, 10], [100, -900]);
     const imageTwoY = useTransform(scrollYProgress, [0, 10], [-200, 1800]);
     const imageTwoScale = useTransform(scrollYProgress, [0, 10], [0.5, 5.5]);
@@ -137,7 +133,7 @@ const TrippyScrollEffectTwo = () => {
                     <motion.h1 className="text-8xl mb-2 pt-11 mt-auto text-magenta tracking-tighter drop-shadow-2xl xs:text-3xl">Amelia Pudzianowska&#8482;</motion.h1>
                     <h1 className="text-4xl mt-2 mb-20 font-thin text-magenta xs:text-xl">Przedstawia:</h1>
                     <div className="flex flex-col justify-center items-center">
-                        <motion.img src={image4} className="w-14 h-14" alt="fotka4" style={{opacity: splashOfInkOpacity, scale: splashOfInkScale}} />
+                        <motion.img src={image4} className="w-14 h-14" alt="fotka4" style={{ opacity: splashOfInkOpacity, scale: splashOfInkScale }} />
                     </div>
                     <motion.h2 className="text-1 mt-auto font-extralight text-magenta mb-7 drop-shadow xs:text-base">2023 Radom | blog & kurs</motion.h2>
                 </motion.header>
