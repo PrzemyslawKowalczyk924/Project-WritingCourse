@@ -35,16 +35,20 @@ const TrippyScrollEffectTwo = () => {
     const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
     const imageOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0, 0, 10, 10, 10, 10, 0.9]);
 
-    const imageOneX = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [-10, -25, 0, -15, 0, -15, 0]);
-    const imageOneY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [10, -25, 15, -15, 15, -15, -15, 15]);
-    const imageOneRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [5, -25, 0, -15, 0, -15, 0]);
+    //const imageOneX = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [-10, -25, 0, -15, 0, -15, 0]);
+    const imageOneX = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [-10, -25, 0, -15, -15, 0]);
+    //const imageOneY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [10, -25, 15, -15, 15, -15, -15, 15]);
+    const imageOneY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [10, -25, 15, -15, -15, 15]);
+    //const imageOneRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [5, -25, 0, -15, 0, -15, 0]);
+    const imageOneRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [5, -25, 0, -15, -15, 0]);
 
-    const inkImageX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.56, 0.6, 0.75, 0.76, 1], [0, 6, 4, 4, 7, 3, 7, 6]);
-    const inkImageY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, -41, -44, -82, -45, -78, -45, 370]);
-    const inkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0.5, 0.5, 0.5, 0.6, 0.75, 1, 0.4]);
-    const inkImageRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 0.8, 0.9, 1], [0, 0, 0, 0, 7, 7, -17, 17, -17, 17]);
+    const inkImageX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.56, 0.52, 0.75, 0.76, 1], [0, 4, 3, 3, 3, 4, 7, 6]);
+    //const inkImageY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, -41, -44, -82, -45, -78, -45, 370]);
+    const inkImageY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.52, 0.75, 1], [0, -39, -40, -82, -82, -45, 370]);
+    const inkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.52, 0.75, 0.76, 1], [0, 0.5, 0.6, 0.65, 0.70, 0.75, 1, 0.4]);
+    const inkImageRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 0.8, 0.9, 1], [0, 0, 11, 5, 4, 7, -17, 17, -17, 17]);
     const splashOfInkOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.98, 1], [0, 0, 0, 0, 0, 0, 0, 10]);
-    const splashOfInkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.4, 0.5, 0.75, 0.76, 1], [0, 0, 0, 0, 0, 0.1, 0.5, 1.2]);
+    const splashOfInkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.4, 0.5, 0.65, 0.86, 1], [0, 0, 0, 0, 0, 0.7, 0.97, 1.2]);
 
     /* console.log(imageOneX, imageOneY); */
 
@@ -122,7 +126,7 @@ const TrippyScrollEffectTwo = () => {
     }
 
     return (
-        <section ref={targetRef} className="bg-lavenda-pink relative z-0 h-[300vh]">
+        <section ref={targetRef} className="bg-lavenda-pink relative z-0 h-[400vh]">
             <motion.div className="sticky top-0 h-screen z-20">
                 <motion.header className="flex flex-col justify-center items-center h-screen">
                     <div className="flex flex-col justify-center items-center mt-auto">
