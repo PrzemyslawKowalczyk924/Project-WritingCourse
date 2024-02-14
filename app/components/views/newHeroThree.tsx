@@ -1,10 +1,9 @@
-import { useTransform, useScroll, motion, MotionValue, useMotionValueEvent, easeOut } from "framer-motion";
+import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
 import { useRef, ReactNode } from "react";
 import image1 from "../../../public/images/PióroAlone.png";
 import image2 from "../../../public/images/kałamaż2.png";
 import image3 from "../../../public/images/kropla.png";
 import image4 from "../../../public/images/kleks.png";
-import motyl from '../../../public/icons/butterflySVG.svg';
 
 
 interface SectionProps {
@@ -16,34 +15,19 @@ interface SectionProps {
 const TrippyScrollEffectTwo = () => {
 
     const targetRef = useRef(null);
-    /* const containerRef = useRef(null); */
 
     const { scrollYProgress } = useScroll({
         target: targetRef,
     });
 
-    /* const { scrollY } = useScroll({
-        target: targetRef,
-    }); */
-
-    /*  useMotionValueEvent(scrollY, "change", (latest) => {
-         console.log("Page scroll: ", latest)
-     }) */
-
-
-
     const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
     const imageOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0, 0, 10, 10, 10, 10, 0.9]);
 
-    //const imageOneX = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [-10, -25, 0, -15, 0, -15, 0]);
     const imageOneX = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [-10, -25, 0, -15, -15, 0]);
-    //const imageOneY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [10, -25, 15, -15, 15, -15, -15, 15]);
     const imageOneY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [10, -25, 15, -15, -15, 15]);
-    //const imageOneRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 1], [5, -25, 0, -15, 0, -15, 0]);
     const imageOneRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [5, -25, 0, -15, -15, 0]);
 
     const inkImageX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.56, 0.52, 0.75, 0.76, 1], [0, 4, 3, 3, 3, 4, 7, 6]);
-    //const inkImageY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, -41, -44, -82, -45, -78, -45, 370]);
     const inkImageY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.52, 0.75, 1], [0, -39, -40, -82, -82, -45, 370]);
     const inkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.52, 0.75, 0.76, 1], [0, 0.5, 0.6, 0.65, 0.70, 0.75, 1, 0.4]);
     const inkImageRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 0.8, 0.9, 1], [0, 0, 11, 5, 4, 7, -17, 17, -17, 17]);
@@ -86,13 +70,6 @@ const TrippyScrollEffectTwo = () => {
 
     const NUM_SECTION = 10;
     const PADDING = `${100 / NUM_SECTION / 2}vmin`;
-
-    /* const motionScroller = () => {
-        
-        
-    }
-
-    motionScroller(); */
 
     const generateSections = (count, color, rotate) => {
         if (count === NUM_SECTION) {

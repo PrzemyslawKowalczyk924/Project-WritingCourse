@@ -37,7 +37,7 @@ export default function Header() {
                 <div className="flex flex-shrink-0 items-center">
                   <a href='/'>
                     <img
-                      className=" w-auto brightness-0 invert"
+                      className="w-auto brightness-0 invert"
                       src={butterfly_3}
                       alt="Your Company"
                     />

@@ -1,18 +1,34 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+import photoOfAuthor_1 from "../../../public/images/AmPudz1.jpg";
+import photoOfAuthor_2 from "../../../public/images/AmPudz2.jpg";
+import photoOfAuthor_3 from "../../../public/images/AmPudz14.jpg";
+import photoOfAuthor_4 from "../../../public/images/AmPudz4.jpg";
+import photoOfAuthor_5 from "../../../public/images/AmPudz5.jpg";
+import photoOfAuthor_6 from "../../../public/images/AmPudz6.jpg";
+import photoOfAuthor_7 from "../../../public/images/AmPudz7.jpg";
+import photoOfAuthor_8 from "../../../public/images/AmPudz8.jpg";
+import photoOfAuthor_9 from "../../../public/images/AmPudz9.jpg";
+import photoOfAuthor_10 from "../../../public/images/AmPudz10.jpg";
+import photoOfAuthor_11 from "../../../public/images/AmPudz11.jpg";
+import photoOfAuthor_12 from "../../../public/images/AmPudz12.jpg";
+import photoOfAuthor_13 from "../../../public/images/AmPudz15.jpg";
+import butterfly from "../../../public/icons/butterfly_24.png"
 
 const CarouselExample = () => {
   return (
-    <div className="bg-neutral-800">
+    <div className="bg-lavenda-pink">
       <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
-          Scroll down
+          <img src={butterfly} className="w-auto m-auto"/>
+          „Cierpię za miliony, a nie mam za to ani grosza“
         </span>
       </div>
       <HorizontalScrollCarousel />
+      <img src={butterfly} className="w-auto m-auto"/>
       <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
+        <span className="font-black text-9xl text-gray-800">&#9884;</span>
         </span>
       </div>
     </div>
@@ -28,7 +44,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+    <section ref={targetRef} className="relative h-[300vh] bg-cherry-pink">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
@@ -44,21 +60,17 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+      className="group relative h-[450px] w-[450px] overflow-hidden bg-gray-900"
     >
-      <div
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
+      <img
+        src={card.url}
+        className="absolute h-2/3 m-auto w-auto inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+      ></img>
+      {/* <div className="absolute inset-0 z-10 grid place-content-center">
         <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
           {card.title}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -67,38 +79,68 @@ export default CarouselExample;
 
 const cards = [
   {
-    url: "https://images.pexels.com/photos/19862554/pexels-photo-19862554/free-photo-of-ulica-okna-okno-telefon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    url: photoOfAuthor_1,
     title: "Title 1",
     id: 1,
   },
   {
-    url: "https://images.pexels.com/photos/19295636/pexels-photo-19295636/free-photo-of-wedkarstwo-morze-zachod-slonca-mezczyzna.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    url: photoOfAuthor_2,
     title: "Title 2",
     id: 2,
   },
   {
-    url: "https://images.pexels.com/photos/19415783/pexels-photo-19415783/free-photo-of-mezczyzna-garnitur-siedzenie-staroswiecki.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    url: photoOfAuthor_3,
     title: "Title 3",
     id: 3,
   },
   {
-    url: "https://images.pexels.com/photos/19165528/pexels-photo-19165528/free-photo-of-kobieta-kubek-drink-szklanka.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    url: photoOfAuthor_4,
     title: "Title 4",
     id: 4,
   },
   {
-    url: "https://images.pexels.com/photos/19884483/pexels-photo-19884483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    url: photoOfAuthor_5,
     title: "Title 5",
     id: 5,
   },
   {
-    url: "https://images.pexels.com/photos/14020153/pexels-photo-14020153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    url: photoOfAuthor_6,
     title: "Title 6",
     id: 6,
   },
   {
-    url: "https://images.pexels.com/photos/16390239/pexels-photo-16390239/free-photo-of-czarno-bialy-miasto-ulice-ludzie.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    url: photoOfAuthor_7,
     title: "Title 7",
     id: 7,
+  },
+  {
+    url: photoOfAuthor_8,
+    title: "Title 8",
+    id: 8,
+  },
+  {
+    url: photoOfAuthor_9,
+    title: "Title 9",
+    id: 9,
+  },
+  {
+    url: photoOfAuthor_10,
+    title: "Title 10",
+    id: 10,
+  },
+  {
+    url: photoOfAuthor_11,
+    title: "Title 11",
+    id: 11,
+  },
+  {
+    url: photoOfAuthor_12,
+    title: "Title 12",
+    id: 12,
+  },
+  {
+    url: photoOfAuthor_13,
+    title: "Title 13",
+    id: 13,
   },
 ];
