@@ -66,11 +66,11 @@ const Card = ({ card }) => {
         src={card.url}
         className="absolute h-2/3 m-auto w-auto inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></img>
-      {/* <div className="absolute inset-0 z-10 grid place-content-center">
+      <div className="absolute inset-0 z-10 grid place-content-center">
         <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
           {card.title}
         </p>
-      </div> */}
+      </div>
     </div>
   );
 };
@@ -108,7 +108,7 @@ const cards = [
     title: "Title 6",
     id: 6,
   },
-  {
+ /*  {
     url: photoOfAuthor_7,
     title: "Title 7",
     id: 7,
@@ -117,7 +117,7 @@ const cards = [
     url: photoOfAuthor_8,
     title: "Title 8",
     id: 8,
-  },
+  }, */
   {
     url: photoOfAuthor_9,
     title: "Title 9",

@@ -20,53 +20,41 @@ const TrippyScrollEffectTwo = () => {
         target: targetRef,
     });
 
-    const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
-    const imageOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0, 0, 10, 10, 10, 10, 0.9]);
+    function getTransformations(...valuesArray: [any[], any[]][]) {
 
-    const imageOneX = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [-10, -25, 0, -15, -15, 0]);
-    const imageOneY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [10, -25, 15, -15, -15, 15]);
-    const imageOneRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.75, 1], [5, -25, 0, -15, -15, 0]);
+        const transformationsArray = [];
+        for (const valuesPair of valuesArray) {
+            transformationsArray.push(useTransform(scrollYProgress, valuesPair[0], valuesPair[1]))
+        }
+
+        return transformationsArray;
+
+    }
+
+    const [imageOneX, imageOneY, imageOneRotate] = getTransformations(
+        [[0, 0.25, 0.35, 0.5, 0.75, 1], [-10, -25, 0, -15, -15, 0]],
+        [[0, 0.25, 0.35, 0.5, 0.75, 1], [10, -25, 15, -15, -15, 15]],
+        [[0, 0.25, 0.35, 0.5, 0.75, 1], [5, -25, 0, -15, -15, 0]]
+    );
+
+    const imageOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 1], [0, 0, 0, 10, 10, 10, 10, 0.9]);
 
     const inkImageX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.56, 0.52, 0.75, 0.76, 1], [0, 4, 3, 3, 3, 4, 7, 6]);
     const inkImageY = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.52, 0.75, 1], [0, -39, -40, -82, -82, -45, 370]);
     const inkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.52, 0.75, 0.76, 1], [0, 0.5, 0.6, 0.65, 0.70, 0.75, 1, 0.4]);
+
     const inkImageRotate = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.76, 0.8, 0.9, 1], [0, 0, 11, 5, 4, 7, -17, 17, -17, 17]);
     const splashOfInkOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.5, 0.6, 0.75, 0.98, 1], [0, 0, 0, 0, 0, 0, 0, 10]);
     const splashOfInkScale = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.4, 0.5, 0.65, 0.86, 1], [0, 0, 0, 0, 0, 0.7, 0.97, 1.2]);
 
     /* console.log(imageOneX, imageOneY); */
 
-    /* useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        console.log("Page scroll: ", latest);
-        if (scrollYProgress.get() == 1) {
-            console.log('true');
-            console.log(imageOneX.get());
-             frame.render(() => {
-                 imageOneX = useTransform(scrollYProgress, [0, 10], [25, -50])
-             });
-        }
-    }); */
 
     /* useMotionValueEvent(imageOneX, "change", (latest) => {
         console.log("Page scroll: ", latest);
     })
  */
-    const imageTwoX = useTransform(scrollYProgress, [0, 10], [100, -900]);
-    const imageTwoY = useTransform(scrollYProgress, [0, 10], [-200, 1800]);
-    const imageTwoScale = useTransform(scrollYProgress, [0, 10], [0.5, 5.5]);
-
-    const imageThreeX = useTransform(scrollYProgress, [0, 10], [-100, 900]);
-    const imageThreeY = useTransform(scrollYProgress, [0, 10], [-50, 450]);
-
-    const imageFourX = useTransform(scrollYProgress, [0, 10], [100, -900]);
-    const imageFourY = useTransform(scrollYProgress, [0, 10], [50, -450]);
-    ;
-    const imageFiveX = useTransform(scrollYProgress, [0, 10], [-200, 1800]);
-    const imageFiveY = useTransform(scrollYProgress, [0, 10], [-100, 900]);
-
-    const imageSixX = useTransform(scrollYProgress, [0, 10], [200, -1800]);
-    const imageSixY = useTransform(scrollYProgress, [0, 10], [200, -1800]);
-    const imageSixScale = useTransform(scrollYProgress, [0, 10], [0.5, 5.5]);
+ 
 
     const NUM_SECTION = 10;
     const PADDING = `${100 / NUM_SECTION / 2}vmin`;
@@ -86,11 +74,11 @@ const TrippyScrollEffectTwo = () => {
 
     }
 
-    const Trippy = () => {
+    /* const Trippy = () => {
         return <div className="absolute inset-0 overflow-hidden bg-black">
             {generateSections(0, "black", rotate)}
         </div>
-    }
+    } */
 
     const Section: React.FC<SectionProps> = ({ background, children, rotate }) => {
         return (
