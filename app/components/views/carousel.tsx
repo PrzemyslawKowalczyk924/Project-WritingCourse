@@ -18,19 +18,17 @@ import butterfly from "../../../public/icons/butterfly_24.png"
 const CarouselExample = () => {
   return (
     <div className="bg-lavenda-pink">
-      <div className="flex h-48 items-center justify-center">
+      <div className="flex flex-col h-48 items-center justify-center">
+        <span className="font-black text-3xl text-gray-800">&#9884;</span>
         <span className="font-semibold uppercase text-neutral-500">
-          <img src={butterfly} className="w-auto m-auto"/>
           „Cierpię za miliony, a nie mam za to ani grosza“
         </span>
       </div>
       <HorizontalScrollCarousel />
-      <img src={butterfly} className="w-auto m-auto"/>
-      <div className="flex h-48 items-center justify-center">
+      {/* <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
-        <span className="font-black text-9xl text-gray-800">&#9884;</span>
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -108,16 +106,16 @@ const cards = [
     title: "Title 6",
     id: 6,
   },
- /*  {
-    url: photoOfAuthor_7,
-    title: "Title 7",
-    id: 7,
-  },
-  {
-    url: photoOfAuthor_8,
-    title: "Title 8",
-    id: 8,
-  }, */
+  /*  {
+     url: photoOfAuthor_7,
+     title: "Title 7",
+     id: 7,
+   },
+   {
+     url: photoOfAuthor_8,
+     title: "Title 8",
+     id: 8,
+   }, */
   {
     url: photoOfAuthor_9,
     title: "Title 9",

@@ -21,11 +21,11 @@ export default function Example() {
     });
 
 
-    const butterflyOpacity = useTransform(scrollYProgress, [0.32, 1], [1, 1]);
-    const butterFlyX = useTransform(scrollYProgress, [0.33, 0.38, 0.4], [0, -40,  10]);
-    const butterFlyY = useTransform(scrollYProgress, [0.33, 0.38, 0.4], [-180, -135, 10]);
+    const butterflyOpacity = useTransform(scrollYProgress, [0.33, 1], [1, 1]);
+    const butterFlyX = useTransform(scrollYProgress, [0.33, 0.38, 0.45, 0.65, 0.83, 1], [100, -200, 100, 1800, 1800, -50]);
+    const butterFlyY = useTransform(scrollYProgress, [0.33, 0.38, 0.45, 0.65, 0.83, 1], [100, -200, 0, 0, -100, 0]);
     const butterFlyRotate = useTransform(scrollYProgress, [0.35, 0.4], [0, 10]);
-    const butterFlyScale = useTransform(scrollYProgress, [0.35, 0.4], [0, 1]);
+    const butterFlyScale = useTransform(scrollYProgress, [0.35, 0.367, 0.44, 0.45, 0.66, 1], [0, 0.65, 0.65, 0, 0, 0.65]);
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         console.log("Page scroll: ", latest);
@@ -33,13 +33,13 @@ export default function Example() {
     
 
     return (
-        <div ref={targetRef} className="bg-mimi-pink ">
-            <TrippyScrollEffectThree />
+        <div ref={targetRef} className="bg-mimi-pink">
             <motion.img
             src={motyl}
-            className="w-20 h-20 m-auto z-50 opacity-90"
+            className="w-20 h-20 z-50 opacity-90 fixed top-1/2 left-1/2"
                 style={{ translateX: butterFlyX, translateY: butterFlyY, rotateY: scrollY, opacity: butterflyOpacity, scale: butterFlyScale }}
             />
+            <TrippyScrollEffectThree />
             <LiteraryAchievments />
             <CarouselExample />
         </div>

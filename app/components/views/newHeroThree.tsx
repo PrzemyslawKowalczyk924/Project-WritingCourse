@@ -5,7 +5,6 @@ import image2 from "../../../public/images/kałamaż2.png";
 import image3 from "../../../public/images/kropla.png";
 import image4 from "../../../public/images/kleks.png";
 
-
 interface SectionProps {
     background: string;
     children: ReactNode;
