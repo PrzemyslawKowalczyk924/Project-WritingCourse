@@ -10,6 +10,7 @@ import ShuffleHero from "~/components/views/shuffleHero";
 import { Card } from 'flowbite-react';
 import doSyreny from '../../public/movies/Do syreny film.mp4';
 import LiteraryAchievments from "~/components/views/literaryAchievments";
+import VisitMyBlog from "~/components/views/visitMyBlog";
 
 export default function Example() {
 
@@ -42,6 +43,7 @@ export default function Example() {
             <TrippyScrollEffectThree />
             <LiteraryAchievments />
             <CarouselExample />
+            <VisitMyBlog />
         </div>
     )
 }

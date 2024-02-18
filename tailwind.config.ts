@@ -53,7 +53,8 @@ export default {
       fontSize: {
         '10xl': '10rem', 
         '11xl': '12rem',
-        '12xl': '14rem'
+        '12xl': '14rem',
+        '52xl': '54rem',
       },
       colors: {
         'lavenda-pink': '#FFEBEC',
@@ -134,6 +135,19 @@ export default {
       },
       boxShadow: {
         'costum-1': '1px 1px 1px black',
+      },
+      scale: {
+        '550': '5.5',
+        '400': '4',
+        '200': '2',
+      },
+      translate: {
+        '60rem': '60rem',
+        '55rem': '55rem',
+        '45rem': '45rem',
+        '40rem': '40rem',
+        '35rem': '35rem',
+        '20rem': '20rem',
       }
     },
   },
