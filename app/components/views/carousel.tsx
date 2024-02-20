@@ -13,7 +13,8 @@ import photoOfAuthor_10 from "../../../public/images/AmPudz10.jpg";
 import photoOfAuthor_11 from "../../../public/images/AmPudz11.jpg";
 import photoOfAuthor_12 from "../../../public/images/AmPudz12.jpg";
 import photoOfAuthor_13 from "../../../public/images/AmPudz15.jpg";
-import butterfly from "../../../public/icons/butterfly_24.png"
+import butterfly from "../../../public/icons/butterfly_24.png";
+import doSyreny from "../../../public/movies/Do syreny film.mp4";
 
 const CarouselExample = () => {
   return (
@@ -48,6 +49,7 @@ const HorizontalScrollCarousel = () => {
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
+          {/* <video autoPlay muted loop src={doSyreny} /> */}
         </motion.div>
       </div>
     </section>

@@ -11,6 +11,7 @@ import { Card } from 'flowbite-react';
 import doSyreny from '../../public/movies/Do syreny film.mp4';
 import LiteraryAchievments from "~/components/views/literaryAchievments";
 import MainPageBlog from "~/components/views/mainPageBlog";
+import CheckUpMyCourse from "~/components/views/checkUpMyCourse";
 
 export default function Example() {
 
@@ -44,6 +45,7 @@ export default function Example() {
             <LiteraryAchievments />
             <CarouselExample />
             <MainPageBlog />
+            <CheckUpMyCourse />
         </div>
     )
 }

@@ -22,10 +22,10 @@ export default function VisitMyBlog() {
             {/* <video autoPlay muted loop className="video object-cover object-center rounded-sm w-full h-full absolute opacity-10" src={poem} /> */}
             <div className="sticky top-0 z-20 h-screen max-w-commonLayout mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                 <div className="max-w-commonLayout lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 relative">
-                    <div className="absolute font-black text-12xl opacity-100 text-cherry-pink scale-550 -rotate-12 -translate-y-8">&#66;</div>
-                    <div className="absolute font-black text-12xl opacity-100 text-cherry-pink scale-400 rotate-12 -translate-y-8 translate-x-35rem">&#76;</div>
-                    <div className="absolute font-black text-12xl opacity-100 text-cherry-pink scale-200 rotate-12 -translate-y-1 translate-x-40rem">&#79;</div>
-                    <div className="absolute font-black text-12xl opacity-100 text-cherry-pink scale-200 rotate-12 translate-y-60 translate-x-55rem">&#71;</div>
+                    <div className="absolute font-black text-12xl text-cherry-pink scale-550 -rotate-12 -translate-y-8">&#66;</div>
+                    <div className="absolute font-black text-12xl text-cherry-pink scale-400 rotate-12 -translate-y-8 translate-x-35rem">&#76;</div>
+                    <div className="absolute font-black text-12xl text-cherry-pink scale-200 rotate-12 -translate-y-1 translate-x-40rem">&#79;</div>
+                    <div className="absolute font-black text-12xl text-cherry-pink scale-200 rotate-12 translate-y-60 translate-x-55rem">&#71;</div>
                     {/* <img className="object-cover object-center shadow-2xl rounded-full w-96 h-96 opacity-75" alt="hero" src={kocha} /> */}
                     {/* <div className="font-black text-12xl opacity-100 text-cherry-pink scale-300 -rotate-12">&#7838;</div> */}
                 </div>
