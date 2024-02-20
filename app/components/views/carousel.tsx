@@ -19,12 +19,12 @@ import doSyreny from "../../../public/movies/Do syreny film.mp4";
 const CarouselExample = () => {
   return (
     <div className="bg-lavenda-pink">
-      <div className="flex flex-col h-48 items-center justify-center">
+      {/* <div className="flex flex-col h-48 items-center justify-center">
         <span className="font-black text-3xl text-gray-800">&#9884;</span>
         <span className="font-semibold uppercase text-neutral-500">
           „Cierpię za miliony, a nie mam za to ani grosza“
         </span>
-      </div>
+      </div> */}
       <HorizontalScrollCarousel />
       {/* <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">

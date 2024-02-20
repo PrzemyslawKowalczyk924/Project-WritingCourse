@@ -12,6 +12,7 @@ import doSyreny from '../../public/movies/Do syreny film.mp4';
 import LiteraryAchievments from "~/components/views/literaryAchievments";
 import MainPageBlog from "~/components/views/mainPageBlog";
 import CheckUpMyCourse from "~/components/views/checkUpMyCourse";
+import FindMeAlso from "~/components/views/findMeAlso";
 
 export default function Example() {
 
@@ -46,6 +47,7 @@ export default function Example() {
             <CarouselExample />
             <MainPageBlog />
             <CheckUpMyCourse />
+            <FindMeAlso />
         </div>
     )
 }
