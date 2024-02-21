@@ -1,10 +1,19 @@
-import pokoleniePost from '../../../public/images/pokoleniePost.jpg'
+import mountain1 from '../../../public/images/mountain1.svg'
+import mountain2 from '../../../public/images/mountain2.svg'
+import mountain3 from '../../../public/images/mountain3.svg'
+import mountain4 from '../../../public/images/mountain4.svg'
+import mountain5 from '../../../public/images/mountain5.svg'
 import wiersz from '../../../public/images/kocha.jpg'
 
 export default function FindMe() {
     return (
         <section className="bg-lavenda-pink py-24 sm:py-32 relative z-20 h-screen">
-            <div className="flex flex-row mx-auto max-w-7xl px-6 lg:px-8">
+                <img className='absolute z-50 bottom-0 w-screen h-screen' src={mountain1}/>
+                <img className='absolute z-40 bottom-20 w-screen h-screen' src={mountain2}/>
+                <img className='absolute z-30 bottom-30 w-screen h-screen' src={mountain3}/>
+                <img className='absolute z-20 bottom-40 w-screen h-screen' src={mountain4}/>
+                <img className='absolute z-10 bottom-50 w-screen h-screen' src={mountain5}/>
+            {/* <div className="flex flex-row mx-auto max-w-7xl px-6 lg:px-8">
                 <img className='absolute w-96 h-96 rounded-full opacity-95 md-max:opacity-10 md-max:left-1/2 md-max:top-0' src={wiersz} />
                 <h2 className="text-start ml-28 text-lg font-semibold leading-8 text-gray-900 md-max:mx-auto md-max:text-center">
                     Znajdziesz mnie również na:
@@ -35,7 +44,7 @@ export default function FindMe() {
                         <p className="ml-3">𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶</p>
                     </a>
                 </div>
-            </div>
+            </div> */}
         </section>
     )
 }
