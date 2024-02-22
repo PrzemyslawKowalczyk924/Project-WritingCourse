@@ -1,3 +1,5 @@
+import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
+import { useRef, ReactNode } from "react";
 import mountain1 from '../../../public/images/mountain1.svg'
 import mountain2 from '../../../public/images/mountain2.svg'
 import mountain3 from '../../../public/images/mountain3.svg'
@@ -6,13 +8,29 @@ import mountain5 from '../../../public/images/mountain5.svg'
 import wiersz from '../../../public/images/kocha.jpg'
 
 export default function FindMe() {
+
+    const targetRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+        /* offset: ['start, start', 'end, start'], */
+    });
+
+    const imageOneY = useTransform(scrollYProgress, [0, 1], ["35%", "0%"]);
+    const imageTwoY = useTransform(scrollYProgress, [0, 1], ["30%", "0%"]);
+    const imageThreeY = useTransform(scrollYProgress, [0, 1], ["25%", "0%"]);
+    const imageFourY = useTransform(scrollYProgress, [0, 1], ["15%", "0%"]);
+    const imageFiveY = useTransform(scrollYProgress, [0, 1], ["10%", "0%"]);
+
     return (
-        <section className="bg-lavenda-pink py-24 sm:py-32 relative z-20 h-screen">
-                <img className='absolute z-50 bottom-0 w-screen h-screen' src={mountain1}/>
-                <img className='absolute z-40 bottom-20 w-screen h-screen' src={mountain2}/>
-                <img className='absolute z-30 bottom-30 w-screen h-screen' src={mountain3}/>
-                <img className='absolute z-20 bottom-40 w-screen h-screen' src={mountain4}/>
-                <img className='absolute z-10 bottom-50 w-screen h-screen' src={mountain5}/>
+        <section ref={targetRef} className="bg-lavenda-pink py-24 sm:py-32 relative z-0 h-[400vh]">
+            <motion.div className="sticky top-0 h-screen z-20">
+                <motion.img className='absolute z-50 bottom-0  opacity-80   w-screen' src={mountain1} style={{translateY: imageOneY}}/>
+                <motion.img className='absolute z-40 bottom-12 opacity-90  blur-xs w-screen' src={mountain2} style={{translateY: imageTwoY}}/>
+                <motion.img className='absolute z-30 bottom-24 opacity-90  blur-xs w-screen' src={mountain3} style={{translateY: imageThreeY}}/>
+                <motion.img className='absolute z-20 bottom-40 opacity-90  blur-xs w-screen' src={mountain4} style={{translateY: imageFourY}}/>
+                <motion.img className='absolute z-10 bottom-60 opacity-25  blur-xs w-screen' src={mountain5} style={{translateY: imageFiveY}}/>
+            </motion.div>
             {/* <div className="flex flex-row mx-auto max-w-7xl px-6 lg:px-8">
                 <img className='absolute w-96 h-96 rounded-full opacity-95 md-max:opacity-10 md-max:left-1/2 md-max:top-0' src={wiersz} />
                 <h2 className="text-start ml-28 text-lg font-semibold leading-8 text-gray-900 md-max:mx-auto md-max:text-center">

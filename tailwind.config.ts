@@ -149,6 +149,9 @@ export default {
         '40rem': '40rem',
         '35rem': '35rem',
         '20rem': '20rem',
+      },
+      blur: {
+        xs: '2px',
       }
     },
   },
