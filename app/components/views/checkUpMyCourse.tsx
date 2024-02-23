@@ -1,11 +1,20 @@
+import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
+import { useRef } from "react";
 import kocha from "../../../public/images/kocha.jpg";
 import napisacWiersz from "../../../public/images/napisacWiersz.jpg";
 import doSyreny from "../../../public/movies/Do syreny film.mp4";
 
 export default function CheckUpMyCourse() {
+
+    const targetRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+    });
+
     return (
-        <section className="text-gray-600 body-font h-screen bg-cherry-pink z-30 relative">
-            <div className="max-w-commonLayout w-full h-full m-auto flex px-5 py-24 md:flex-row flex-row justify-center items-center">
+        <section ref={targetRef} className="text-gray-600 body-font h-[300vh] bg-cherry-pink z-30 relative">
+            <div className="sticky top-0 max-w-commonLayout w-full h-screen m-auto flex px-5 py-24 md:flex-row flex-row justify-center items-center">
                 <div className="flex flex-col items-start justify-center lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                     <video autoPlay muted loop className="rounded-sm mb-9" src={doSyreny} />
                     <img src={napisacWiersz} className=" shadow-2xl grayscale" />
