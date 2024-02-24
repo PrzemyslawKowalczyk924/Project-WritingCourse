@@ -16,7 +16,7 @@ export default function CheckUpMyCourse() {
         <section ref={targetRef} className="text-gray-600 body-font h-[300vh] bg-cherry-pink z-30 relative">
             <div className="sticky top-0 max-w-commonLayout w-full h-screen m-auto flex px-5 py-24 md:flex-row flex-row justify-center items-center">
                 <div className="flex flex-col items-start justify-center lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                    <video autoPlay muted loop className="rounded-sm mb-9" src={doSyreny} />
+                    <video autoPlay muted loop className="rounded-sm mt-14 mb-7" src={doSyreny} />
                     <img src={napisacWiersz} className=" shadow-2xl grayscale" />
                 </div>
                 <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-center md:text-left items-center text-center">

@@ -40,6 +40,3 @@ export default function Index() {
     </div>
   );
 }
-
-//bg-position: 90% center, bacground-size: 298%, bacground-repeat: no-repeat
-// <div className="grid grid-flow-row grid-cols-1 overflow-hidden">   <--- overflow-hidden
