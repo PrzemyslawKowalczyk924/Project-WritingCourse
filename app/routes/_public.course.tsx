@@ -1,46 +1,44 @@
-import CarouselExample from "~/components/views/carousel";
-import TrippyScrollEffectThree from "~/components/views/newHeroThree";
-import { useTransform, useScroll, motion, useMotionValueEvent } from "framer-motion";
-import motyl from '../../public/icons/butterflySVG.svg';
-import { useRef } from "react";
-import LiteraryAchievments from "~/components/views/literaryAchievments";
-import MainPageBlog from "~/components/views/mainPageBlog";
-import CheckUpMyCourse from "~/components/views/checkUpMyCourse";
-import FindMeAlso from "~/components/views/findMeAlso";
-
-export default function Example() {
-
-    const targetRef = useRef(null);
-
-    const { scrollYProgress, scrollY } = useScroll({
-        target: targetRef,
-    });
 
 
-    const butterflyOpacity = useTransform(scrollYProgress, [0.172, 0.173, 0.369, 0.37, 0.461, 0.462, 0.98, 1], [0, 1, 1, 0, 0, 1, 1, 0]);
-    const butterFlyX = useTransform(scrollYProgress, [0.16, 0.18, 0.21, 0.462, 0.51, 0.57, 0.62, 1], [-37, 20, 400, -37, 160, -40, -250, 320]);
-    const butterFlyY = useTransform(scrollYProgress, [0.16, 0.51, 0.62, 0.83, 1], [0, 170, -120, 520, -120]);
-    const butterFlyRotate = useTransform(scrollYProgress, [0.16, 1], [0, 20]);
-    const butterFlyScale = useTransform(scrollYProgress, [0.16, 0.18, 0.21, 0.31, 0.32, 0.349, 0.35, 0.462, 1], [0.5, 0.5, 0, 0, 0.5, 0.5, 0, 0.5, 0.5]);
+import type { V2_MetaFunction } from "@remix-run/node";
+import Intro from "~/components/views/intro";
+import Intro_PartTwo from "~/components/views/intro_PartTwo";
+import InNumbers from "~/components/views/inNumbers";
+import Feature from "~/components/views/feature";
+import Enhance from "~/components/views/enhance";
+import Ticker from "~/components/views/ticker";
+import CallToAction from "~/components/views/cta";
+import NewsLetter from "~/components/views/newsLetter";
+import Publication from "~/components/views/publication";
+import AskMore from "~/components/views/askMore";
+import Hero from "~/components/views/hero";
+import FindMe from "~/components/views/findMe";
+import VisitMyBlog from "~/components/views/visitMyBlog";
 
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        console.log("Page scroll: ", latest);
-    })
-    
+export const meta: V2_MetaFunction = () => {
+  return [
+    { title: "Kurs Pisania" },
+    { name: "description", content: "Welcome to Remix!" },
+  ];
+};
 
-    return (
-        <div ref={targetRef} className="bg-mimi-pink">
-            <motion.img
-            src={motyl}
-            className="w-20 h-20 z-50 opacity-90 fixed top-1/2 left-1/2"
-                style={{ translateX: butterFlyX, translateY: butterFlyY, rotateY: scrollY, opacity: butterflyOpacity, scale: butterFlyScale }}
-            />
-            <TrippyScrollEffectThree />
-            <LiteraryAchievments />
-            <CarouselExample />
-            <MainPageBlog />
-            <CheckUpMyCourse />
-            <FindMeAlso />
-        </div>
-    )
+export default function Index() {
+  
+  return (
+    <div className="grid grid-flow-row grid-cols-1 overflow-hidden">
+      <Hero />
+      <Intro />
+      <Intro_PartTwo />
+      <Ticker />
+      <Feature />
+      <Publication />
+      <Enhance />
+      <InNumbers />
+      <CallToAction />
+      <AskMore />
+      <FindMe />
+      <VisitMyBlog />
+      <NewsLetter />
+    </div>
+  );
 }

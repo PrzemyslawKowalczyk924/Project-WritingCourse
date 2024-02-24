@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Popover, Transition } from '@headlessui/react';
+import { useState } from 'react';
 import { motion} from 'framer-motion';
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
+import { ChevronDownIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import {
   ArrowPathIcon,
   ChartPieIcon,
@@ -58,11 +57,11 @@ export default function Example() {
               whileTap={{ scale: 0.99 }}
               exit={{ x: -250, y: -100, rotate: -25, opacity: 0}}
               className="absolute left-1/2 -z-50 top-16 flex w-screen max-w-max -translate-x-1/2 px-4">
-              <div className="w-screen max-w-md flex-auto overflow-hidden rounded-b-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+              <div className="w-screen max-w-md flex-auto overflow-hidden rounded-b-3xl bg-lavenda-pink text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {solutions.map((item) => (
                     <div key={item.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                      <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-cherry-pink group-hover:bg-white">
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                       </div>
                       <div>
@@ -75,7 +74,7 @@ export default function Example() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-cherry-pink">
                   {callsToAction.map((item) => (
                     <a
                       key={item.name}
