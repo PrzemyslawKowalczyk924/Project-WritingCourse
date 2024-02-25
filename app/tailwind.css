@@ -212,4 +212,8 @@
         background-position: center top;
     }
 
+    .filter-pinker {
+        filter: invert(10%) sepia(10%) saturate(25%) hue-rotate(330deg) brightness(110%) contrast(91%);
+      }
+
 }

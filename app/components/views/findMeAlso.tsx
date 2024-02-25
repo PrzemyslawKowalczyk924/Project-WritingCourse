@@ -26,9 +26,9 @@ export default function FindMe() {
         <section ref={targetRef} className="bg-lavenda-pink pt-24 sm:pt-32 relative z-0 h-[400vh]">
             <motion.div className="sticky top-0 h-screen z-20">
                 <motion.img className='absolute z-50 bottom-0  opacity-80   w-screen' src={mountain1} style={{ translateY: imageOneY }} />
-                <motion.img className='absolute z-40 bottom-12 opacity-90  blur-xs w-screen' src={mountain2} style={{ translateY: imageTwoY }} />
-                <motion.img className='absolute z-30 bottom-24 opacity-90  blur-xs w-screen' src={mountain3} style={{ translateY: imageThreeY }} />
-                <motion.img className='absolute z-20 bottom-40 opacity-90  blur-xs w-screen' src={mountain4} style={{ translateY: imageFourY }} />
+                <motion.img className='absolute z-40 bottom-12 opacity-95  blur-xs w-screen' src={mountain2} style={{ translateY: imageTwoY }} />
+                <motion.img className='absolute z-30 bottom-24 opacity-95  blur-xs w-screen' src={mountain3} style={{ translateY: imageThreeY }} />
+                <motion.img className='absolute z-20 bottom-40 opacity-95  blur-xs w-screen' src={mountain4} style={{ translateY: imageFourY }} />
                 <motion.img className='absolute z-10 bottom-60 opacity-25  blur-xs w-screen' src={mountain5} style={{ translateY: imageFiveY }} />
                 <motion.div className="flex flex-col sticky top-36 mx-auto max-w-7xl px-6 lg:px-8">
                     <motion.h2 className="text-end mb-10 mr-28 text-lg font-semibold leading-8 text-gray-900 md-max:mx-auto md-max:text-center" style={{opacity: titleOpacity}}>
