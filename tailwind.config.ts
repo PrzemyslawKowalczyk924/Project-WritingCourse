@@ -129,7 +129,8 @@ export default {
         'leonAi-26': 'url("public/images/leonAi-26.jpg")',    
         'leonAi-27': 'url("public/images/leonAi-27.jpg")',    
         'leonAi-28': 'url("public/images/leonAi-28.jpg")',    
-        'leonAi-29': 'url("public/images/leonAi-29.jpg")',    
+        'leonAi-29': 'url("public/images/leonAi-29.jpg")',
+        'gazeta': 'url("public/images/gazeta.jpg")',  
       },
       backgroundSize: {
         'contain-50': '50% 50%',

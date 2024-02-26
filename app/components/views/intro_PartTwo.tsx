@@ -56,7 +56,7 @@ export default function Intro_PartTwo() {
     }, []);
 
     return (
-      <section className="w-full bg-mimi-pink relative xs:pb-32 scroll-smooth z-20">
+      <section id='course_AboutAuthor' className="w-full bg-mimi-pink relative xs:pb-32 scroll-smooth z-20">
         <div className="max-w-commonLayout min-h-screen flex flex-col justify-center items-center mx-auto">
             <div className='flex flex-row justify-between items-center w-full xs:flex-col-reverse'>
                 <div className='flex flex-col items-center m-auto h-128'>

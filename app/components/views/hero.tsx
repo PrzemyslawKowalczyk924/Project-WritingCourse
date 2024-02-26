@@ -44,7 +44,7 @@ export default function Hero() {
   const skewYTownAndBlog = useTransform(scrollYProgress, [0, 1], [0, -0.5]);
 
   return (
-    <section className="bg-cherry-pink z-20">
+    <section id="course_Hero" className="bg-cherry-pink z-20">
       <motion.div className="bg-hero-pattern bg-cover xs:bg-right-bottom z-20" style={{ perspective: perspectiveVal, rotate: '0deg', skewY: skewY, rotateY: '0deg', scaleX: scalEX, translateZ: '0px', translateX: '0px', translateY: transY, rotateX: tiltY, transformOrigin: "bottom" }}>
         <motion.header className="flex flex-col  justify-center items-center h-screen">
           <motion.h1 className="text-8xl mb-2 mt-auto text-magenta tracking-tighter drop-shadow-2xl xs:text-3xl" style={{ perspective: perspectiveVal, rotateY: '0deg', scaleX: scaleEXName, scaleY: scaleNameY, translateZ: '0px', translateX: '0px', translateY: transYName, rotateX: rotateNameX, transformOrigin: "bottom" }}>Amelia Pudzianowska&#8482;</motion.h1>

@@ -13,13 +13,15 @@ import {
   PaperAirplaneIcon,
   ShoppingCartIcon
 } from '@heroicons/react/24/outline';
+import gazeta from '../../../public/images/gazeta.jpg';
 
 const solutions = [
-  { name: 'Poezja', description: 'Czym jest kurs i do kogo jest skierowany?', href: '#', icon: PencilIcon },
-  { name: 'Opowiadanie', description: 'Co będzie twoim zadaniem na kursie i co zyskasz dzięki niemu?', href: '#', icon: LanguageIcon },
-  { name: 'Powieść', description: "Czyli jak pisać, aby porywać tłumy i pozostawić po sobie niezatarty ślad", href: '#', icon: FingerPrintIcon },
-  { name: 'Artykuły', description: 'Przekonaj się, że w grupie jest nie tylko raźniej, ale owocniej', href: '#', icon: SquaresPlusIcon },
-  { name: 'Felieton', description: 'Napisz swoją historię marzeń i pozwól, aby przeczytali ją inni!', href: '#', icon: PaperAirplaneIcon },
+  { name: 'poezja', description: 'Czym jest kurs i do kogo jest skierowany?', href: '/literaryWorks', icon: PencilIcon },
+  { name: 'opowiadania', description: 'Co będzie twoim zadaniem na kursie i co zyskasz dzięki niemu?', href: '/literaryWorks', icon: LanguageIcon },
+  { name: 'powieści', description: "Czyli jak pisać, aby porywać tłumy i pozostawić po sobie niezatarty ślad", href: '#', icon: FingerPrintIcon },
+  { name: 'artykuły', description: 'Przekonaj się, że w grupie jest nie tylko raźniej, ale owocniej', href: '/literaryWorks', icon: SquaresPlusIcon, background: gazeta },
+  { name: 'felietony', description: 'Napisz swoją historię marzeń i pozwól, aby przeczytali ją inni!', href: '/literaryWorks', icon: PaperAirplaneIcon },
+  { name: 'spis wszystkich', description: 'Napisz swoją historię marzeń i pozwól, aby przeczytali ją inni!', href: '/literaryWorks', icon: PaperAirplaneIcon },
 ];
 
 export default function Example() {
@@ -30,39 +32,21 @@ export default function Example() {
       <motion.button
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="inline-flex items-center gap-x-px text-sm font-semibold text-white h-full hover:text-yellow-200"
+        className="inline-flex items-center gap-x-px text-sm font-medium text-white h-full hover:text-cherry-pink"
       >
         <span>twórczość</span>
-        <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+        <span className="h-5 w-5" aria-hidden="true">&#8595;</span>
         {isHovered && (
           <motion.div
-          /* transition={{
-            type: "spring", 
-            stiffness: 190,
-            damping: 10,
-            ease: "linear",
-            duration: 0.1,
-            delay: 0.02
-          }} */
-            /* initial={{ x: -250, y: -100, rotate: -25, opacity: 0 }}
-            animate={{ x: -250, y: 0, rotate: 0, opacity: 1 }}
-            exit={{ x: 0, y: -300, opacity: 0, }}
-            whileTap={{ scale: 0.99 }} */
-            className="absolute z-10 max-w-md top-16 flex w-screen -translate-x-2/4">
-            <div className="w-screen flex-auto overflow-hidden rounded-b-3xl bg-gray-800 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+            className="absolute z-10 -left-40 top-16 flex">
+            <div className="w-96 overflow-hidden rounded-b-3xl bg-lavenda-pink text-sm text-gray-800 leading-6 shadow-lg ring-1 ring-gray-900/5">
               <div className="p-4">
                 {solutions.map((item) => (
-                  <div key={item.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                    <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-lavenda-pink group-hover:bg-white">
-                      <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                    </div>
-                    <div>
-                      <a href={item.href} className="font-semibold text-white">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                      {/* <p className="mt-1 text-gray-600">{item.description}</p> */}
-                    </div>
+                  <div key={item.name} className="relative flex flex-col flex-wrap gap-x-6 rounded-sm border-b-2 border-b-mimi-pink p-4 hover:bg-mimi-pink">
+
+                    <a href={item.href} className="text-sm font-medium text-gray-800">
+                      {item.name}
+                    </a>
                   </div>
                 ))}
               </div>
