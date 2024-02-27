@@ -1,4 +1,5 @@
 const path = require("path");
+const MongoClient = require('mongodb').MongoClient;
 
 const { createRequestHandler } = require("@remix-run/express");
 const { installGlobals } = require("@remix-run/node");
@@ -33,23 +34,37 @@ app.all(
   "*",
   process.env.NODE_ENV === "development"
     ? (req, res, next) => {
-        purgeRequireCache();
+      purgeRequireCache();
 
-        return createRequestHandler({
-          build: require(BUILD_DIR),
-          mode: process.env.NODE_ENV,
-        })(req, res, next);
-      }
-    : createRequestHandler({
+      return createRequestHandler({
         build: require(BUILD_DIR),
         mode: process.env.NODE_ENV,
-      })
+      })(req, res, next);
+    }
+    : createRequestHandler({
+      build: require(BUILD_DIR),
+      mode: process.env.NODE_ENV,
+    })
 );
 const port = process.env.PORT || 3000;
+
+const url = 'mongodb://127.0.0.1:27017/';
+const dbName = 'literatureDB';
+
+MongoClient.connect(url, (err, client) => {
+  const db = client.db(dbName);
+  db.collection.find();
+  if (err) {
+    console.log('Error connecting to the database:', err);
+  } else {
+    console.log('Successfully connected to the database');
+  }
+});
 
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}`);
 });
+
 
 function purgeRequireCache() {
   // purge require cache on requests for "server side HMR" this won't let
@@ -63,3 +78,4 @@ function purgeRequireCache() {
     }
   }
 }
+
