@@ -1,12 +1,13 @@
 const path = require("path");
-const MongoClient = require('mongodb').MongoClient;
 
 const { createRequestHandler } = require("@remix-run/express");
 const { installGlobals } = require("@remix-run/node");
 const compression = require("compression");
 const express = require("express");
 const morgan = require("morgan");
+const dbConnect = require('./db')
 
+dbConnect();
 installGlobals();
 
 const BUILD_DIR = path.join(process.cwd(), "build");
@@ -48,18 +49,6 @@ app.all(
 );
 const port = process.env.PORT || 3000;
 
-const url = 'mongodb://127.0.0.1:27017/';
-const dbName = 'literatureDB';
-
-MongoClient.connect(url, (err, client) => {
-  const db = client.db(dbName);
-  db.collection.find();
-  if (err) {
-    console.log('Error connecting to the database:', err);
-  } else {
-    console.log('Successfully connected to the database');
-  }
-});
 
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}`);
