@@ -2,6 +2,33 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import JsonViewer from '~/components/features/jsonLoader'
+import Novel from '../../models/novel.model'
+import { useLoaderData } from '@remix-run/react'
+import { ActionFunction } from '@remix-run/node'
+
+
+//tu trzeba dodać ala kontroller i stworzył folder z modelami
+
+export async function loader() {
+  try {
+    // Pobranie wszystkich opowiadań
+    const opowiadania = await Novel.find();
+
+    console.log(opowiadania);
+
+    return opowiadania;
+  } catch (error) {
+    console.error('Błąd pobierania danych:', error);
+    return { json: { error: 'Błąd pobierania danych' } };
+  }
+}
+
+export const action:ActionFunction = async ({request}) => {
+    //add, update, delete
+    return null;
+}
+
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
@@ -61,6 +88,8 @@ function classNames(...classes) {
 
 export default function Example() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+
+    const data = useLoaderData()
 
     return (
         <div className="bg-white">
@@ -292,7 +321,7 @@ export default function Example() {
                             {/* Product grid */}
                             <div className="lg:col-span-3 bg-lavenda-pink">
                                 {/* Your content */}
-                                <p className='overflow-y-scroll h-screen'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla in nulla ut molestie. Nunc et lacus venenatis, viverra risus rhoncus, facilisis nisi. Proin id justo convallis, tristique diam id, eleifend augue. Cras tristique magna vitae ullamcorper porttitor. Ut tempus metus lectus, at aliquet dui lacinia eget. Maecenas porttitor nunc tellus, sed condimentum sem elementum iaculis. Ut accumsan erat ipsum, vel molestie ipsum ornare eget. Nullam pretium nisi aliquet, hendrerit tellus et, efficitur eros. Aenean porta blandit ipsum, vitae sagittis nulla porta sit amet. Proin dignissim nibh eu erat tempus blandit. Nunc pretium elit nec suscipit consectetur. Sed tempor orci id sodales pretium. Vestibulum eget metus et orci convallis congue vitae eu ante.
+                                {/* <p className='overflow-y-scroll h-screen'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla in nulla ut molestie. Nunc et lacus venenatis, viverra risus rhoncus, facilisis nisi. Proin id justo convallis, tristique diam id, eleifend augue. Cras tristique magna vitae ullamcorper porttitor. Ut tempus metus lectus, at aliquet dui lacinia eget. Maecenas porttitor nunc tellus, sed condimentum sem elementum iaculis. Ut accumsan erat ipsum, vel molestie ipsum ornare eget. Nullam pretium nisi aliquet, hendrerit tellus et, efficitur eros. Aenean porta blandit ipsum, vitae sagittis nulla porta sit amet. Proin dignissim nibh eu erat tempus blandit. Nunc pretium elit nec suscipit consectetur. Sed tempor orci id sodales pretium. Vestibulum eget metus et orci convallis congue vitae eu ante.
 
 Maecenas sed dui erat. Morbi sed risus id leo vehicula volutpat at non massa. Aliquam eu ultricies sem. Curabitur pulvinar justo sed ex congue porttitor. Vivamus convallis mauris sit amet tellus porta suscipit. Nunc sagittis, sem quis accumsan porttitor, leo mi hendrerit elit, ac feugiat libero ipsum eu massa. Praesent iaculis est eu scelerisque dictum. Ut eu viverra elit, ac venenatis lacus. Sed tincidunt, sapien sed consequat commodo, justo lectus semper sapien, at cursus ante ipsum nec neque. Vivamus suscipit est eget arcu elementum bibendum. Duis iaculis ex in justo porttitor rutrum. Sed blandit efficitur lacus non auctor.
 
@@ -310,7 +339,8 @@ Aenean dui orci, ullamcorper quis posuere sit amet, commodo eu velit. Nam non ni
 
 Cras vel nulla eu quam facilisis ultricies. Integer non ligula sit amet ex sollicitudin dignissim vitae sit amet augue. In eget fringilla est, sit amet vehicula mi. Mauris ut dapibus tellus. Pellentesque at velit ut lacus semper varius. Pellentesque vitae enim in elit vulputate luctus ac vitae metus. Aliquam vitae diam leo. Nunc dictum lorem in vehicula commodo.
 
-Integer non elit eu ligula consectetur dictum. Praesent non commodo lectus. Morbi condimentum purus arcu, at ullamcorper quam porta at. In sit amet lectus non erat maximus consequat sed in eros. Curabitur in fringilla ante, eget finibus tortor. Suspendisse nec augue neque. Integer pretium ipsum ex, sit amet ultricies sem aliquet ac. Aenean vestibulum arcu nec volutpat pellentesque. Vivamus semper tempus metus, ut laoreet diam finibus eu. Nulla lectus nunc, feugiat in risus eu, tempor porta dui. Nullam rhoncus neque a ipsum pharetra, non porttitor turpis laoreet.</p>
+Integer non elit eu ligula consectetur dictum. Praesent non commodo lectus. Morbi condimentum purus arcu, at ullamcorper quam porta at. In sit amet lectus non erat maximus consequat sed in eros. Curabitur in fringilla ante, eget finibus tortor. Suspendisse nec augue neque. Integer pretium ipsum ex, sit amet ultricies sem aliquet ac. Aenean vestibulum arcu nec volutpat pellentesque. Vivamus semper tempus metus, ut laoreet diam finibus eu. Nulla lectus nunc, feugiat in risus eu, tempor porta dui. Nullam rhoncus neque a ipsum pharetra, non porttitor turpis laoreet.</p> */}
+                            <JsonViewer data={data} error={"error"} />
                             </div>
                         </div>
                     </section>
