@@ -16,11 +16,11 @@
 export default function JsonViewer({ data, error }) {
   try {
     if(data) {
-      //console.log(data[0].content);
+      console.log(data[0].content);
       const paragraphs = data[0].content.split('\n');
       console.log(paragraphs)
       const contentElements = paragraphs.map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
+        <p className="text-justify" key={index}>{paragraph}</p>
       ));
 
       return <div>{contentElements}</div>;
