@@ -2,7 +2,7 @@ import { ObjectId } from 'mongodb';
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
-const postSchema = new Schema({
+const poemSchema = new Schema({
   _id: { type: ObjectId, require: true },
   content: { type: String, require: true },
   author: { type: Number, require: false },
@@ -12,5 +12,5 @@ const postSchema = new Schema({
   date: { type: Number, require: false },
 });
 
-const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
-export default Post;
+const Poetry = mongoose.models.Poetry || mongoose.model("Poetry", poemSchema);
+export default Poetry;

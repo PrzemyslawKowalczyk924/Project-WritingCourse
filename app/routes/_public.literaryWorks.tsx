@@ -3,28 +3,29 @@ import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import JsonViewer from '~/components/features/jsonLoader'
-import Novel from '../../models/novel.model'
+import Novels from '../../models/novels.model';
+import Poetry from '../../models/poetry.model';
+import Articles from '../../models/articles.model';
 import { useLoaderData } from '@remix-run/react'
 import { ActionFunction } from '@remix-run/node'
 
-
-//tu trzeba dodać ala kontroller i stworzył folder z modelami
-
 export async function loader() {
-  try {
-    // Pobranie wszystkich opowiadań
-    const opowiadania = await Novel.find();
+    try {
+        // Pobranie wszystkich opowiadań
+        const opowiadania = await Novels.find();
+        const poems = await Poetry.find();
+        const articles = await Articles.find();
 
-    console.log(opowiadania);
-
-    return opowiadania;
-  } catch (error) {
-    console.error('Błąd pobierania danych:', error);
-    return { json: { error: 'Błąd pobierania danych' } };
-  }
+        const dataDB = { opowiadania, poems, articles };
+        
+        return dataDB;
+    } catch (error) {
+        console.error('Błąd pobierania danych:', error);
+        return { json: { error: 'Błąd pobierania danych' } };
+    }
 }
 
-export const action:ActionFunction = async ({request}) => {
+export const action: ActionFunction = async ({ request }) => {
     //add, update, delete
     return null;
 }
@@ -90,6 +91,9 @@ export default function Example() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
     const data = useLoaderData()
+    console.log(data)
+    console.log(data.poems)
+    console.log(data.opowiadania)
 
     return (
         <div className="bg-white">
@@ -262,7 +266,7 @@ export default function Example() {
                             Products
                         </h2>
 
-                        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+                        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
                             {/* Filters */}
                             <form className="hidden lg:block">
                                 <h3 className="sr-only">Categories</h3>
@@ -320,27 +324,7 @@ export default function Example() {
 
                             {/* Product grid */}
                             <div className="lg:col-span-3 bg-lavenda-pink">
-                                {/* Your content */}
-                                {/* <p className='overflow-y-scroll h-screen'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla in nulla ut molestie. Nunc et lacus venenatis, viverra risus rhoncus, facilisis nisi. Proin id justo convallis, tristique diam id, eleifend augue. Cras tristique magna vitae ullamcorper porttitor. Ut tempus metus lectus, at aliquet dui lacinia eget. Maecenas porttitor nunc tellus, sed condimentum sem elementum iaculis. Ut accumsan erat ipsum, vel molestie ipsum ornare eget. Nullam pretium nisi aliquet, hendrerit tellus et, efficitur eros. Aenean porta blandit ipsum, vitae sagittis nulla porta sit amet. Proin dignissim nibh eu erat tempus blandit. Nunc pretium elit nec suscipit consectetur. Sed tempor orci id sodales pretium. Vestibulum eget metus et orci convallis congue vitae eu ante.
-
-Maecenas sed dui erat. Morbi sed risus id leo vehicula volutpat at non massa. Aliquam eu ultricies sem. Curabitur pulvinar justo sed ex congue porttitor. Vivamus convallis mauris sit amet tellus porta suscipit. Nunc sagittis, sem quis accumsan porttitor, leo mi hendrerit elit, ac feugiat libero ipsum eu massa. Praesent iaculis est eu scelerisque dictum. Ut eu viverra elit, ac venenatis lacus. Sed tincidunt, sapien sed consequat commodo, justo lectus semper sapien, at cursus ante ipsum nec neque. Vivamus suscipit est eget arcu elementum bibendum. Duis iaculis ex in justo porttitor rutrum. Sed blandit efficitur lacus non auctor.
-
-Etiam vel orci sodales, consectetur diam vel, elementum risus. Sed volutpat dui id auctor suscipit. Nunc justo tortor, scelerisque sed posuere laoreet, feugiat tincidunt velit. Nulla ut sem eu sapien lacinia porttitor. Suspendisse tristique augue nisi, sed eleifend lectus molestie eget. In hac habitasse platea dictumst. Nullam ultrices condimentum ipsum, vitae tristique magna imperdiet ut. Nunc ullamcorper nunc id enim pretium molestie. Sed tellus ante, volutpat vel nibh ut, scelerisque porta mi. Vestibulum sollicitudin sapien porttitor rhoncus posuere. Curabitur quis nulla tortor. Nunc tincidunt tellus in massa blandit euismod. Nulla tempus vitae ipsum ac vehicula. Vestibulum a diam ac ligula malesuada imperdiet et id eros.
-
-Vestibulum efficitur massa libero. Curabitur eleifend lacus vitae tincidunt tempor. Curabitur luctus commodo nisi quis pellentesque. Nullam pellentesque luctus semper. Mauris at justo malesuada, pretium mi non, malesuada nulla. Phasellus sit amet blandit tortor. Nulla nulla urna, aliquam quis eleifend vel, dignissim eget magna. Sed non libero ac felis aliquet euismod aliquam aliquet metus. Duis pellentesque, massa in pellentesque tempus, metus augue porta nulla, a ullamcorper libero ex blandit erat. Proin mauris magna, gravida consectetur ultrices ac, bibendum eget eros. In id urna consectetur, fermentum arcu ut, commodo justo. Fusce a semper felis, id efficitur urna. Vivamus quam urna, suscipit ac fringilla quis, ultricies non nulla. Duis non odio non quam facilisis semper non quis nibh.
-
-Duis vitae ligula in augue laoreet consectetur a congue odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut dapibus dapibus nisi id venenatis. Quisque tempor nisl ut diam scelerisque vestibulum. Vestibulum tellus velit, pharetra at lorem sit amet, vehicula scelerisque risus. Suspendisse sagittis ultrices dapibus. Morbi nec tincidunt ante, vel pretium leo. Quisque posuere eleifend ipsum sit amet vestibulum. Praesent neque arcu, ornare non leo a, faucibus iaculis justo. Aliquam lobortis eros mauris, blandit vestibulum enim placerat nec. Duis vitae consequat nisi, nec tincidunt metus. Sed eu purus eget velit placerat cursus. Praesent tincidunt velit in hendrerit elementum. Fusce vehicula mi eget varius lacinia. Morbi eget neque nulla. Nunc pretium tincidunt ligula quis suscipit.
-
-Praesent non suscipit nulla, id sollicitudin nibh. Mauris sagittis vel massa ac sodales. Vivamus ac rhoncus augue. Cras a placerat arcu. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique lacinia egestas. Phasellus bibendum mi est, sit amet rutrum magna posuere lobortis. Proin ultricies facilisis aliquet.
-
-Nulla tristique arcu eu lacinia vehicula. Vivamus ornare convallis egestas. Donec semper molestie consequat. Suspendisse lacinia volutpat condimentum. Ut et dolor justo. Ut sed volutpat erat. Fusce mollis tincidunt est, in elementum nunc pretium in. Aenean ullamcorper bibendum nunc, vitae maximus ligula. Cras commodo tempor nisi. Ut in orci vitae augue egestas lacinia dapibus eu leo. Donec eget sem sed magna lobortis facilisis ac ac tellus. Fusce tincidunt metus et arcu interdum interdum. Etiam non lacus metus.
-
-Aenean dui orci, ullamcorper quis posuere sit amet, commodo eu velit. Nam non nibh metus. Sed ac tincidunt ligula, vitae interdum libero. Nunc bibendum, metus at congue volutpat, neque augue fermentum velit, ac aliquet nulla elit non magna. Maecenas porttitor eget nisl et tincidunt. Fusce posuere elementum dolor, id venenatis nibh dapibus ultricies. Suspendisse eget euismod est. Quisque at tellus vulputate, maximus nulla sit amet, ultrices dui. Mauris sit amet lobortis orci. Donec semper vestibulum dui, pellentesque imperdiet massa faucibus in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vitae sapien vestibulum orci tristique porttitor. Vivamus lorem nulla, maximus a posuere sed, blandit eu elit. Maecenas sollicitudin nec ante at rhoncus. Donec non velit dictum, vestibulum turpis in, elementum tortor. Sed bibendum, libero vitae vulputate accumsan, libero sapien finibus justo, quis venenatis orci libero sit amet erat.
-
-Cras vel nulla eu quam facilisis ultricies. Integer non ligula sit amet ex sollicitudin dignissim vitae sit amet augue. In eget fringilla est, sit amet vehicula mi. Mauris ut dapibus tellus. Pellentesque at velit ut lacus semper varius. Pellentesque vitae enim in elit vulputate luctus ac vitae metus. Aliquam vitae diam leo. Nunc dictum lorem in vehicula commodo.
-
-Integer non elit eu ligula consectetur dictum. Praesent non commodo lectus. Morbi condimentum purus arcu, at ullamcorper quam porta at. In sit amet lectus non erat maximus consequat sed in eros. Curabitur in fringilla ante, eget finibus tortor. Suspendisse nec augue neque. Integer pretium ipsum ex, sit amet ultricies sem aliquet ac. Aenean vestibulum arcu nec volutpat pellentesque. Vivamus semper tempus metus, ut laoreet diam finibus eu. Nulla lectus nunc, feugiat in risus eu, tempor porta dui. Nullam rhoncus neque a ipsum pharetra, non porttitor turpis laoreet.</p> */}
-                            <JsonViewer data={data} error={"error"} />
+                                <JsonViewer data={data.opowiadania} error={"error"} />
                             </div>
                         </div>
                     </section>
