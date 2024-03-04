@@ -7,6 +7,7 @@ const JsonViewer: React.FC<JsonViewerProps> = ({ data, error }) => {
   try {
     if (data) {
 
+      console.log('data[0].date', data[0]);
       const paragraphs = data[0].content
         .split('\n')
         .map((paragraph: string, index: number) => {
@@ -20,10 +21,11 @@ const JsonViewer: React.FC<JsonViewerProps> = ({ data, error }) => {
         });
 
       return (
-        <article className="p-10">
+        <article className="p-10 max-h-screen overflow-y-scroll">
           <h3 className="text-2xl mb-10">{data[0].author}</h3>
           <h1 className="text-4xl mb-10">{data[0].title}</h1>
           {paragraphs}
+          <h4 className="mt-10 font-light">{data[0].date}</h4>
         </article>
       );
     }

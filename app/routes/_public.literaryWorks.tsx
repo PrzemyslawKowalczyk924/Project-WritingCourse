@@ -16,6 +16,7 @@ export async function loader() {
         const poems = await Poetry.find();
         const articles = await Articles.find();
 
+        console.log(poems)
         const dataDB = { opowiadania, poems, articles };
         
         return dataDB;
@@ -83,7 +84,7 @@ const filters = [
     },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
@@ -91,9 +92,9 @@ export default function Example() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
     const data = useLoaderData()
-    console.log(data)
-    console.log(data.poems)
-    console.log(data.opowiadania)
+    console.log('data', data)
+    console.log('poems', data.poems)
+    console.log('opowiadania', data.opowiadania)
 
     return (
         <div className="bg-white">

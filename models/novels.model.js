@@ -9,7 +9,7 @@ const novelSchema = new Schema({
   title: { type: String, require: false },
   genre: { type: String, require: false },
   pages: { type: Number, require: false },
-  date: { type: Number, require: false },
+  date: { type: String, require: false },
 });
 
 const Novels = mongoose.models.Novels || mongoose.model("Novels", novelSchema);
