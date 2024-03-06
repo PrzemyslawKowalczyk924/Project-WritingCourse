@@ -7,19 +7,22 @@ import Novels from '../../models/novels.model';
 import Poetry from '../../models/poetry.model';
 import Articles from '../../models/articles.model';
 import { useLoaderData } from '@remix-run/react'
-import { ActionFunction } from '@remix-run/node'
+import { ActionFunction, LoaderFunction } from '@remix-run/node'
 
-export async function loader() {
+export const loader: LoaderFunction = async ({ params }) =>  {
     try {
+        console.log(params);
+        const { category } = params;
         // Pobranie wszystkich opowiadań
-        const opowiadania = await Novels.find();
-        const poems = await Poetry.find();
-        const articles = await Articles.find();
-
-        console.log(poems)
-        const dataDB = { opowiadania, poems, articles };
-        
-        return dataDB;
+        if (category === 'poetry') {
+             return await Poetry.find();
+        } else if (category === 'novels') {
+            return await Novels.find();
+        } else if (category === 'articles') {
+            return await Articles.find();
+        } else {
+            // Dodaj obsługę innych kategorii według potrzeb
+        }
     } catch (error) {
         console.error('Błąd pobierania danych:', error);
         return { json: { error: 'Błąd pobierania danych' } };
@@ -40,10 +43,10 @@ const sortOptions = [
     { name: 'Price: High to Low', href: '#', current: false },
 ]
 const subCategories = [
-    { name: 'Poezja', href: '#' },
-    { name: 'Opowiadania', href: '#' },
+    { name: 'Poezja', href: 'poetry' },
+    { name: 'Opowiadania', href: 'novels' },
     { name: 'Powieści', href: '#' },
-    { name: 'Artykuły', href: '#' },
+    { name: 'Artykuły', href: 'articles' },
     { name: 'Felietony', href: '#' },
 ]
 const filters = [
@@ -91,10 +94,7 @@ function classNames(...classes: string[]) {
 export default function Example() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
-    const data = useLoaderData()
-    console.log('data', data)
-    console.log('poems', data.poems)
-    console.log('opowiadania', data.opowiadania)
+    const data = useLoaderData();
 
     return (
         <div className="bg-white">
@@ -325,7 +325,7 @@ export default function Example() {
 
                             {/* Product grid */}
                             <div className="lg:col-span-3 bg-lavenda-pink">
-                                <JsonViewer data={data.opowiadania} error={"error"} />
+                                <JsonViewer data={data} error={"error"} />
                             </div>
                         </div>
                     </section>
