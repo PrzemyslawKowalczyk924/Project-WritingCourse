@@ -93,7 +93,7 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-    const [clickedTitle, setClickedTitle] = useState<any>(null);
+    const [clickedTitle, setClickedTitle] = useState<any>(0);
 
     const data = useLoaderData();
     //console.log(data);
