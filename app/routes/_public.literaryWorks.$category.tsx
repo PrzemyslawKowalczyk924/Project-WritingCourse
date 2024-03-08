@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
@@ -9,13 +9,13 @@ import Articles from '../../models/articles.model';
 import { useLoaderData } from '@remix-run/react'
 import { ActionFunction, LoaderFunction } from '@remix-run/node'
 
-export const loader: LoaderFunction = async ({ params }) =>  {
+export const loader: LoaderFunction = async ({ params }) => {
     try {
-        console.log(params);
+        //console.log('params', params);
         const { category } = params;
         // Pobranie wszystkich opowiadań
         if (category === 'poetry') {
-             return await Poetry.find();
+            return await Poetry.find();
         } else if (category === 'novels') {
             return await Novels.find();
         } else if (category === 'articles') {
@@ -92,9 +92,16 @@ function classNames(...classes: string[]) {
 }
 
 export default function Example() {
-    const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+    const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+    const [clickedTitle, setClickedTitle] = useState<any>(null);
 
     const data = useLoaderData();
+    //console.log(data);
+    console.log('clickedTitle', clickedTitle);
+
+    function returnTitle(data: { title: any }) {
+        return data.title;
+    }
 
     return (
         <div className="bg-white">
@@ -325,8 +332,21 @@ export default function Example() {
 
                             {/* Product grid */}
                             <div className="lg:col-span-3 bg-lavenda-pink">
-                                <JsonViewer data={data} error={"error"} />
+                                <JsonViewer data={data} error={"error"} arg={clickedTitle} />
                             </div>
+                            <form className='hidden lg:block'>
+                                <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
+                                    {data.map((item: { _id: Key | null | undefined; position: number; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined }) => (
+                                        <li key={item._id}>
+                                            <button onClick={(event) => {
+                                                event.preventDefault();
+                                                setClickedTitle(item.position)
+                                                console.log('Button clicked!');
+                                                }}>{item.title}</button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </form>
                         </div>
                     </section>
                 </main>

@@ -1,13 +1,15 @@
 interface JsonViewerProps {
   data: Record<string, any>[] | null;
   error: string | null;
+  arg: any;
 }
 
-const JsonViewer: React.FC<JsonViewerProps> = ({ data, error }) => {
+const JsonViewer: React.FC<JsonViewerProps> = ({ data, error, arg }) => {
   try {
     if (data) {
-
-      console.log('data[0].date', data[0]);
+      console.log('arg', arg)
+      //console.log('data[0].date', data[0]);
+      console.log('data', data[arg]);
       const paragraphs = data[0].content
         .split('\n')
         .map((paragraph: string, index: number) => {

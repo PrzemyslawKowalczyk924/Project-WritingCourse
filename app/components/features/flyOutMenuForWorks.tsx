@@ -16,8 +16,8 @@ import {
 import gazeta from '../../../public/images/gazeta.jpg';
 
 const solutions = [
-  { name: 'poezja', description: 'Czym jest kurs i do kogo jest skierowany?', href: '/literaryWorks', icon: PencilIcon },
-  { name: 'opowiadania', description: 'Co będzie twoim zadaniem na kursie i co zyskasz dzięki niemu?', href: '/literaryWorks', icon: LanguageIcon },
+  { name: 'poezja', description: 'Czym jest kurs i do kogo jest skierowany?', href: '/literaryWorks/poetry', icon: PencilIcon },
+  { name: 'opowiadania', description: 'Co będzie twoim zadaniem na kursie i co zyskasz dzięki niemu?', href: '/literaryWorks/novels', icon: LanguageIcon },
   { name: 'powieści', description: "Czyli jak pisać, aby porywać tłumy i pozostawić po sobie niezatarty ślad", href: '#', icon: FingerPrintIcon },
   { name: 'artykuły', description: 'Przekonaj się, że w grupie jest nie tylko raźniej, ale owocniej', href: '/literaryWorks', icon: SquaresPlusIcon, background: gazeta },
   { name: 'felietony', description: 'Napisz swoją historię marzeń i pozwól, aby przeczytali ją inni!', href: '/literaryWorks', icon: PaperAirplaneIcon },
