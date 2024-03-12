@@ -6,8 +6,9 @@ import JsonViewer from '~/components/features/jsonLoader'
 import Novels from '../../models/novels.model';
 import Poetry from '../../models/poetry.model';
 import Articles from '../../models/articles.model';
-import { useLoaderData } from '@remix-run/react'
-import { ActionFunction, LoaderFunction } from '@remix-run/node'
+import { useLoaderData } from '@remix-run/react';
+import { ActionFunction, LoaderFunction } from '@remix-run/node';
+import TinyMceComponent from '../components/features/tinyMCEcomponent';
 
 export const loader: LoaderFunction = async ({ params }) => {
     try {
@@ -96,15 +97,9 @@ export default function Example() {
     const [clickedTitle, setClickedTitle] = useState<any>(0);
 
     const data = useLoaderData();
-    //console.log(data);
-    console.log('clickedTitle', clickedTitle);
-
-    function returnTitle(data: { title: any }) {
-        return data.title;
-    }
 
     return (
-        <div className="bg-white">
+        <div className="bg-white min-h-screen">
             <div>
                 {/* Mobile filter dialog */}
                 <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -276,12 +271,12 @@ export default function Example() {
 
                         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
                             {/* Filters */}
-                            <form onSubmit={(event) => event.preventDefault()} className="hidden lg:block">
+                            <form className="hidden lg:block">
                                 <h3 className="sr-only">Categories</h3>
                                 <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                                     {subCategories.map((category) => (
                                         <li key={category.name}>
-                                            <a type='submit' href={category.href}>{category.name}</a>
+                                            <a href={category.href}>{category.name}</a>
                                         </li>
                                     ))}
                                 </ul>
@@ -331,7 +326,7 @@ export default function Example() {
                             </form>
 
                             {/* Product grid */}
-                            <div className="lg:col-span-3 bg-lavenda-pink">
+                            <div className="lg:col-span-3 bg-lavenda-pink relative">
                                 <JsonViewer data={data} error={"error"} arg={clickedTitle} />
                             </div>
                             <form className='hidden lg:block'>
@@ -347,6 +342,7 @@ export default function Example() {
                                     ))}
                                 </ul>
                             </form>
+                            {/* <TinyMceComponent /> */}
                         </div>
                     </section>
                 </main>
