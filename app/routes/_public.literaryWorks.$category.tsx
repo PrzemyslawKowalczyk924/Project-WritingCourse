@@ -336,7 +336,6 @@ export default function Example() {
                                             <button onClick={(event) => {
                                                 event.preventDefault();
                                                 setClickedTitle(item.position)
-                                                console.log('Button clicked!');
                                                 }}>{item.title}</button>
                                         </li>
                                     ))}
