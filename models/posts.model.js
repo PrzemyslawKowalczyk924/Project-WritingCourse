@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
-  _id: { type: ObjectId, require: true },
+  _id: { type: ObjectId, require: false },
   description: { type: String, require: true },
   author: { type: String, require: false },
   title: { type: String, require: false },
