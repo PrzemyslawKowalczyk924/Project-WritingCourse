@@ -3,8 +3,8 @@ import FlyOutForWorks from "../features/flyOutMenuForWorks";
 
 const navigation = [
   { name: 'strona główna', href: '/', current: false },
-  { name: 'blog', href: 'blog', current: false },
-  { name: 'kontakt', href: 'contact', current: false },
+  { name: 'blog', href: '/blog', current: false },
+  { name: 'kontakt', href: '/contact', current: false },
 ]
 
 const oneElement = {

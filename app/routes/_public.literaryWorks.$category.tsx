@@ -7,7 +7,7 @@ import Novels from '../../models/novels.model';
 import Poetry from '../../models/poetry.model';
 import Articles from '../../models/articles.model';
 import { useLoaderData } from '@remix-run/react';
-import { ActionFunction, LoaderFunction } from '@remix-run/node';
+import { ActionFunction, LoaderFunction, redirect } from '@remix-run/node';
 import TinyMceComponent from '../components/features/tinyMCEcomponent';
 
 export const loader: LoaderFunction = async ({ params }) => {
@@ -22,19 +22,13 @@ export const loader: LoaderFunction = async ({ params }) => {
         } else if (category === 'articles') {
             return await Articles.find();
         } else {
-            // Dodaj obsługę innych kategorii według potrzeb
+           return redirect('/');
         }
     } catch (error) {
         console.error('Błąd pobierania danych:', error);
         return { json: { error: 'Błąd pobierania danych' } };
     }
 }
-
-export const action: ActionFunction = async ({ request }) => {
-    //add, update, delete
-    return null;
-}
-
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
@@ -140,7 +134,7 @@ export default function Example() {
                                     </div>
 
                                     {/* Filters */}
-                                    <form className="mt-4 border-t border-gray-200">
+                                    <div className="mt-4 border-t border-gray-200">
                                         <h3 className="sr-only">Categories</h3>
                                         <ul role="list" className="px-2 py-3 font-medium text-gray-900">
                                             {subCategories.map((category) => (
@@ -194,7 +188,7 @@ export default function Example() {
                                                 )}
                                             </Disclosure>
                                         ))}
-                                    </form>
+                                    </div>
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>
@@ -271,7 +265,7 @@ export default function Example() {
 
                         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
                             {/* Filters */}
-                            <form className="hidden lg:block">
+                            <div className="hidden lg:block">
                                 <h3 className="sr-only">Categories</h3>
                                 <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                                     {subCategories.map((category) => (
@@ -323,13 +317,13 @@ export default function Example() {
                                         )}
                                     </Disclosure>
                                 ))}
-                            </form>
+                            </div>
 
                             {/* Product grid */}
                             <div className="lg:col-span-3 bg-lavenda-pink relative">
                                 <JsonViewer data={data} error={"error"} arg={clickedTitle} />
                             </div>
-                            <form className='hidden lg:block'>
+                            <div className='hidden lg:block'>
                                 <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                                     {data.map((item: { _id: Key | null | undefined; position: number; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined }) => (
                                         <li key={item._id}>
@@ -340,7 +334,7 @@ export default function Example() {
                                         </li>
                                     ))}
                                 </ul>
-                            </form>
+                            </div>
                             {/* <TinyMceComponent /> */}
                         </div>
                     </section>
