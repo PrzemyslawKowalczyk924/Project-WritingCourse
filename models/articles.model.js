@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const articleSchema = new Schema({
-  _id: { type: ObjectId, require: true },
   content: { type: String, require: true },
   author: { type: String, require: false },
   title: { type: String, require: false },

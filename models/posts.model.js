@@ -1,9 +1,7 @@
-import { ObjectId } from 'mongodb';
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
-  _id: { type: ObjectId, require: false },
   description: { type: String, require: true },
   author: { type: String, require: false },
   title: { type: String, require: false },
@@ -11,6 +9,8 @@ const postSchema = new Schema({
   pages: { type: Number, require: false },
   date: { type: String, require: false },
   datetime: { type: Date, require: false },
+  shortDescription: { type: String, require: false },
+  timeOfPublication: { type: String, require: false },
 });
 
 const Posts = mongoose.models.Posts || mongoose.model("Posts", postSchema);

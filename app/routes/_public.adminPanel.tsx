@@ -1,22 +1,41 @@
-import { Form } from '@remix-run/react';
+import { Form, useLoaderData } from '@remix-run/react';
 import TinyMceComponent from '../components/features/tinyMCEcomponent';
-import { ActionFunction, LoaderFunction, redirect } from '@remix-run/node';
+import { ActionFunction } from '@remix-run/node';
 import Posts from 'models/posts.model';
+import { useState } from 'react';
 
 export const action: ActionFunction = async ({ request }) => {
+    const actualTime = new Date();
+    const day = actualTime.getDate();
+    const monthNames = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"];
+    const monthIndex = actualTime.getMonth();
+    const month = monthNames[monthIndex];
+    const year = actualTime.getFullYear();
+    const actualTimeString = `${day}, ${month} ${year}`;
+
     const data = await request.formData();
     const content = data.get('content');
-    console.log(content);
+    const title = data.get('title');
+    const shortDescription = data.get('shortDescription');
+    const genre = data.get('genre');
+  
+    console.log('data', data);
 
     await Posts.create({
-        _id: content.id,
-        description: content
+        title: title,
+        shortDescription: shortDescription,
+        timeOfPublication: actualTimeString,
+        description: content,
+        genre: genre
     });
     //add, update, delete
     return null;
 }
 
 export default function AdminPanel() {
+
+    //const data = useLoaderData();
+
     return (
         <><nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
             <div className="px-3 py-3 lg:px-5 lg:pl-3">
@@ -162,6 +181,9 @@ export default function AdminPanel() {
                     </div>
                     <div className="flex items-center justify-center h-full mb-4 rounded bg-gray-50 dark:bg-gray-800">
                         <Form method='post'>
+                            <input name='title' type='text' placeholder='tytuł'></input>
+                            <input name='genre' type='text' placeholder='rodzaj'></input>
+                            <textarea name='shortDescription' placeholder='zajawka'></textarea>
                             <TinyMceComponent />
                             <button type="submit" className="btn">BUTTON</button>
                         </Form>

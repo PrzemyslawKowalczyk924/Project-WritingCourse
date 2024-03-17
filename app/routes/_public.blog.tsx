@@ -16,7 +16,7 @@ export const loader: LoaderFunction = async () => {
 export default function Example() {
 
   const data = useLoaderData();
-  console.log(data);
+  console.log('data z blogu', data);
 
     return (
       <div className="bg-white py-24 sm:py-32 min-h-screen">
@@ -28,17 +28,19 @@ export default function Example() {
             </p>
           </div>
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {data.map((post: { _id: Key | null | undefined; datetime: string | undefined; date: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; category: string | null; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) => (
+            {data.map((post: {
+              timeOfPublication: string | undefined; _id: Key | null | undefined; datetime: string | undefined; date: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; genre: string | null; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; 
+}) => (
               <article key={post._id} className="flex max-w-xl flex-col items-start justify-between">
                 <div className="flex items-center gap-x-4 text-xs">
-                  <time dateTime={post.datetime} className="text-gray-500">
-                    {post.date}
+                  <time dateTime={post.timeOfPublication} className="text-gray-500">
+                    {post.timeOfPublication}
                   </time>
                   <a
                     href={"#"}
                     className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                   >
-                    {post.category}
+                    {post.genre}
                   </a>
                 </div>
                 <div className="group relative">
@@ -48,7 +50,9 @@ export default function Example() {
                       {post.title}
                     </a>
                   </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
+                  <a href={"#"}>
+                    <div dangerouslySetInnerHTML={{__html: post.shortDescription}} className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600"></div>
+                  </a>
                 </div>
                 {/* <div className="relative mt-8 flex items-center gap-x-4">
                   <img src={post.author.imageUrl} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
