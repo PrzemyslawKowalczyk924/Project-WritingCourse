@@ -13,6 +13,18 @@ export const action: ActionFunction = async ({ request }) => {
     const year = actualTime.getFullYear();
     const actualTimeString = `${day}, ${month} ${year}`;
 
+    //sligify
+    function sligyfyTitle(titleOfPost: any): any {
+        return titleOfPost
+            .toString()
+            .normalize('NFD')                   // split an accented letter in the base letter and the acent
+            .replace(/[\u0300-\u036f]/g, '')   // remove all previously split accents
+            .toLowerCase()
+            .trim()
+            .replace(/[^a-z0-9 ]/g, '')   // remove all chars not letters, numbers and spaces (to be replaced)
+            .replace(/\s+/g, '-') 
+      }
+
     const data = await request.formData();
     const content = data.get('content');
     const title = data.get('title');
@@ -26,7 +38,8 @@ export const action: ActionFunction = async ({ request }) => {
         shortDescription: shortDescription,
         timeOfPublication: actualTimeString,
         description: content,
-        genre: genre
+        genre: genre,
+        slug: sligyfyTitle(title),
     });
     //add, update, delete
     return null;

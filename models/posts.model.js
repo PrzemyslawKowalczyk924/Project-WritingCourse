@@ -7,10 +7,10 @@ const postSchema = new Schema({
   title: { type: String, require: false },
   genre: { type: String, require: false },
   pages: { type: Number, require: false },
-  date: { type: String, require: false },
   datetime: { type: Date, require: false },
   shortDescription: { type: String, require: false },
   timeOfPublication: { type: String, require: false },
+  slug: { type: String, require: true },
 });
 
 const Posts = mongoose.models.Posts || mongoose.model("Posts", postSchema);

@@ -8,7 +8,6 @@ import Poetry from '../../models/poetry.model';
 import Articles from '../../models/articles.model';
 import { useLoaderData } from '@remix-run/react';
 import { ActionFunction, LoaderFunction, redirect } from '@remix-run/node';
-import TinyMceComponent from '../components/features/tinyMCEcomponent';
 
 export const loader: LoaderFunction = async ({ params }) => {
     try {
@@ -335,7 +334,6 @@ export default function Example() {
                                     ))}
                                 </ul>
                             </div>
-                            {/* <TinyMceComponent /> */}
                         </div>
                     </section>
                 </main>
