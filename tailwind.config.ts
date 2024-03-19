@@ -130,6 +130,7 @@ export default {
         'leonAi-27': 'url("public/images/leonAi-27.jpg")',    
         'leonAi-28': 'url("public/images/leonAi-28.jpg")',    
         'leonAi-29': 'url("public/images/leonAi-29.jpg")',
+        'photo00': 'url("public/images/grafika00.png")',
         'gazeta': 'url("public/images/gazeta.jpg")',  
       },
       backgroundSize: {

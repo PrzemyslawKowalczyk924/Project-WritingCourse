@@ -2,7 +2,7 @@ import { LoaderFunction } from "@remix-run/node";
 import Posts from '../../models/posts.model';
 import { useLoaderData } from "@remix-run/react";
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
-
+import photo from "../../public/images/grafika00.png"
 
 export const loader: LoaderFunction = async () => {
   try {
@@ -20,6 +20,7 @@ export default function Blog() {
 
   return (
     <div className="bg-white py-24 sm:py-32 min-h-screen">
+      <img src={photo} alt="kałamaż" className="fixed h-full opacity-5" />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Blogownia</h2>
@@ -72,7 +73,6 @@ export default function Blog() {
                 </div> */}
             </article>
           ))}
-
         </div>
       </div>
     </div>
