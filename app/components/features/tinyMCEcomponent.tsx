@@ -9,7 +9,7 @@ export default function tinyMCEEditor() {
     <Editor
       /* id={editorId} */
       textareaName='content'
-      apiKey='ru4zyh7m9vsydnuh4w5p89t5m1x8lzykx3dcfmh96ipllspd'
+      apiKey='plfenpu7wttl1d47w3pbc051bjzt3ig7zh6dsmdbnbyc18su'
       init={{
         
         plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',

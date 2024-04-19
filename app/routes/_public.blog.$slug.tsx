@@ -2,7 +2,6 @@ import { LoaderFunction } from "@remix-run/node";
 import Posts from '../../models/posts.model';
 import { useLoaderData } from "@remix-run/react";
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
-import photo from "../../public/images/grafika 0 0.png"
 
 
 export const loader: LoaderFunction = async ({ params }) => {
