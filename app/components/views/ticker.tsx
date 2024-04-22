@@ -1,6 +1,9 @@
+import pranie from '../../../public/images/pranie_1.svg'
+
 export default function Ticker() {
     return (
-      <section className="bg-light-pink py-24 sm:py-32 z-30 overflow-hidden">
+      <section className="relative bg-light-pink py-24 sm:py-32 z-30 overflow-hidden">
+        <img src={pranie} className='absolute top-0 opacity-85'></img>
         <div className="flex -mx-4 img-ticker">
             <img className="w-64 mx-4 self-start flex-none" src="https://via.placeholder.com/256x341/f4ccccff/434343?text=1" />
             <img className="w-64 mx-4 self-start flex-none" src="https://via.placeholder.com/256x192/f4ccccff/434343?text=2" />

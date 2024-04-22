@@ -107,6 +107,7 @@ export default function Intro() {
     return (
       <section id="course_Intro" className="w-full bg-lavenda-pink relative scroll-smooth h-screen mx-auto z-20">
         {/* <img className='absolute w-96 h-96 opacity-95 sunflower' src={slonecznik10} /> */}
+
         <div className='max-w-commonLayout text-center mt-0 mb-0 mr-auto ml-auto pt-0 pb-0 pr-5 pl-5 flex md:flex-col justify-center h-full items-end md-max:static md-max:flex-col md-max:m-0'>
         {/* <img className='absolute w-screen left-0' src={introNapiszHistorie} /> */}
         {/* <img className='absolute left-0' src={introNapiszHistorie2} /> */}

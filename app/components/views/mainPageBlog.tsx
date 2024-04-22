@@ -1,11 +1,5 @@
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
-import doorsToBlog from '../../../public/images/doorsToBlog.png';``
-import typeWriterMachine from '../../../public/movies/typewriter2.mp4';
-import poem from '../../../public/movies/Do syreny film.mp4';
-import kocha from '../../../public/images/kocha.jpg';
-import licencja from '../../../public/images/licencja.jpg';
-import pokolenie from '../../../public/images/pokolenie.jpg';
 
 export default function VisitMyBlog() {
 
