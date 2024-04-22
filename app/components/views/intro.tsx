@@ -5,7 +5,7 @@ import { useFollowPointer } from "../features/use-follow-pointer";
 import TypewriterEffect from '../features/typeWriter';
 import slonecznik10 from '../../../public/images/grafika10.svg';
 import introNapiszHistorie from '../../../public/images/introNapiszHistorie.png';
-import introNapiszHistorie2 from '../../../public/images/introNapiszHistorie2.png';
+import dragon from '../../../public/images/dragon.svg';
 import introNapiszHistorie3 from '../../../public/images/introNapiszHistorie3.webp';
 
 
@@ -106,7 +106,7 @@ export default function Intro() {
 
     return (
       <section id="course_Intro" className="w-full bg-lavenda-pink relative scroll-smooth h-screen mx-auto z-20">
-        {/* <img className='absolute w-96 h-96 opacity-95 sunflower' src={slonecznik10} /> */}
+        <img className='absolute opacity-50 top-0 right-0 z-40' src={dragon} />
 
         <div className='max-w-commonLayout text-center mt-0 mb-0 mr-auto ml-auto pt-0 pb-0 pr-5 pl-5 flex md:flex-col justify-center h-full items-end md-max:static md-max:flex-col md-max:m-0'>
         {/* <img className='absolute w-screen left-0' src={introNapiszHistorie} /> */}

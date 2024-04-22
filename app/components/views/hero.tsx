@@ -35,11 +35,12 @@ export default function Hero() {
   const scaleNameY = useTransform(scrollYProgress, [0, 0.0190, 0.0302, 0.0380, 0.0425, 0.0546, 0.0606, 0.065, 0.0685], [1, 1.25, 1.65, 1.95, 2.25, 3.75, 5.25, 7.7, 15]);
   const scaleNameYShadow = useTransform(scrollYProgress, [0, 0.0190, 0.0302, 0.0380, 0.0425, 0.0546, 0.0606, 0.065, 0.0685], [0, 0.95, 0.89, 0.80, 0.72, 0.64, 0.58, 0.48, 0.40]);
   const scaleEXName = useTransform(scrollYProgress, [0.046, 0.067, 0.0691], [0.99, 0.991, 1]);
+  const opacityForTitle = useTransform(scrollYProgress, [0.046, 0.067, 0.0691], [1, 0.5, 0]);
 
   const rotateXShadow = useTransform(scrollYProgress, [0.046, 0.067, 0.0691], [0, 0.991, 1.57007]);
 
 
-  const blurValue = useTransform(scrollYProgress, [0, 0.0966], ['0px', '2px']);
+  const blurValue = useTransform(scrollYProgress, [0, 0.0966], ['0px', '15px']);
   const filter = useTransform(blurValue, value => `blur(${value})`);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -55,7 +56,7 @@ export default function Hero() {
               Amelia Pudzianowska&#8482;
             </motion.h1>
           </motion.h1>
-          <motion.h1 className="text-3xl mt-2 font-thin text-magenta xs:text-xl" >Przedstawia:</motion.h1>
+          <motion.h1 className="text-3xl mt-2 font-thin text-magenta xs:text-xl" style={{ opacity: opacityForTitle}}>Przedstawia:</motion.h1>
           <motion.h2 className="relative text-lg mt-auto font-extralight text-magenta mb-7 xs:text-base" style={{ scaleX: scaleEXName, scaleY: scaleNameY, transformOrigin: "bottom" }}>
             2023 Radom | blog & kurs
             <motion.h2 className="absolute top-0 left-0 -z-10 blur-[1px] text-lg mt-auto font-extralight text-magenta mb-7 xs:text-base" style={{ translateY: '-3px', scaleX: scaleEXName, scaleY: scaleNameYShadow, rotateX: rotateXShadow, transformOrigin: "bottom" }}>
