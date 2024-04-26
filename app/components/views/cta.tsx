@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useFollowPointer } from "../../components/features/use-follow-pointer";
 import ctaBackgroundImg from "../../../public/images/ctaBackGround.png";
 import ctaBgMobile from "../../../public/images/ctaBgMobile.png";
+import ozdobaNaCennik from "../../../public/images/ozdobaNaCennik.svg";
+import wasy from "../../../public/images/wasy.svg";
 
 export default function CallToAction() {
     const ref = useRef <HTMLElement | null> (null);
@@ -57,12 +59,16 @@ export default function CallToAction() {
                 />
             </motion.div>
             <div className="py-8 px-4 sm:py-16 lg:px-6 -z-10 max-w-commonLayout absolute opacity-90 xs:px-0 md-max:top-1/2 xs:py-0">
-                <div className="bg-lavenda-pink mx-auto rounded-full text-center p-4 w-3/4 2xs:p-8">
+                <div className="flex justify-center flex-col items-center bg-lavenda-pink mx-auto rounded-full text-center p-4 w-3/4 2xs:p-8">
                     <h2 className="z-10 my-4 text-4xl tracking-tighter font-black leading-tight text-gray-950 dark:text-white md-max:text-2xl 2xs:my-0 2sm:mx-3">Zacznij swoją przygodę z pisaniem!</h2>
-                    <p className="my-6 z-10 px-32 font-light text-gray-800 dark:text-gray-800 md:text-lg md-max:p-0 2xs:mt-2 2xs:mb-0 md-max:m-3">Zapisz się na kurs i "Napisz historię marzeń". <span className='xs:hidden'>Już dziś dołącz do szerokiego grona ludzi, którzy z pisania uczynili swoje życiowe rzemiosło i pasję.</span></p>
+                    <p className="relative my-6 z-10 px-32 font-light text-gray-800 dark:text-gray-800 md:text-lg md-max:p-0 2xs:mt-2 2xs:mb-0 md-max:m-3">Zapisz się na kurs i "Napisz historię marzeń". <span className='xs:hidden'>Już dziś dołącz do szerokiego grona ludzi, którzy z pisania uczynili swoje życiowe rzemiosło i pasję.</span></p>
+                    <img src={wasy} className='absolute mt-40' />
                 </div>
             </div>
-            <a href="pricing" className="absolute top-3/4 leading-9 text-gray-900 z-10 bg-lavenda-pink hover:bg-primary-800 shadow-2xl focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-8 py-5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 mx-auto md-max:top-650px">Cennik</a>
+            <a href="pricing" className=" absolute top-3/4 leading-9 text-gray-900 z-10 bg-lavenda-pink hover:bg-primary-800 shadow-2xl focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-8 py-5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 mx-auto md-max:top-650px">
+            <img src={ozdobaNaCennik} className='absolute top-3 left-0'/>
+                Cennik
+            </a>
 
         </section>
     );

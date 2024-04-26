@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useTransform, useScroll, useMotionValueEvent } from "framer-motion";
+import adamiewa from "../../../public/images/adamiewa.svg"
 
 export default function Hero() {
 
@@ -47,8 +48,25 @@ export default function Hero() {
     console.log("Page scroll: ", latest);
   })
   return (
-    <section id="course_Hero" className="min-h-screen brickWall z-20 relative">
-      <motion.div className="absolute w-full h-full bg-hero-pattern bg-cover xs:bg-right-bottom z-0" style={{ perspective: perspectiveVal, translateY: transY, rotateX: tiltY, transformOrigin: "bottom" }}>
+    <section id="course_Hero" className="min-h-screen z-20 relative">
+      <motion.div className="absolute w-full h-full  bg-cover xs:bg-right-bottom z-0">
+        <motion.header className="absolute top-0 right-0 left-0 flex flex-col  justify-center items-center h-screen">
+          <motion.h1 className="relative text-5xl mb-2 mt-auto text-magenta tracking-tighter drop-shadow-2xl xs:text-3xl">
+            Amelia Pudzianowska&#8482;
+          </motion.h1>
+          <motion.h1 className="text-3xl mt-2 font-thin text-magenta xs:text-xl">Przedstawia:</motion.h1>
+          <img src={adamiewa} className="absolute mt-16 w-64 top-1/2" />
+          <motion.h2 className="relative text-lg mt-auto font-extralight text-magenta mb-7 xs:text-base">
+            2023 Radom | blog & kurs
+          </motion.h2>
+        </motion.header>
+      </motion.div>
+    </section>
+  );
+
+ /*  return (
+    <section id="course_Hero" className="min-h-screen z-20 relative">
+      <motion.div className="absolute w-full h-full  bg-cover xs:bg-right-bottom z-0" style={{ perspective: perspectiveVal, translateY: transY, rotateX: tiltY, transformOrigin: "bottom" }}>
         <motion.header className="absolute top-0 right-0 left-0 flex flex-col  justify-center items-center h-screen">
           <motion.h1 className="relative text-5xl mb-2 mt-auto text-magenta tracking-tighter drop-shadow-2xl xs:text-3xl" style={{ perspective: perspectiveVal, scaleX: scaleEXName, scaleY: scaleNameY, transformOrigin: "bottom" }}>
             Amelia Pudzianowska&#8482;
@@ -57,6 +75,7 @@ export default function Hero() {
             </motion.h1>
           </motion.h1>
           <motion.h1 className="text-3xl mt-2 font-thin text-magenta xs:text-xl" style={{ opacity: opacityForTitle}}>Przedstawia:</motion.h1>
+          <img src={adamiewa} className="absolute mt-16 w-64 top-1/2" />
           <motion.h2 className="relative text-lg mt-auto font-extralight text-magenta mb-7 xs:text-base" style={{ scaleX: scaleEXName, scaleY: scaleNameY, transformOrigin: "bottom" }}>
             2023 Radom | blog & kurs
             <motion.h2 className="absolute top-0 left-0 -z-10 blur-[1px] text-lg mt-auto font-extralight text-magenta mb-7 xs:text-base" style={{ translateY: '-3px', scaleX: scaleEXName, scaleY: scaleNameYShadow, rotateX: rotateXShadow, transformOrigin: "bottom" }}>
@@ -66,5 +85,6 @@ export default function Hero() {
         </motion.header>
       </motion.div>
     </section>
-  );
+  ); */
+  
 };

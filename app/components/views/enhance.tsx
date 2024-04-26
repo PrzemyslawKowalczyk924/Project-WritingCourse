@@ -3,7 +3,13 @@ import boss from '../../../public/icons/boss_ceo.svg';
 import art from '../../../public/icons/art.svg';
 import megaphone from '../../../public/icons/megaphone.svg';
 import typingMachine from '../../../public/icons/typingMachine.svg';
-import slonecznik11 from '../../../public/images/grafika11.svg'
+import slonecznik11 from '../../../public/images/grafika11.svg';
+import kuchenka from '../../../public/images/kuchenka.svg';
+import zelazko from '../../../public/images/zelazko.svg';
+import balaDoMycia from '../../../public/images/balaDoMycia.png';
+import kredens from '../../../public/images/kredens.svg';
+import wanna from '../../../public/images/wanna.svg';
+import umywalka from '../../../public/images/umywalka.svg';
 
 const features = [
   {
@@ -34,8 +40,16 @@ const features = [
 
 export default function Enhance() {
   return (
-    <section id='course_Enhance' className="bg-lavenda-pink py-24 sm:py-32 z-20 relative">
-      <img className='absolute w-96 h-80 top-1/3 right-auto  z-0 opacity-10 xl:opacity-100' src={slonecznik11} />
+    <section id='course_Enhance' className="bg-lavenda-pink py-24 sm:py-32 z-20 relative h-screen flex justify-center items-center">
+      {/* <div className='grid grid-cols-5 grid-rows-2 top-5 absolute p-20 gap-4'>
+        <img src={kuchenka} className='opacity-5 col-span-1 row-span-1 z-10'/>
+        <img src={zelazko} className='opacity-5 col-span-3 row-span-1 justify-self-center'/>
+        <img src={kredens} className='opacity-5 col-span-1 row-span-1'/>
+        <img src={wanna} className='opacity-5 col-span-2 row-span-1 z-10'/>
+        <img src={balaDoMycia} className='opacity-5 col-span-2 row-span-1'/>
+        <img src={umywalka} className='opacity-5 col-span-1 row-span-1'/>
+      </div> */}
+      <img className='absolute w-96 h-80 top-1/3 left-0  z-0 opacity-10 xl:opacity-100' src={slonecznik11} />
       <div className="mx-auto max-w-commonLayout px-6 lg:px-8">
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">

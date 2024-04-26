@@ -1,9 +1,11 @@
-import slonecznik12 from '../../../public/images/grafika12.svg'
+import slonecznik12 from '../../../public/images/grafika12.svg';
+import pajac from '../../../public/images/pajac.svg';
 
 export default function FindMe() {
     return (
       <section className="bg-lavenda-pink py-24 sm:py-32 relative z-20">
         <img className='absolute w-96 h-80 left-2/3 top-0 opacity-95 md-max:opacity-10 md-max:left-1/2 md-max:top-0' src={slonecznik12} />
+        {/* <img className='absolute top-14 left-12 opacity-30 md-max:opacity-10 md-max:left-1/2 md-max:top-0' src={pajac} /> */}
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-start ml-28 text-lg font-semibold leading-8 text-gray-900 md-max:mx-auto md-max:text-center">
             Znajdziesz mnie również na:

@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useMotionValue, useTransform, animate, motion, useInView } from "framer-motion";
+import szafa from "../../../public/images/szafa.svg";
+import bluszcz from "../../../public/images/bluszcz.svg";
 
 const links = [
     { name: 'Nauka z mentorem', href: '#' },
@@ -62,6 +64,8 @@ const links = [
 
     return (
       <section  className="relative isolate overflow-hidden bg-mimi-pink py-24 sm:py-32 z-30">
+        {/* <img src={szafa} className="absolute opacity-50 top-28 right-20" /> */}
+        <img src={bluszcz} className="absolute opacity-50 top-28 right-20 w-96" />
         <div className="mx-auto max-w-commonLayout px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tighter text-black sm:text-6xl">„Napisz historię marzeń!” w liczbach:</h2>
