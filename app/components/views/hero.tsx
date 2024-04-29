@@ -55,7 +55,7 @@ export default function Hero() {
             Amelia Pudzianowska&#8482;
           </motion.h1>
           <motion.h1 className="text-3xl mt-2 font-thin text-magenta xs:text-xl">Przedstawia:</motion.h1>
-          <img src={adamiewa} className="absolute mt-16 w-64 top-1/2" />
+          <img src={adamiewa} className="absolute opacity-55 mt-16 w-64 top-1/2" />
           <motion.h2 className="relative text-lg mt-auto font-extralight text-magenta mb-7 xs:text-base">
             2023 Radom | blog & kurs
           </motion.h2>

@@ -1,14 +1,11 @@
-import szafa from '../../../public/images/szafa.svg';
-import winogrono from '../../../public/images/winogrono.svg';
-
+import catAndBirdHand from '../../../public/images/catAndBirdHand.svg';
 
 export default function AskMore() {
 
     return (
 
         <section className="text-gray-600 body-font bg-mimi-pink z-30 relative">
-            {/* <img src={szafa} className='absolute right-0 w-96' /> */}
-            {/* <img src={winogrono} className='absolute opacity-25 top-0 left-0 w-64' /> */}
+            <img src={catAndBirdHand} className='absolute top-5 right-10 w-64' />
             
             <div className="max-w-commonLayout px-5 py-24 mx-auto z-30">
                 <h1 className="sm:text-3xl md:text-4xl font-medium title-font text-center text-gray-900 mb-20 tracking-tight">Masz więcej pytań?</h1>
