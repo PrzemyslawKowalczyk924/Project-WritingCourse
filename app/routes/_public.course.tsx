@@ -38,7 +38,7 @@ export default function Index() {
       <AskMore />
       <FindMe />
       <VisitMyBlog />
-      <NewsLetter />
+      {/* <NewsLetter /> */}
     </div>
   );
 }

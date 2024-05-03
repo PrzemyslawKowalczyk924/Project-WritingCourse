@@ -131,7 +131,9 @@ export default {
         'leonAi-28': 'url("public/images/leonAi-28.jpg")',    
         'leonAi-29': 'url("public/images/leonAi-29.jpg")',
         'photo00': 'url("public/images/grafika00.png")',
-        'gazeta': 'url("public/images/gazeta.jpg")',  
+        'gazeta': 'url("public/images/gazeta.jpg")',
+        'lavenda_cta_bg': 'url("public/images/lavenda_background_hero.jpg")',  
+        'lavenda_cta_bg_sea': 'url("public/images/lavenda_bg_hero_sea.jpg")',  
       },
       backgroundSize: {
         'contain-50': '50% 50%',

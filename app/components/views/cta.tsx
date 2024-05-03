@@ -22,7 +22,7 @@ export default function CallToAction() {
     };
 
     return (
-        <section id='ctaId' className="bg-ctaBackground-pattern md-max:bg-none bg-cover md:bg-fixed md-max:h-140 h-screen w-full dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
+        <section id='ctaId' className="bg-lavenda_cta_bg_sea md-max:bg-none bg-cover md:bg-fixed md-max:h-140 h-screen w-full dark:bg-gray-900 z-10 relative flex justify-center items-center flex-col">
             <div className='absolute w-full h-full'>
                 <img src={ctaBgMobile} className='hidden md-max:block md-max:fixed bg-center left-0 -z-50 h-140 w-full max-w-3xl top-16' />
             </div>

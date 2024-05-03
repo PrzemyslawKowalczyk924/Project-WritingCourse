@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="bg-white bg-gradient-to-tr relative from-[#ffffff] to-[#FFEBEC] dark:bg-gray-900 z-20">
             <div className="mx-auto w-full max-w-commonLayout p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
-                    <img src={winogrono} className='absolute opacity-25 top-10 left-10 w-44' />
+                   {/*  <img src={winogrono} className='absolute opacity-25 top-10 left-10 w-44' /> */}
                     <div className="mb-6 md:mb-0">
                         <a href="https://flowbite.com/" className="flex items-center">
                             {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="FlowBite Logo" /> */}

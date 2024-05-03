@@ -1,7 +1,7 @@
 import { Carousel } from 'flowbite-react';
-import fota1 from '../../../public/images/blackTulip1.jpg';
-import fota2 from '../../../public/images/blackTulip2.jpg';
-import fota3 from '../../../public/images/blackTulip3.jpg';
+import fota1 from '../../../public/images/czarnyTulipan_3.png';
+import fota2 from '../../../public/images/czarnyTulipan_4.png';
+import fota3 from '../../../public/images/czarnyTulipan_5.png';
 import drukarz from '../../../public/images/drukarz.svg';
 
 export default function Publication() {
@@ -10,26 +10,18 @@ export default function Publication() {
         <section id='course_Publication' className="relative bg-mimi-pink dark:bg-gray-900 xs:min-h-5/4 sm:min-h-5/4 md:min-h-screen z-20">
             <img src={drukarz} className='absolute opacity-5 w-1/3 top-1/3 right-0'/>
             <div className="gap-8 items-center py-8 px-4 mx-auto max-w-commonLayout xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 h-full xs:flex xs:h-full xs:flex-col-reverse">
-                <Carousel indicators={false} className=''>
-                    <img
+                <Carousel indicators={false} leftControl="&#8592;" rightControl="&#8594;" slide={false} className=''>
+                    <img className=''
                         alt="..."
                         src={fota1}
                     />
-                    <img
+                    <img className=''
                         alt="..."
                         src={fota2}
                     />
-                    <img
+                    <img className=''
                         alt="..."
                         src={fota3}
-                    />
-                    <img
-                        alt="..."
-                        src={fota1}
-                    />
-                    <img
-                        alt="..."
-                        src={fota2}
                     />
                 </Carousel>
                 <div className="mt-4 md:mt-0">

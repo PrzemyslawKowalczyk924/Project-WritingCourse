@@ -48,7 +48,7 @@ export default function Hero() {
     console.log("Page scroll: ", latest);
   })
   return (
-    <section id="course_Hero" className="min-h-screen z-20 relative">
+    <section id="course_Hero" className="min-h-screen z-20 relative noise">
       <motion.div className="absolute w-full h-full  bg-cover xs:bg-right-bottom z-0">
         <motion.header className="absolute top-0 right-0 left-0 flex flex-col  justify-center items-center h-screen">
           <motion.h1 className="relative text-5xl mb-2 mt-auto text-magenta tracking-tighter drop-shadow-2xl xs:text-3xl">
