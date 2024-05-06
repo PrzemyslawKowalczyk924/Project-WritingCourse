@@ -32,7 +32,7 @@ export default function Example() {
         <div ref={targetRef} className="bg-mimi-pink">
             <motion.img
             src={motyl}
-            className="w-20 h-20 z-50 opacity-90 fixed top-1/2 left-1/2"
+            className="w-20 h-20 z-40 opacity-90 fixed top-1/2 left-1/2"
                 style={{ translateX: butterFlyX, translateY: butterFlyY, rotateY: scrollY, opacity: butterflyOpacity, scale: butterFlyScale }}
             />
             <TrippyScrollEffectThree />

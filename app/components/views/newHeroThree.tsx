@@ -4,6 +4,7 @@ import image1 from "../../../public/images/PióroAlone.png";
 import image2 from "../../../public/images/kałamaż2.png";
 import image3 from "../../../public/images/kropla.png";
 import image4 from "../../../public/images/kleks.png";
+import dwaKwiaty from "../../../public/images/dwaKwiaty.svg";
 
 interface SectionProps {
     background: string;
@@ -92,7 +93,8 @@ const TrippyScrollEffectTwo = () => {
     return (
         <section ref={targetRef} className="bg-lavenda-pink relative z-0 h-[400vh]">
             <motion.div className="sticky top-0 h-screen z-20">
-                <motion.header className="flex flex-col justify-center items-center h-screen">
+                <motion.header className="flex flex-col justify-center items-center h-screen relative">
+                    <img src={dwaKwiaty} className="absolute top-1/4 opacity-35" />
                     <div className="flex flex-col justify-center items-center mt-auto">
                         <motion.img src={image1} className="h-24 w-24 mr-20 mt-48" style={{ translateX: imageOneX, translateY: imageOneY, rotate: imageOneRotate }} alt="fotka2" />
                         <motion.img src={image2} className="h-12" alt="fotka2" />

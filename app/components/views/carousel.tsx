@@ -15,10 +15,11 @@ import photoOfAuthor_12 from "../../../public/images/AmPudz12.jpg";
 import photoOfAuthor_13 from "../../../public/images/AmPudz15.jpg";
 import butterfly from "../../../public/icons/butterfly_24.png";
 import doSyreny from "../../../public/movies/Do syreny film.mp4";
+import dragon from '../../../public/images/dragon.svg';
 
 const CarouselExample = () => {
   return (
-    <div className="bg-lavenda-pink">
+    <div className="bg-lavenda-pink relative z-40">
       {/* <div className="flex flex-col h-48 items-center justify-center">
         <span className="font-black text-3xl text-gray-800">&#9884;</span>
         <span className="font-semibold uppercase text-neutral-500">
@@ -52,6 +53,7 @@ const HorizontalScrollCarousel = () => {
           {/* <video autoPlay muted loop src={doSyreny} /> */}
         </motion.div>
       </div>
+      <img src={dragon} className="absolute bottom-0 right-[475px] w-1/3 h-1/3 -z-10 opacity-50" />
     </section>
   );
 };
