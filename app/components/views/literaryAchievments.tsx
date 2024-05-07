@@ -4,6 +4,7 @@ import doPołowy_1 from '../../../public/images/doPołowy-1.svg';
 import doPołowy_2 from '../../../public/images/doPołowy-2.svg';
 import doPołowy_3 from '../../../public/images/doPołowy-3.svg';
 import doPołowy_4 from '../../../public/images/doPołowy-4.svg';
+import gentelmens from '../../../public/images/gentelmens.svg';
 
 const LiteraryAchievments = () => {
 
@@ -38,6 +39,7 @@ const LiteraryAchievments = () => {
     return (
         <motion.div ref={targetRef} className="relative h-[300vh] z-20 max-w-commonLayout mx-auto">
             <motion.header className="sticky top-0 h-screen flex flex-row flex-wrap z-0 justify-between">
+                <img src={gentelmens} className="absolute left-1/2" />
                 <div className="w-1/2 h-1/2 flex flex-row flex-wrap justify-center items-center my-auto">
                     <h1 className="text-9xl font-semibold tracking-tighter drop-shadow-2xl xs:text-3xl text-gray-950 mx-auto mt-9">Dorobek</h1>
                     <h1 className="text-9xl font-semibold tracking-tighter drop-shadow-2xl xs:text-3xl text-gray-950 mx-auto mb-9">Literacki</h1>

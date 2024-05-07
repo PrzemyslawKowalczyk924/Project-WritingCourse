@@ -100,12 +100,12 @@ const TrippyScrollEffectTwo = () => {
                         <motion.img src={image2} className="h-12" alt="fotka2" />
                         <motion.img src={image3} className="w-4 h-6 -z-10" alt="fotka2" style={{ translateX: inkImageX, translateY: inkImageY, rotate: inkImageRotate, opacity: imageOpacity, scale: inkScale }} />
                     </div>
-                    <motion.h1 className="text-8xl mb-2 pt-11 mt-auto text-magenta tracking-tighter drop-shadow-2xl xs:text-3xl">Amelia Pudzianowska&#8482;</motion.h1>
-                    <h1 className="text-4xl mt-2 mb-20 font-thin text-magenta xs:text-xl">Przedstawia:</h1>
+                    <motion.h1 className="text-8xl mb-2 pt-11 mt-auto text-black tracking-tighter drop-shadow-2xl xs:text-3xl">Amelia Pudzianowska&#8482;</motion.h1>
+                    <h1 className="text-4xl mt-2 mb-20 font-thin text-black xs:text-xl">Przedstawia:</h1>
                     <div className="flex flex-col justify-center items-center">
                         <motion.img src={image4} className="w-14 h-14" alt="fotka4" style={{ opacity: splashOfInkOpacity, scale: splashOfInkScale }} />
                     </div>
-                    <motion.h2 className="text-1 mt-auto font-extralight text-magenta mb-7 drop-shadow xs:text-base">2023 Radom | blog & kurs</motion.h2>
+                    <motion.h2 className="text-1 mt-auto font-extralight text-black mb-7 drop-shadow xs:text-base">2023 Radom | blog & kurs</motion.h2>
                 </motion.header>
             </motion.div>
         </section>
