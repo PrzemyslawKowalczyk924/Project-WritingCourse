@@ -52,8 +52,8 @@ const HorizontalScrollCarousel = () => {
           })}
           {/* <video autoPlay muted loop src={doSyreny} /> */}
         </motion.div>
+        <img src={dragon} className="absolute justify-self-center justify-items-center right-full left-full h-1/2 -z-10 opacity-50" />
       </div>
-      <img src={dragon} className="absolute bottom-0 right-[475px] w-1/3 h-1/3 -z-10 opacity-50" />
     </section>
   );
 };
