@@ -96,7 +96,7 @@ const TrippyScrollEffectTwo = () => {
                 <motion.header className="flex flex-col justify-center items-center h-screen relative">
                     <img src={dwaKwiaty} className="absolute top-1/4 opacity-35" />
                     <div className="flex flex-col justify-center items-center mt-auto">
-                        <motion.img src={image1} className="h-24 w-24 mr-20 mt-48 opacity-70" style={{ translateX: imageOneX, translateY: imageOneY, rotate: imageOneRotate }} alt="fotka2" />
+                        <motion.img src={image1} className="h-24 w-24 mr-20 mt-48 opacity-85" style={{ translateX: imageOneX, translateY: imageOneY, rotate: imageOneRotate }} alt="fotka2" />
                         <motion.img src={image2} className="h-12 z-20" alt="fotka2" />
                         <motion.img src={image3} className="w-4 h-6 -z-10" alt="fotka2" style={{ translateX: inkImageX, translateY: inkImageY, rotate: inkImageRotate, opacity: imageOpacity, scale: inkScale }} />
                     </div>
