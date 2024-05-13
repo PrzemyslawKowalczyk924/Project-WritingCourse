@@ -23,7 +23,7 @@ export default function FindMe() {
     const titleOpacity = useTransform(scrollYProgress, [0.5, 1], ["0%", "100%"]);
 
     return (
-        <section ref={targetRef} className="bg-lavenda-pink  relative z-0 h-[400vh]">
+        <section ref={targetRef} className="bg-cherry-pink relative z-0 h-[400vh]">
             <motion.div className="sticky top-0 h-screen z-20">
                 <motion.img className='absolute z-50 bottom-0  opacity-80   w-screen' src={mountain1} style={{ translateY: imageOneY }} />
                 <motion.img className='absolute z-40 bottom-12 opacity-95  blur-xs w-screen' src={mountain2} style={{ translateY: imageTwoY }} />
