@@ -26,8 +26,8 @@ const solutions = [
 ];
 
 const callsToAction = [
-  { name: 'Obejrzyj demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Zapisz się', href: 'pricing', icon: ShoppingCartIcon },
+  { name: 'Obejrzyj demo', href: 'https://www.cozadzien.pl/radio-rekord/smutek-to-przyjaciel-artystow-o-warsztatach-literackich-i-poezji/100402', icon: PlayCircleIcon, target: '_blank' },
+  { name: 'Zapisz się', href: 'pricing', icon: ShoppingCartIcon, target: '_self' },
 ];
 
 export default function Example() {
@@ -320,6 +320,7 @@ c60 58 66 67 62 96 -3 18 1 55 9 81 19 64 5 110 -41 139 -40 24 -56 25 -82 5z"/>
                     key={item.name}
                     href={item.href}
                     className="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100"
+                    target={item.target}
                   >
                     <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                     {item.name}

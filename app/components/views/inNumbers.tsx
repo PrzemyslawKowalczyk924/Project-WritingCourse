@@ -36,7 +36,7 @@ const links = [
       if (isInView) {
         const animations = [
           createAnimation(countH1, 5, 3),
-          createAnimation(countH2, 60, 3),
+          createAnimation(countH2, 45, 3),
           createAnimation(countH3, 3, 3),
           createAnimation(countH4, 8, 5),
           createAnimation(countH5, 100, 7),
@@ -55,7 +55,7 @@ const links = [
 
      const stats = [
        { name: 'Spotkania', value: roundedH1},
-       { name: 'Godzina zegarowa zajęć', value: roundedH2, symbol: 'min'},
+       { name: 'Godzina lekcyjna', value: roundedH2, symbol: 'min'},
        { name: 'Intensywne tygodnie zajęć', value: roundedH3},
        { name: 'Uczestników', value: roundedH4 },
        { name: 'Satysfakcja', value:  roundedH5, symbol: '%' },

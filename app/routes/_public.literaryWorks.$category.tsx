@@ -39,7 +39,7 @@ const sortOptions = [
 const subCategories = [
     { name: 'Poezja', href: 'poetry' },
     { name: 'Opowiadania', href: 'novels' },
-    { name: 'Powieści', href: '#' },
+    { name: 'Reportaże', href: '#' },
     { name: 'Artykuły', href: 'articles' },
     { name: 'Felietony', href: '#' },
 ]
@@ -196,7 +196,7 @@ export default function Example() {
 
                 <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">Dobytek literacki</h1>
+                        <h1 className="text-4xl font-bold tracking-tight text-gray-900">Dorobek literacki</h1>
 
                         <div className="flex items-center">
                             <Menu as="div" className="relative inline-block text-left">

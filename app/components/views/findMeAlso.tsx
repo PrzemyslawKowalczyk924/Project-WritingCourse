@@ -1,11 +1,16 @@
-import { useTransform, useScroll, motion, MotionValue } from "framer-motion";
+import { useTransform, useScroll, motion, MotionValue, useMotionValueEvent } from "framer-motion";
 import { useRef } from "react";
 import mountain1 from '../../../public/images/mountain1.svg'
+import mountain10 from '../../../public/images/mountain10.png'
 import mountain2 from '../../../public/images/mountain2.svg'
+import mountain20 from '../../../public/images/mountain20.png'
 import mountain3 from '../../../public/images/mountain3.svg'
+import mountain30 from '../../../public/images/mountain30.png'
 import mountain4 from '../../../public/images/mountain4.svg'
+import mountain40 from '../../../public/images/mountain40.png'
+import mountain04 from '../../../public/images/mountain04.png'
 import mountain5 from '../../../public/images/mountain5.svg'
-import wiersz from '../../../public/images/kocha.jpg'
+import mountain50 from '../../../public/images/mountain50.png'
 
 export default function FindMe() {
 
@@ -20,17 +25,21 @@ export default function FindMe() {
     const imageThreeY = useTransform(scrollYProgress, [0, 1], ["25%", "0%"]);
     const imageFourY = useTransform(scrollYProgress, [0, 1], ["15%", "0%"]);
     const imageFiveY = useTransform(scrollYProgress, [0, 1], ["10%", "0%"]);
-    const titleOpacity = useTransform(scrollYProgress, [0.5, 1], ["0%", "100%"]);
+    const titleOpacity = useTransform(scrollYProgress, [0.03, 1], ["0%", "100%"]);
+
+    useMotionValueEvent(scrollYProgress, "change", (latest) => {
+        console.log("Page scroll: ", latest);
+    })
 
     return (
-        <section ref={targetRef} className="bg-cherry-pink relative z-0 h-[400vh]">
+        <section ref={targetRef} className="bg-cherry-pink relative z-0 h-[500vh]">
             <motion.div className="sticky top-0 h-screen z-20">
-                <motion.img className='absolute z-50 bottom-0  opacity-80   w-screen' src={mountain1} style={{ translateY: imageOneY }} />
-                <motion.img className='absolute z-40 bottom-12 opacity-95  blur-xs w-screen' src={mountain2} style={{ translateY: imageTwoY }} />
-                <motion.img className='absolute z-30 bottom-24 opacity-95  blur-xs w-screen' src={mountain3} style={{ translateY: imageThreeY }} />
-                <motion.img className='absolute z-20 bottom-40 opacity-95  blur-xs w-screen' src={mountain4} style={{ translateY: imageFourY }} />
-                <motion.img className='absolute z-10 bottom-60 opacity-25  blur-xs w-screen' src={mountain5} style={{ translateY: imageFiveY }} />
-                <motion.div className="absolute right-0 flex flex-col top-1/4 mx-auto max-w-7xl px-6 lg:px-8">
+                <motion.img className='absolute z-50 bottom-0  w-screen' src={mountain10}  style={{ translateY: imageOneY}} />
+                <motion.img className='absolute z-40 bottom-12 opacity-95 blur-[1px] w-screen' src={mountain20} style={{ translateY: imageTwoY}} />
+                <motion.img className='absolute z-30 bottom-24 opacity-90 blur-[1px] w-screen' src={mountain30} style={{ translateY: imageThreeY}} />
+                <motion.img className='absolute z-20 bottom-40 opacity-75 blur-[1px] w-screen' src={mountain04} style={{ translateY: imageFourY}} />
+                <motion.img className='absolute z-10 bottom-60 opacity-95 blur-[1px] w-screen' src={mountain50} style={{ translateY: imageFiveY}} />
+                <motion.div className="absolute right-0 flex flex-col top-1/4 mx-auto max-w-7xl px-6 lg:px-8 z-10">
                     <motion.h2 className="text-end mb-10 mr-28 text-lg font-semibold leading-8 text-gray-900 md-max:mx-auto md-max:text-center" style={{opacity: titleOpacity}}>
                         Znajdziesz mnie również na:
                     </motion.h2>

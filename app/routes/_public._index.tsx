@@ -7,6 +7,7 @@ import LiteraryAchievments from "~/components/views/literaryAchievments";
 import MainPageBlog from "~/components/views/mainPageBlog";
 import CheckUpMyCourse from "~/components/views/checkUpMyCourse";
 import FindMeAlso from "~/components/views/findMeAlso";
+import IWorkWith from "~/components/views/iWorkWith";
 
 export default function Example() {
 
@@ -40,6 +41,7 @@ export default function Example() {
             <CarouselExample />
             <MainPageBlog />
             <CheckUpMyCourse />
+            {/* <IWorkWith /> */}
             <FindMeAlso />
         </div>
     )
