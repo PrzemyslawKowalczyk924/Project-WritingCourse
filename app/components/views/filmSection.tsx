@@ -21,7 +21,7 @@ export default function CheckUpMyCourse() {
 
     return (
         <section ref={targetRef} className="text-gray-600 body-font h-[300vh] bg-light-pink z-30 relative shadowForBoxLight">
-            <div className="sticky top-0 max-w-commonLayout w-full h-screen mb-10 m-auto flex px-5 py-24 md:flex-row flex-row justify-center items-center">
+            <div className="sticky top-0 max-w-commonLayout w-full h-screen mb-10 m-auto flex px-5 py-24 md:flex-row flex-row justify-center items-end">
                 <div className="lg:flex-grow md:w-1/2 max-w-md flex flex-col md:items-center md:text-left items-center text-left">
                     <h1 className="text-7xl text-gray-900 tracking-tighter font-medium leading-tight self-start">Obejrzyj</h1>
                     <h2 className="text-6xl text-gray-900 tracking-tighter font-black mb-9">historię pisaną wierszem</h2>
@@ -32,9 +32,9 @@ export default function CheckUpMyCourse() {
                     </div> */}
                 </div>
                 <img src={panipani} className="absolute top-10 opacity-5 -left-56" />
-                <img src={tv} className="absolute bottom-0 right-0" />
-                <div className="flex flex-col items-start justify-center lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 pl-24">
-                    <video autoPlay muted loop className="tv-screen mt-5 opacity-90" src={doSyreny} />
+                <div className="relative flex flex-col items-center justify-center w-1/2 ml-12 mb-36">
+                    <img src={tv} className="absolute" />
+                    <video autoPlay muted loop className="tv-screen opacity-90 mr-10 mb-20" src={doSyreny} />
                     {/* <img src={napisacWiersz} className="grayscale flubber opacity-90" /> */}
                 </div>
             </div>

@@ -1,12 +1,13 @@
 import butterfly from "../../../public/icons/butterfly_24.png"
 import winogrono from '../../../public/images/winogrono.svg';
+import litleSceleton from '../../../public/images/litleSceleton.svg';
 
 export default function Footer() {
     return (
         <footer className="bg-white bg-gradient-to-tr relative from-[#ffffff] to-[#FFEBEC] dark:bg-gray-900 z-20">
             <div className="mx-auto w-full max-w-commonLayout p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
-                   {/*  <img src={winogrono} className='absolute opacity-25 top-10 left-10 w-44' /> */}
+                    <img src={litleSceleton} className='absolute opacity-50 bottom-4 left-56' />
                     <div className="mb-6 md:mb-0">
                         <a href="https://flowbite.com/" className="flex items-center">
                             {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="FlowBite Logo" /> */}
