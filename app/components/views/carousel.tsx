@@ -14,7 +14,6 @@ import photoOfAuthor_11 from "../../../public/images/AmPudz11.jpg";
 import photoOfAuthor_12 from "../../../public/images/AmPudz12.jpg";
 import photoOfAuthor_13 from "../../../public/images/AmPudz15.jpg";
 import dragon from '../../../public/images/dragon.svg';
-import crack from '../../../public/images/crack2.svg';
 import crack_1 from '../../../public/images/crack_1.svg';
 import crack_2 from '../../../public/images/crack_2.svg';
 import crack_3 from '../../../public/images/crack_3.svg';

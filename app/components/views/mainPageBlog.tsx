@@ -22,7 +22,7 @@ export default function VisitMyBlog() {
 
     return (
         <section ref={targetRef} className="relative text-gray-600 body-font h-[300vh] bg-lavenda-pink z-0">
-            <div className="sticky flex max-w-6xl justify-items-end items-center top-0 z-20 h-screen mx-auto gap-0">
+            <div className="sticky max-h-[1152px] flex max-w-6xl justify-items-end items-center top-0 z-20 h-screen mx-auto gap-0">
                 <img src={blogLetters_2} className="absolute w-full h-full bottom-8 -left-36 z-10"/>
                 <img src={sterta_3} className="absolute bottom-0 left-0 z-0 opacity-5"/>
                 <div className="absolute right-0 text-right mr-52 2xl:mr-0 max-w-sm justify-self-start z-10">

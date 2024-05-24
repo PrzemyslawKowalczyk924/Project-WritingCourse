@@ -92,7 +92,7 @@ const TrippyScrollEffectTwo = () => {
 
     return (
         <section ref={targetRef} className="bg-lavenda-pink relative z-0 h-[400vh]">
-            <motion.div className="sticky top-0 h-screen z-20">
+            <motion.div className="sticky top-0 min-h-screen z-20">
                 <motion.header className="flex flex-col justify-center items-center h-screen relative">
                     <img src={dwaKwiaty} className="absolute top-1/4 opacity-35" />
                     <div className="flex flex-col justify-center items-center mt-auto">

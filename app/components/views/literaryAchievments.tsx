@@ -62,7 +62,7 @@ const LiteraryAchievments = () => {
                         <motion.img src={doPołowy_4} className="z-0 opacity-100" style={{ translateX: imageThreeX, translateY: imageThreeY, rotate: imageThreeRotate }} />
                         <motion.img src={doPołowy_3} className="z-0 opacity-100" style={{ translateX: imageFourX, translateY: imageFourY, rotate: imageFourRotate }} />
                     </div>
-                    <button type="submit" className="flex-none mx-auto rounded-md bg-cherry-pink px-3.5 py-2.5 text-sm font-medium text-gray-950 hover:text-lavenda-pink hover:bg-gray-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 shadowForBox">Zajrzyj po więcej!</button>
+                    <button className="text-gray-700 bg-cherry-pink hover:bg-primary-800 shadow focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Wejdź!</button>
                 </div>
             </motion.header>
         </motion.div>

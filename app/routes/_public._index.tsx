@@ -19,7 +19,7 @@ export default function Example() {
     });
 
 
-    const butterflyOpacity = useTransform(scrollYProgress, [0.138, 0.173, 0.369, 0.37, 0.461, 0.462, 0.98, 1], [0, 1, 1, 0, 0, 1, 1, 0]);
+    const butterflyOpacity = useTransform(scrollYProgress, [0.1395, 0.1399, 0.173, 0.369, 0.37, 0.461, 0.462, 0.98, 1], [0, 1, 1, 1, 0, 0, 1, 1, 0]);
     const butterFlyX = useTransform(scrollYProgress, [0.16, 0.18, 0.21, 0.462, 0.51, 0.57, 0.62, 1], [-37, 20, 400, -37, 160, -40, -250, 320]);
     const butterFlyY = useTransform(scrollYProgress, [0.16, 0.51, 0.62, 0.83, 1], [0, 170, -120, 520, -120]);
     const butterFlyRotate = useTransform(scrollYProgress, [0.16, 1], [0, 20]);
