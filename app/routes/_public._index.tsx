@@ -19,11 +19,10 @@ export default function Example() {
     });
 
 
-    const butterflyOpacity = useTransform(scrollYProgress, [0.1395, 0.1399, 0.173, 0.369, 0.37, 0.461, 0.462, 0.98, 1], [0, 1, 1, 1, 0, 0, 1, 1, 0]);
-    const butterFlyX = useTransform(scrollYProgress, [0.16, 0.18, 0.21, 0.462, 0.51, 0.57, 0.62, 1], [-37, 20, 400, -37, 160, -40, -250, 320]);
-    const butterFlyY = useTransform(scrollYProgress, [0.16, 0.51, 0.62, 0.83, 1], [0, 170, -120, 520, -120]);
-    const butterFlyRotate = useTransform(scrollYProgress, [0.16, 1], [0, 20]);
-    const butterFlyScale = useTransform(scrollYProgress, [0.16, 0.18, 0.21, 0.31, 0.32, 0.349, 0.35, 0.462, 1], [0.5, 0.5, 0, 0, 0.5, 0.5, 0, 0.5, 0.5]);
+    const butterflyOpacity = useTransform(scrollYProgress, [0.1395, 0.1399, 0.173, 0.263, 0.2631, 0.369, 0.37, 0.461, 0.462, 0.98, 1], [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]);
+    const butterFlyX = useTransform(scrollYProgress, [0.136, 0.139, 0.145, 0.16, 0.18, 0.21, 0.462, 0.51, 0.57, 0.62, 1], [-37, -37, -90, -37, 20, 400, -37, 160, -40, -250, 320]);
+    const butterFlyY = useTransform(scrollYProgress, [0.136, 0.139, 0.145, 0.16, 0.17, 0.185, 0.51, 0.62, 0.83, 1], [0, 0, -30, 15, 70, 0, 170, -120, 520, -120]);
+    const butterFlyScale = useTransform(scrollYProgress, [0.16, 0.18, 0.21, 0.25, 0.26, 2.89, 0.35, 0.462, 1], [0.5, 0.5, 0, 0, 0.5, 0.5, 0, 0.5, 0.5]);
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         console.log("Page scroll: ", latest);

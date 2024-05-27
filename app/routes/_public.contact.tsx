@@ -2,143 +2,94 @@ import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import faceBookIcon from '../../public/icons/faceBookIcon.svg'
+import instagramIcon from '../../public/icons/instagramIcon.svg'
+import gmailIcon from '../../public/icons/gmailIcon.svg'
+import emailIcon from '../../public/icons/emailIcon.svg'
+
 
 export default function Example() {
-  const [agreed, setAgreed] = useState(false)
+
 
   return (
-    <div className="isolate bg-contact-pattern px-6 py-24 sm:py-32 lg:px-8">
-      <div
-        className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-        />
-      </div>
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kontakt</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
-        </p>
-      </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
-              Imię
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
+    <section className="bg-contact-pattern py-16 dark:bg-slate-800" id="contact">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mb-4">
+          <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
+            <p className="text-base font-semibold uppercase tracking-wide text-gray-800 dark:text-blue-200">
+              Kontakt
+            </p>
+            <h2
+              className="font-heading my-8 font-bold tracking-tight text-gray-900 dark:text-white text-xl sm:text-3xl">
+              Wszystko zaczyna się od słów
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-600 dark:text-slate-400">Skontaktuj się z ze mną, aby dowiedzieć się, jak mogę pomóc Ci w realizacji Twoich literackich marzeń.
+            </p>
           </div>
-          <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
-              Nazwisko
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                autoComplete="family-name"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-              Email
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                autoComplete="email"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
-              Telefon
-            </label>
-            <div className="relative mt-2.5">
-              <input
-                type="tel"
-                name="phone-number"
-                id="phone-number"
-                autoComplete="tel"
-                className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-              Wiadomość
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                name="message"
-                id="message"
-                rows={4}
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                defaultValue={''}
-              />
-            </div>
-          </div>
-          <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
-            <div className="flex h-6 items-center">
-              <Switch
-                checked={agreed}
-                onChange={setAgreed}
-                className={classNames(
-                  agreed ? 'bg-indigo-600' : 'bg-gray-200',
-                  'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
-                )}
-              >
-                <span className="sr-only">Agree to policies</span>
-                <span
-                  aria-hidden="true"
-                  className={classNames(
-                    agreed ? 'translate-x-3.5' : 'translate-x-0',
-                    'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out'
-                  )}
-                />
-              </Switch>
-            </div>
-            <Switch.Label className="text-sm leading-6 text-gray-600">
-              Naciskając przycisk, zgadzasz się na naszą {' '}
-              <a href="#" className="font-semibold text-gray-900">
-                privacy&nbsp;policy
-              </a>
-              .
-            </Switch.Label>
-          </Switch.Group>
         </div>
-        <div className="mt-10">
-          <button
-            type="submit"
-            className="block w-full rounded-md bg-cherry-pink px-3.5 py-2.5 text-center text-sm font-semibold text-gray-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Wyślij
-          </button>
+        <div className="flex items-stretch justify-center">
+          <div className="grid md:grid-cols-2">
+            <div className="h-full pr-6">
+              <p className="mt-3 mb-12 text-left text-base text-gray-800 dark:text-slate-400">
+                Poniżej znajdziesz źródła w mediach społecznościowych, przez które możesz łatwo nawiązać ze mną kontakt.
+                Udostępniam również tradycyjną formę kontaktu za pomocą formularza. Wpisz swój adres e-mail oraz treść, a ja odpowiem.
+              </p>
+              <ul className="mb-6 md:mb-0">
+                <li className="flex">
+                  <div className="flex h-24 w-24 items-center justify-center rounded  text-gray-50">
+                    <img src={emailIcon} className='' />
+                  </div>
+                  <div className="ml-4 my-4 content-center">
+                    <h3 className=" text-lg  leading-6 text-gray-900 dark:text-white">amelka.pudzianowska@wp.pl
+                    </h3>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="flex h-24 w-24 items-center justify-center rounded  text-gray-50">
+                    <img src={faceBookIcon} className='' />
+                  </div>
+                  <div className="ml-4 my-4 content-center">
+                    <a href='https://www.facebook.com/amelia.pudzianowska' target='_blank'>
+                      <h3 className=" text-lg font-medium leading-6 text-gray-900 dark:text-white">𝗳𝗮𝗰𝗲𝗯𝗼𝗼𝗸</h3>
+                    </a>
+                  </div>
+                </li>
+                <li className="flex">
+                  <div className="flex h-24 w-24 items-center justify-center rounded  text-gray-50">
+                    <img src={instagramIcon} className='' />
+                  </div>
+                  <div className="ml-4 my-4 content-center">
+                    <a href='https://www.instagram.com/nizejpodpisana/' target='_blank'>
+                      <h3 className=" text-lg font-medium leading-6 text-gray-900 dark:text-white">𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶</h3>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
+              <h2 className="mb-4 text-2xl font-bold dark:text-white">Wypełnij formularz</h2>
+              <form id="contactForm">
+                <div className="mb-6">
+                  <div className="mx-0 mb-1 sm:mb-4">
+                    <div className="mx-0 mb-1 sm:mb-4">
+                      <label htmlFor="name" className="pb-1 text-xs uppercase tracking-wider"></label><input type="text" id="name" autoComplete="given-name" placeholder="Twoje imię" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="name" />
+                    </div>
+                    <div className="mx-0 mb-1 sm:mb-4">
+                      <label htmlFor="email" className="pb-1 text-xs uppercase tracking-wider"></label><input type="email" id="email" autoComplete="email" placeholder="Twój e-mail" className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" name="email" />
+                    </div>
+                  </div>
+                  <div className="mx-0 mb-1 sm:mb-4">
+                    <label htmlFor="textarea" className="pb-1 text-xs uppercase tracking-wider"></label><textarea id="textarea" name="textarea" cols={30} rows={5} placeholder="Treść..." className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <button type="submit" className="w-full bg-cherry-pink text-gray-800 shadow-md border border-gray-400 px-6 py-3 font-xl rounded-md sm:mb-0">Wyślij</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </section>
   )
 }
