@@ -31,7 +31,8 @@ export default function Post() {
   return (
     <div className="bg-white py-24 sm:py-32 min-h-screen">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto lg:mx-0">
+        <div className="relative mx-auto lg:mx-0">
+          <a href="/blog" className="text-4xl absolute top-0 left-10">&#8592;</a>
           <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">Abc</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

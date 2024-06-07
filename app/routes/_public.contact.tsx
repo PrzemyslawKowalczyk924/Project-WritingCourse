@@ -12,7 +12,7 @@ export default function Example() {
 
 
   return (
-    <section className="bg-contact-pattern py-16 dark:bg-slate-800" id="contact">
+    <section className="bg-contact-pattern-2 py-16 bg-lavenda-pink dark:bg-lavenda-pink" id="contact">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-4">
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">

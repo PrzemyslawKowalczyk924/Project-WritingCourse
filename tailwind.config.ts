@@ -84,6 +84,7 @@ export default {
         'hero-pattern': 'url("public/images/hero_pinkBackground.png")',    
         'old-paper': 'url("https://images.pexels.com/photos/14129745/pexels-photo-14129745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',    
         'contact-pattern': 'url("public/images/grafika2.png")',   
+        'contact-pattern-2': 'url("public/images/grafika2-gimp-3.png")',   
         'slonecznik-pattern': 'url("public/images/grafika3.png")',   
         'slonecznik2-pattern': 'url("public/images/grafika6.png")',   
         'slonecznik3-pattern': 'url("public/images/grafika7.png")',   
