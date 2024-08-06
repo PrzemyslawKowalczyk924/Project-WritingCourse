@@ -4,6 +4,8 @@ import kocha from '../../public/images/kocha_1.svg';
 import proste from '../../public/images/rynek_1.svg';
 import gdzieDiabel from '../../public/images/gdzieDiabel_1.svg';
 import pokolenie from '../../public/images/pokoleniePost.jpg';
+import gender from '../../public/images/gender.jpg';
+import madonna from '../../public/images/madonna.jpg';
 
 export default function Example() {
     return (
@@ -36,23 +38,23 @@ export default function Example() {
                             {/* Decorative image grid */}
                             <div
                                 aria-hidden="true"
-                                className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-6xl"
+                                className="lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-6xl"
                             >
                                 <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                                     <div className="flex items-center space-x-6 lg:space-x-8">
                                         <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                                            <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                                            <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                 <img
                                                     src={kocha}
                                                     alt=""
-                                                    className="h-full w-full object-cover object-center"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-center opacity-5 hover:opacity-85"
                                                 />
                                             </div>
                                             <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                 <img
                                                     src={proste}
                                                     alt=""
-                                                    className="h-full w-full object-cover object-right"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-right opacity-5 hover:opacity-85"
                                                 />
                                             </div>
                                         </div>
@@ -61,37 +63,37 @@ export default function Example() {
                                                 <img
                                                     src={gdzieDiabel}
                                                     alt=""
-                                                    className="h-full w-full object-cover object-center"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-center opacity-5 hover:opacity-85"
                                                 />
                                             </div>
                                             <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                 <img
                                                     src={muza}
                                                     alt=""
-                                                    className="h-full w-full object-cover object-center"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-center"
                                                 />
                                             </div>
                                             <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                 <img
                                                     src={pokolenie}
                                                     alt=""
-                                                    className="h-full w-full object-cover object-bottom"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-bottom opacity-5 hover:opacity-85"
                                                 />
                                             </div>
                                         </div>
                                         <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                             <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                 <img
-                                                    src="https://via.placeholder.com/256x192/f4ccccff/434343?text=2"
+                                                    src={gender}
                                                     alt=""
-                                                    className="h-full w-full object-cover object-center"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-right opacity-5 hover:opacity-85"
                                                 />
                                             </div>
                                             <div className="h-64 w-44 overflow-hidden rounded-lg">
                                                 <img
-                                                    src="https://via.placeholder.com/256x341/f4ccccff/434343?text=1"
+                                                    src={madonna}
                                                     alt=""
-                                                    className="h-full w-full object-cover object-center"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-left opacity-5 hover:opacity-85"
                                                 />
                                             </div>
                                         </div>
@@ -106,3 +108,6 @@ export default function Example() {
         </div>
     )
 }
+
+//https://via.placeholder.com/256x192/f4ccccff/434343?text=2
+//https://via.placeholder.com/256x341/f4ccccff/434343?text=1
