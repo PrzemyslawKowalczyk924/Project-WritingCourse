@@ -6,6 +6,7 @@ import gdzieDiabel from '../../public/images/gdzieDiabel_1.svg';
 import pokolenie from '../../public/images/pokoleniePost.jpg';
 import gender from '../../public/images/gender.jpg';
 import madonna from '../../public/images/madonna.jpg';
+import licencja from '../../public/images/licencja.jpg';
 
 export default function Example() {
     return (
@@ -43,57 +44,57 @@ export default function Example() {
                                 <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                                     <div className="flex items-center space-x-6 lg:space-x-8">
                                         <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                                            <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                            <div className="h-64 w-44 overflow-hidden rounded-lg border border-cherry-pink">
                                                 <img
                                                     src={kocha}
                                                     alt=""
-                                                    className="h-full w-full object-cover cursor-zoom-in object-center opacity-5 hover:opacity-85"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-center opacity-25 hover:opacity-85"
                                                 />
                                             </div>
-                                            <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                            <div className="h-64 w-44 overflow-hidden rounded-lg border border-cherry-pink">
                                                 <img
                                                     src={proste}
                                                     alt=""
-                                                    className="h-full w-full object-cover cursor-zoom-in object-right opacity-5 hover:opacity-85"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-right opacity-25 hover:opacity-85"
                                                 />
                                             </div>
                                         </div>
                                         <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                                            <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                            <div className="h-64 w-44 overflow-hidden rounded-lg border border-cherry-pink">
                                                 <img
                                                     src={gdzieDiabel}
                                                     alt=""
-                                                    className="h-full w-full object-cover cursor-zoom-in object-center opacity-5 hover:opacity-85"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-center opacity-25 hover:opacity-85"
                                                 />
                                             </div>
-                                            <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                            <div className="h-64 w-44 overflow-hidden rounded-lg border border-cherry-pink">
                                                 <img
                                                     src={muza}
                                                     alt=""
-                                                    className="h-full w-full object-cover cursor-zoom-in object-center"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-center opacity-80 hover:opacity-100"
                                                 />
                                             </div>
-                                            <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                            <div className="h-64 w-44 overflow-hidden rounded-lg border border-cherry-pink">
                                                 <img
-                                                    src={pokolenie}
+                                                    src={licencja}
                                                     alt=""
-                                                    className="h-full w-full object-cover cursor-zoom-in object-bottom opacity-5 hover:opacity-85"
+                                                    className="h-full w-full object-scale-down bg-black cursor-zoom-in object-center opacity-25 hover:opacity-85"
                                                 />
                                             </div>
                                         </div>
                                         <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                                            <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                            <div className="h-64 w-44 overflow-hidden rounded-lg border border-cherry-pink">
                                                 <img
                                                     src={gender}
                                                     alt=""
-                                                    className="h-full w-full object-cover cursor-zoom-in object-right opacity-5 hover:opacity-85"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-right opacity-25 hover:opacity-85"
                                                 />
                                             </div>
-                                            <div className="h-64 w-44 overflow-hidden rounded-lg">
+                                            <div className="h-64 w-44 overflow-hidden rounded-lg border border-cherry-pink">
                                                 <img
                                                     src={madonna}
                                                     alt=""
-                                                    className="h-full w-full object-cover cursor-zoom-in object-left opacity-5 hover:opacity-85"
+                                                    className="h-full w-full object-cover cursor-zoom-in object-left-top opacity-25 hover:opacity-85"
                                                 />
                                             </div>
                                         </div>
